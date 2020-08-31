@@ -15,6 +15,7 @@ class InquiriesController < ApplicationController
   def create
     @inquiry = Inquiry.new(inquiry_params)
     @inquiry.user = current_user
+    @inquiry.offer = Offer.find(params[:id])
     if @inquiry.save
       redirect_to inquiry_path(@inquiry)
     else
