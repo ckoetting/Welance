@@ -1,27 +1,36 @@
 <div class="login-wrapper">
-<h2>Sign up asdsad</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
+  <div class="sign-up-text-box text-white">
+    <h1 class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1>
+    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    </p>
   </div>
+  <div class="login-container">
+    <h2>Sign up</h2>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= f.error_notification %>
+
+    <div class="form-inputs">
+      <%= f.input :email,
+      required: true,
+      autofocus: true,
+      input_html: { autocomplete: "email" }%>
+      <%= f.input :password,
+      required: true,
+      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+      input_html: { autocomplete: "new-password" } %>
+      <%= f.input :password_confirmation,
+      required: true,
+      input_html: { autocomplete: "new-password" } %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit, "Sign up", class: "btn btn-success btn-block" %>
+    </div>
+    <% end %>
+
+    <div class="separator my-3">Already have an account?</div>
+
+    <%= render "devise/shared/links" %>
   </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
 </div>
