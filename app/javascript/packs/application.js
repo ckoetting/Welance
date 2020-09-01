@@ -7,6 +7,7 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+require("jquery")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
@@ -31,4 +32,10 @@ import "bootstrap";
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+});
+
+$('.navTrigger').click(function () {
+  $(this).toggleClass('active');
+  $("#mainListDiv").toggleClass("show_list");
+  $("#mainListDiv").fadeIn();
 });
