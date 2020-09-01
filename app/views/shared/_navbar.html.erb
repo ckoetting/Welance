@@ -1,7 +1,7 @@
-<nav class="nav">
-	<div class="container">
+<nav class="nav global">
+	<div class="container navigation-bar">
 		<div class="logo">
-			<a href="#">Welance</a>
+			<a href="/">Welance</a>
 		</div>
 		<div id="mainListDiv" class="main_list">
 			<ul class="navlinks">
@@ -9,26 +9,28 @@
 				<li><a href="#">Customers</a></li>
 				<li><a href="#">Services</a></li>
 				<li><a href="#">Contact</a></li>
+        <% unless user_signed_in?%>
+        <li><a href="/users/sign_up">Register</a></li>
+				<li><a href="#">Sign In</a></li>
+        <%end%>
 			</ul>
 		</div>
 		<span class="navTrigger">
 			  <i></i>
 				<i></i>
 				<i></i>
-				<i></i>
 		</span>
 	</div>
 </nav>
-<div style="height: 1000px">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 <!-- Function used to shrink nav bar removing paddings and adding black background -->
 <script>
 	$(window).scroll(function() {
 		if ($(document).scrollTop() > 50) {
-			$('.nav').addClass('affix');
+			$('.nav.global').addClass('affix');
 		} else {
-			$('.nav').removeClass('affix');
+			$('.nav.global').removeClass('affix');
 		}
 	});
 </script>
