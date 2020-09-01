@@ -1,47 +1,56 @@
-.login-wrapper {
+.device-wrapper {
   display: flex;
   justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+  background-size: cover;
+  background:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+  &.edit {
     // flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    // background-image: url("https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
-    background-size: cover;
-    background:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+    background: none;
+    background-color: white;
+    // justify-content: space-evenly;
   }
+}
 
-  .login-container {
-    margin: 3vh;
-    // padding: 30px;
-    background-color: rgba(255,255,255,1);
-    border-radius: 10px;
-    min-width: 300px;
-    & .form {
-      padding: 30px;
-    }
+.device-container {
+  background-color: rgba(255,255,255,1);
+  border-radius: 10px;
+  min-width: 300px;
+  & .form {
+    padding: 30px;
   }
+  &.edit {
+    width: 400px;
+    padding: 50px;
+    margin: 10px;
+    border: 2px solid #22dac3;
+  }
+}
 
-  .sign-up-text-box {
-    width: 300px;
-    margin-right: 100px;
-  }
+.sign-up-text-box {
+  width: 300px;
+  margin-right: 100px;
+}
 
-  .separator {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: rgba(0,0,0,0.3);
-  }
-  .separator::before, .separator::after {
-    content: '';
-    flex: 1;
-    border-bottom: 1px solid rgba(0,0,0,0.3);
-  }
-  .separator::before {
-    margin-right: .25em;
-  }
-  .separator::after {
-    margin-left: .25em;
-  }
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: rgba(0,0,0,0.3);
+}
+.separator::before, .separator::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+.separator::before {
+  margin-right: .25em;
+}
+.separator::after {
+  margin-left: .25em;
+}
 
   // bootstrap tabs customization
 
