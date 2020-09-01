@@ -23,7 +23,9 @@
             <img src="https://images.unsplash.com/photo-1589329482108-e414c7c6b8c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" class="company-pic" >
           </div>
           <div class="offers-index-offer-name">
-            <h4><%= offer.title %></h4>
+            <h4><%= link_to offer_path(offer) do %>
+        <%= offer.title %>
+        <% end %></h4>
           </div>
         </div>
         <hr width="100%" color="gray">
