@@ -8,7 +8,7 @@
 				<li><a href="#">About</a></li>
 				<li><a href="#">Customers</a></li>
 				<li><a href="#">Services</a></li>
-				<li><a href="#">Contact</a></li>
+				<li><%= link_to "contact", contact_us_path %></li>
         <% unless user_signed_in?%>
         <li><a href="/users/sign_up">Sign Up</a></li>
 				<li><a href="#">Sign In</a></li>
