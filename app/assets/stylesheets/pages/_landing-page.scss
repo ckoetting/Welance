@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+
 .banner-container {
   display: flex;
   flex-direction: row;
@@ -5,18 +7,21 @@
   align-items: center;
   margin: 0px;
 }
-#code-hero {
+#mbp {
   width: 600px;
   height: 600px;
+}
+#ipx {
+  width: 400px;
+  height: 400px;
 }
 
 .banner.landing h1 {
   margin: 0;
   color: white;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "Quicksand", sans-serif;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 60px;
-  font-weight: bold;
 }
 
 .clients-container {
@@ -34,6 +39,22 @@
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
+.our-developers-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 10px;
+  row-gap: 15px;
+  justify-items: stretch;
+  margin: 35px;
+}
+.our-developers-info p {
+  font-size: 20px;
+}
+.our-developers {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .landing-two {
     display: flex;
     flex-direction: row;
@@ -65,3 +86,35 @@
   text-align: center;
   margin-top: 30px;
 }
+
+.card-img-top {
+  height: 212px;
+}
+
+.container-icon {
+  margin-top: 86px;
+  margin-left: 246px;
+}
+
+.h2-1 {
+  margin-top: 40px;
+  margin-left: -66px;
+}
+
+.h2-2 {
+  margin-top: 40px;
+  margin-left: -22px;
+}
+
+.h2-3 {
+  margin-top: 40px;
+  margin-left: -36px;
+}
+
+#h1-3 {
+  text-align: center;
+  margin-top: 60px;
+}
+
+
+
