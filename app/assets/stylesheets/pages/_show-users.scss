@@ -1,0 +1,59 @@
+.wrapper-profile {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.profile-page-container {
+  width: 600px;
+}
+
+.profile-page-first {
+  display: flex;
+  padding: auto;
+  margin: 30px auto;
+  & h1 {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  & i {
+    color: grey;
+  }
+}
+
+.profile-page-actions {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px auto;
+  & hr {
+    margin-top: 20px;
+  }
+}
+
+.profile-page-button {
+  margin: 5px;
+}
+
+.profile-page-container {
+  & ul {
+    list-style-type: none;
+  }
+}
+.profile-pic {
+border-radius: 50%;
+height: 250px;
+width: 250px;
+
+}
+
+.profile-page-perks {
+  display: flex;
+  justify-content: space-around;
+  font-size: 40px;
+}
+
+.profile-page-about {
+  & p {
+    margin: 10px;
+    padding: 35px;
+  }
+}
