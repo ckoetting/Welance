@@ -1,0 +1,73 @@
+.offers-index-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+//searchbar
+.offers-index-search {
+  margin: 120px auto 20px auto;
+  border-radius: 40px;
+  background-color: #1fa1f2;
+  padding-top: 5px;
+}
+.offers-index-searchbarbut {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.search-form-control {
+  width: 500px;
+}
+.offer-button-search {
+  margin: 0px 10px 15px 20px;
+  padding: 0 auto;
+  border-radius: 40px;
+}
+#search_query {
+  border-radius: 40px;
+}
+
+//offers index
+.offers-index-offers {
+  width: 1025px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 25px;
+  row-gap: 35px;
+  justify-items: stretch;
+  margin-top: 40px;
+}
+.offers-index-offer {
+  width: 500px;
+  box-shadow: 4px 4px 15px -3px rgba(0,0,0,0.24);
+}
+
+// cards
+.offers-index-offer-head {
+  display: flex;
+  margin: 20px 20px 0px 20px;
+}
+.company-pic {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.offers-index-offer-name {
+  margin-top: 10px;
+  margin-left: 30px;
+}
+.offers-index-offer-description {
+  margin: 0px 20px 30px 20px;
+}
+.offers-index-offer-actions {
+  display: flex;
+  justify-content: right;
+  margin: 15px;
+}
+.btn1 {
+  margin-right: inherit;
+}
+.btn-offer {
+  border-radius: 20px;
+}
+
