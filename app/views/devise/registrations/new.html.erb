@@ -5,8 +5,18 @@
     </p>
   </div>
   <div class="login-container">
-    <h2>Sign up</h2>
+    <div>
+      <ul class="nav welance justify-content-center">
+        <li class="nav-item w-50">
+          <a class="nav-link active" href="<%= new_user_registration_path %>">SIGN UP</a>
+        </li>
+        <li class="nav-item w-50">
+          <a class="nav-link" href="<%= new_user_session_path %>">SIGN IN</a>
+        </li>
+      </ul>
+    </div>
 
+    <div class="form">
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= f.error_notification %>
 
@@ -32,5 +42,6 @@
     <div class="separator my-3">Already have an account?</div>
 
     <%= render "devise/shared/links" %>
+    </div>
   </div>
 </div>
