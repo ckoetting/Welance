@@ -25,17 +25,13 @@ require("jquery")
 
 // External imports
 import "bootstrap";
-
+import { mobileMenuNav} from '../components/navbar'
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  mobileMenuNav();
 });
 
-$('.navTrigger').click(function () {
-  $(this).toggleClass('active');
-  $("#mainListDiv").toggleClass("show_list");
-  $("#mainListDiv").fadeIn();
-});

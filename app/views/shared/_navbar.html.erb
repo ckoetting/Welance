@@ -10,8 +10,10 @@
 				<li><a href="#">Services</a></li>
 				<li><a href="#">Contact</a></li>
         <% unless user_signed_in?%>
-        <li><a href="/users/sign_up">Register</a></li>
+        <li><a href="/users/sign_up">Sign Up</a></li>
 				<li><a href="#">Sign In</a></li>
+        <%else%>
+        <li><a href="/users/1/">My Account</a></li>
         <%end%>
 			</ul>
 		</div>
