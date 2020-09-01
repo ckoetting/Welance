@@ -6,4 +6,6 @@ Rails.application.routes.draw do
     resources :reviews
     end
     resources :users, only: [ :show ]
+    resources :contact, only: [:new, :create]
+    get 'contact_us' => 'pages#contact_us'
 end
