@@ -1,7 +1,7 @@
 .col_white_amrc {
   color: #fff;
 }
-footer {
+.footer {
   width: 100%;
   background-color: #263238;
   min-height: 250px;
@@ -11,7 +11,7 @@ footer {
   padding-top: 40px;
   margin-bottom: 20px;
 }
-footer p {
+.footer p {
   font-size: 13px;
   color: #ccc;
   padding-bottom: 0px;
@@ -99,7 +99,7 @@ footer p {
   width: 20px;
   height: 20px;
   text-align: center;
-
+}
 .h4-fo {
   color: whitesmoke;
   margin-top: 10px;
@@ -150,7 +150,6 @@ footer p {
   margin-top: 90px;
 }
 
-a {
+.footer a {
   color: whitesmoke;
 }
-
