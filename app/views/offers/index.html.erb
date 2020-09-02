@@ -2,12 +2,15 @@
   <div class="offers-index-container">
     <div class="offers-index-search">
       <div class="offers-index-searchbarbut">
-      <%= simple_form_for :search, url: root_path, method: :get do |f| %>
-      <div class="search-form-control form-group">
-        <input class="form-control string required" type="text" name="search[query]" id="search_query" />
-      </div>
-      <% end %>
-        <button name="button" type="submit" class="offer-button-search btn btn-outline-success"><i class="fas fa-search"></i> Search</button>
+      
+    <%= form_tag offers_path, method: :get, id: "search" do %>
+    <%= submit_tag "Search", class: "offer-button-search btn btn-outline-success", style: "border-radius: 23px;"%>
+    <%= text_field_tag :search_by_title_and_location,
+    params[:search_ƒby_title_and_location],
+    class: "form-control",
+      placeholder: "Find an offer"
+      %>
+    <% end %>
       </div>
       <div class="row">
         <div class="offers-index-dropdowns">
