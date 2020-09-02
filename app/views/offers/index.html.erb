@@ -1,4 +1,4 @@
-<div class="offers-index-wrapper">
+<div class="index-wrapper">
   <div class="offers-index-container">
     <div class="offers-index-search">
       <div class="offers-index-searchbarbut">
@@ -18,6 +18,7 @@
       </div>
     </div>
     <div class="offers-index-offers">
+
       <% @offers.each do |offer| %>
       <div class="offers-index-offer card">
         <div class="offers-index-offer-head">
@@ -41,7 +42,8 @@
             <button name="button" type="submit" class="btn-offer btn btn-success"><i class="far fa-bookmark"></i> Save</button>
         </div>
       </div>
-    <% end %>
+      <% end %>
+
     </div>
   </div>
 </div>
