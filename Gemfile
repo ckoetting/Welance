@@ -29,6 +29,8 @@ gem 'jquery-rails'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
+#search bar
+gem 'pg_search', '~> 2.3.0'
 
 gem 'devise'
 
