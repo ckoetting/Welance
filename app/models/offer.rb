@@ -9,4 +9,11 @@ class Offer < ApplicationRecord
   validates :fixed_price, presence: true
   validates :location, presence: true
   validates :deadline_at, presence: true
+
+  include PgSearch::Model
+  pg_search_scope :search_by_title_and_location,
+    against: [ :title, :location ],
+    using: {
+      tsearch: { prefix: true } # <-- now `superman batm` will return something!
+    }
 end

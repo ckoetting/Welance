@@ -2,8 +2,12 @@ class OffersController < ApplicationController
   before_action :set_offer, only: [:show, :edit, :update, :destroy]
 
   def index
+    if params[:search_by_title_and_location].nil? || params[:search_by_title_and_location].empty?
+      @offers = Offer.all
+    else
     @offers = Offer.all
   end
+end
 
   def show
   end

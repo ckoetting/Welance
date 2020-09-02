@@ -27,6 +27,25 @@
   border-radius: 40px;
 }
 
+.btn {
+  margin-bottom: -1px;
+}
+
+#search {
+  width: 424px;
+  display: flex;
+  flex-flow: row-reverse;
+  align-items: center;margin: 3vh;
+  border-radius: 5px;
+  margin-bottom: 22px;
+  margin-top: 4px;
+}
+
+#search_by_title_and_location {
+  border-radius: 20px;
+}
+
+
 //offers index
 .offers-index-offers {
   width: 1025px;
