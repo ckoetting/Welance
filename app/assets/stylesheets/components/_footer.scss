@@ -3,29 +3,84 @@ html {
   min-height: 100%;
 }
 
-body {
-  margin-bottom: 60px;
-}
+
 .footer {
-  position: fixed;
+  position: relative;
   bottom: 0px;
   width: 100%;
-  background-color: #f5f5f5;
+  background-color: #293241;
   background-size: cover;
   display: flex;
   justify-content: space-between;
   padding: 0 31px;
+  height: 300px;
+  clear: both;
+  
 }
 
 .smedia {
   display: inline-block;
   float: right;
   padding-right: 2%;
+  margin-top: 80px;
 }
 
-.footer ul {
-  padding-left: 0px;
-}
+
 .footer small {
   color: #07689f;
 }
+
+.h4-fo {
+  color: whitesmoke;
+  margin-top: 10px;
+  margin-bottom: 32px;
+}
+
+#loco-form {
+  margin-top: 18px;
+  margin-left: 28px;
+}
+
+#start-btn {
+  width: 248px;
+}
+
+.acunt {
+  color: whitesmoke;
+}
+
+.icons-social {
+  display: flex;
+  justify-content: space-around;
+  width: 150px;
+  align-items: center;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+#social-icons {
+  color: whitesmoke;
+}
+
+.cntct {
+  margin-left: -350px;
+  margin-top: 80px;
+}
+
+.lanza {
+  color: whitesmoke;
+  width: 500px;
+  line-height: 7px;
+  margin-top: 90px;
+}
+
+.lanzo {
+  color: whitesmoke;
+  line-height: 7px;
+  margin-top: 90px;
+}
+
+a {
+  color: whitesmoke;
+}
+
