@@ -1,0 +1,13 @@
+<div class="device-wrapper">
+  <div class="inquiry-container">
+    <h3> Tell us about yourself </h3>
+    <div class="form">
+    <%= simple_form_for([@offer, @inquiry]) do |f| %>
+      <%= f.input :message, as: :text %>
+      <div class="form-actions">
+        <%= f.button :submit, "Apply", class: "btn btn-success btn-block" %>
+      </div>
+    <% end %>
+    </div>
+  </div>
+</div>

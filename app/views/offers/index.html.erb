@@ -33,7 +33,9 @@
           <%= offer.description %>
         </div>
         <div class="offers-index-offer-actions">
+           <%= link_to new_offer_inquiry_path(offer) do %>
            <button name="button" type="submit" class="btn-offer btn1 btn btn-success"><i class="fab fa-telegram-plane"></i> Apply</button>
+           <% end %>
             <button name="button" type="submit" class="btn-offer btn btn-success"><i class="far fa-bookmark"></i> Save</button>
         </div>
       </div>
