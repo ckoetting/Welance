@@ -2,7 +2,8 @@ class InquiriesController < ApplicationController
   before_action :set_inquiry, only: [:show, :edit, :update, :destroy]
 
   def index
-    @inquiries = Inquiry.all
+    @user = User.find(params[:user_id])
+    @inquiries = @user.inquiries
   end
 
   def show

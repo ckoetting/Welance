@@ -5,6 +5,9 @@
     <%= link_to offers_path do %>
       <button name="button" type="submit" class="btn-inquiry btn1 btn btn-success"> Back to browse </button>
     <% end %>
+    <%= link_to user_inquiries_path(current_user) do %>
+      <button name="button" type="submit" class="btn-inquiry btn1 btn btn-success"> Check my Inquiries </button>
+    <% end %>
   </div>
   <div class="inquiry-message-container">
     <h3> Your Message </h3>

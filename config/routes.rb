@@ -5,7 +5,9 @@ Rails.application.routes.draw do
     resources :inquiries, shallow: true
     resources :reviews
     end
-    resources :users, only: [ :show ]
+    resources :users, only: [ :show ] do
+      get 'inquiries', to: 'inquiries#index'
+    end
     resources :contact, only: [:new, :create]
     get 'contact_us' => 'pages#contact_us'
 end

@@ -7,7 +7,7 @@
 .offers-index-search {
   margin: 120px auto 20px auto;
   border-radius: 40px;
-  background-color: #1fa1f2;
+  background-color: #293241;
   padding-top: 5px;
 }
 .offers-index-searchbarbut {
@@ -36,6 +36,10 @@
   row-gap: 35px;
   justify-items: stretch;
   margin-top: 40px;
+  margin-bottom: 40px;
+  & a {
+    color:#293241;
+  }
 }
 .offers-index-offer {
   width: 500px;
