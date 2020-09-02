@@ -1,0 +1,59 @@
+.wrapper-offer {
+  padding-top: 120px;
+  display: flex;
+  justify-content: center;
+}
+.offer-page-container {
+  width: 600px;
+}
+
+.offer-page-first {
+  display: flex;
+  padding: auto;
+  margin: 30px auto;
+  & h1 {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  & i {
+    color: grey;
+  }
+}
+
+.offer-page-actions {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px auto;
+  & hr {
+    margin-top: 20px;
+  }
+}
+
+.offer-page-button {
+  margin: 5px;
+}
+
+.offer-page-container {
+  & ul {
+    list-style-type: none;
+  }
+}
+.offer-pic {
+border-radius: 50%;
+height: 200px;
+width: 200px;
+
+}
+
+.offer-page-perks {
+  display: flex;
+  justify-content: space-around;
+  font-size: 40px;
+}
+
+.offer-page-about {
+  & p {
+    margin: 10px;
+    padding: 35px;
+  }
+}

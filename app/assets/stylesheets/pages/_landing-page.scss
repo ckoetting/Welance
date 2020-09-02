@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+
+.banner-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0px;
+}
+#mbp {
+  width: 600px;
+  height: 600px;
+}
+#ipx {
+  width: 400px;
+  height: 400px;
+}
+
+.banner.landing h1 {
+  margin: 0;
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 60px;
+}
+
+.clients-container {
+  margin: 20px;
+}
+.our-clients {
+  border-bottom: 2px solid lightgray;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+}
+.banner.landing p {
+  font-size: 20px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+.our-developers-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 10px;
+  row-gap: 15px;
+  justify-items: stretch;
+  margin: 35px;
+}
+.our-developers-info p {
+  font-size: 20px;
+}
+.our-developers {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.landing-two {
+    display: flex;
+    flex-direction: row;
+}
+
+.sub-p {
+  margin-left: 53px;
+  color: black;
+}
+
+#loco {
+  width: 415px;
+  height: 296px;
+  margin-top: 180px;
+  margin-left: 70px;
+}
+
+.col-lg-3 {
+  margin-top: 60px;
+  width: 288px;
+  margin: 30px;
+}
+
+.card-text {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+#h1-2 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.card-img-top {
+  height: 212px;
+}
+
+.container-icon {
+  margin-top: 86px;
+  margin-left: 246px;
+}
+
+.h2-1 {
+  margin-top: 40px;
+  margin-left: -66px;
+}
+
+.h2-2 {
+  margin-top: 40px;
+  margin-left: -22px;
+}
+
+.h2-3 {
+  margin-top: 40px;
+  margin-left: -36px;
+}
+
+#h1-3 {
+  text-align: center;
+  margin-top: 60px;
+}
+
+
+

@@ -1,0 +1,52 @@
+<div class="wrapper-offer">
+  <div class="offer-page-container">
+    <div class="card">
+      <div class="offer-page-first">
+        <div class="offer-page-avatar">
+          <img src="https://images.unsplash.com/photo-1589329482108-e414c7c6b8c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" class="offer-pic" >
+        </div>
+
+        <div class="offer-page-info">
+          <ul>
+          <li> <h1><%= @offer.title %></h1></li>
+          <li> <p><i><%= @offer.skills_required %></li>
+          <li> from </i><%= @offer.location %></li>
+          <li> <%= @offer.compensation %></li>
+          <li> <%= @offer.user.business_name %></li>
+          <li> <%= @offer.user.business_address %></p></li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+      <div class="offer-page-actions">
+        <hr width="120 px" color="blue">
+        <div class="offer-page-button">
+          <%= link_to user_path, class: "btn nav-item btn-primary" do %>
+              Save Offer
+            <% end %>
+        </div>
+        <div class="offer-page-button">
+          <%= link_to user_path, class: "btn nav-item btn-success" do %>
+              Apply Job
+            <% end %>
+        </div>
+        <hr width="120 px" color="blue">
+      </div>
+    <div class="card" style="margin-bottom: 20px;">
+      <div class="offer-page-perks">
+        <div class="perk-1"><i class="fas fa-certificate"></i></div>
+        <div class="perk-2"><i class="fas fa-certificate"></i></div>
+        <div class="perk-3"><i class="fas fa-certificate"></i></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="offer-page-about">
+        <p>
+          <%= @offer.description %>
+        </p>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
