@@ -3,7 +3,8 @@
     <div class="card">
       <div class="profile-page-first">
         <div class="profile-page-avatar">
-          <img src="https://images.unsplash.com/photo-1589329482108-e414c7c6b8c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" class="profile-pic" >
+          <!-- <img src="https://images.unsplash.com/photo-1589329482108-e414c7c6b8c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" class="profile-pic" > -->
+          <%= image_tag @user.avatar_url, class: "profile-pic" %>
         </div>
 
         <div class="profile-page-info">
@@ -15,15 +16,14 @@
           <li> <i>hourly rate</i> <%= @user.hourly_rate %>€/h</li>
           <li> <%= @user.business_name %></li>
           <li> <%= @user.business_address %></p></li>
-
           </ul>
         </div>
       </div>
     </div>
       <div class="profile-page-actions">
-        <hr width="120 px" color="blue">
+        <hr width="120 px">
         <div class="profile-page-button">
-          <%= link_to user_path, class: "btn nav-item btn-primary" do %>
+          <%= link_to edit_user_registration_path, class: "btn nav-item btn-primary" do %>
               Edit Profile
             <% end %>
         </div>
@@ -32,7 +32,7 @@
               Upload Resume
             <% end %>
         </div>
-        <hr width="120 px" color="blue">
+        <hr width="120 px">
       </div>
     <div class="card" style="margin-bottom: 20px;">
       <div class="profile-page-perks">
@@ -41,7 +41,7 @@
         <div class="perk-3"><i class="fas fa-certificate"></i></div>
       </div>
     </div>
-    <div class="card">
+    <div class="card mb-5">
       <div class="profile-page-about">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse molestie odio nisl, sed rhoncus turpis dignissim at. Donec sit amet sollicitudin orci. In hac habitasse platea dictumst. Curabitur iaculis nisi eu mauris vestibulum, a commodo nibh rutrum. Nulla in mattis nunc. Praesent tincidunt risus id finibus viverra. Ut et tortor ut mauris ornare suscipit. Praesent ut lacinia orci, ut sollicitudin velit. Phasellus a purus sed mauris scelerisque porta. Nunc in tempor elit.<br><br> Proin a dapibus nibh.
