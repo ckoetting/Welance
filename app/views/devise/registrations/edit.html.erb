@@ -12,7 +12,7 @@
       <div class="form-inputs" id="Developer">
         <%= f.input :full_name, autofocus: true %>
         <%= f.input :bio, as: :text, autofocus: true %>
-        <%= f.input :location, autofocus: true %>
+        <%= f.input :location, label: 'Address', autofocus: true %>
         <%= f.input :dob, label: 'Date of birth', autofocus: true %>
         <%= f.input :phone_number, autofocus: true %>
         <%= f.input :website, autofocus: true %>
@@ -20,8 +20,8 @@
       <div class="form-inputs" id="Business">
         <%= f.input :business_name, autofocus: true %>
         <%= f.input :business_address, label: 'Address', autofocus: true %>
-        <%= f.input :business_vat_id, autofocus: true %>
-        <%= f.input :bio, label: 'Business details', autofocus: true %>
+        <%= f.input :business_vat_id, label: 'Business VAT', autofocus: true %>
+        <%= f.input :bio, as: :text, label: 'Mission statement', autofocus: true %>
         <%= f.input :business_size, autofocus: true %>
         <%= f.input :phone_number, autofocus: true %>
         <%= f.input :website, autofocus: true %>

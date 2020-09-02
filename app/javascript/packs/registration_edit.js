@@ -9,7 +9,6 @@
         $('div#Business').hide()
           $('#' + this.value).show();
             if (value === 'Developer') {
-              console.log(value)
               document.querySelector(".device-container").style.borderColor = "#1fa1f2";
               document.querySelector("#user-title").innerText = "Developer details";
             } else {
