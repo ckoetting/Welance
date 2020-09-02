@@ -9,6 +9,7 @@ class InquiriesController < ApplicationController
   end
 
   def new
+    @offer = Offer.find(params[:offer_id])
     @inquiry = Inquiry.new
   end
 
