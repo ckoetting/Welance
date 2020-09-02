@@ -1,0 +1,45 @@
+<div class="offers-index-wrapper">
+  <div class="offers-index-container">
+    <div class="offers-index-search">
+      <div class="offers-index-searchbarbut">
+        <br>
+      <%= simple_form_for :search, url: root_path, method: :get do |f| %>
+      <div class="search-form-control form-group">
+        <input class="form-control string required" type="text" name="search[query]" id="search_query" />
+      </div>
+      <% end %>
+        <button name="button" type="submit" class="offer-button-search btn btn-warning"><i class="fas fa-search"></i> Search</button>
+      </div>
+      <div class="row">
+        <div class="offers-index-dropdowns">
+        </div>
+      </div>
+    </div>
+    <div class="offers-index-offers">
+      <% @offers.each do |offer| %>
+      <div class="offers-index-offer card">
+        <div class="offers-index-offer-head">
+          <div class="offers-index-avatar">
+            <img src="https://images.unsplash.com/photo-1589329482108-e414c7c6b8c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" class="company-pic" >
+          </div>
+          <div class="offers-index-offer-name">
+            <h4><%= link_to offer_path(offer) do %>
+        <%= offer.title %>
+        <% end %></h4>
+          </div>
+        </div>
+        <hr width="100%" color="gray">
+        <div class="offers-index-offer-description">
+          <%= offer.description %>
+        </div>
+        <div class="offers-index-offer-actions">
+           <%= link_to new_offer_inquiry_path(offer) do %>
+           <button name="button" type="submit" class="btn-offer btn1 btn btn-success"><i class="fab fa-telegram-plane"></i> Apply</button>
+           <% end %>
+            <button name="button" type="submit" class="btn-offer btn btn-success"><i class="far fa-bookmark"></i> Save</button>
+        </div>
+      </div>
+    <% end %>
+    </div>
+  </div>
+</div>

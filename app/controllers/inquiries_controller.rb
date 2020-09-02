@@ -9,17 +9,20 @@ class InquiriesController < ApplicationController
   end
 
   def new
+    @offer = Offer.find(params[:offer_id])
     @inquiry = Inquiry.new
   end
 
   def create
     @inquiry = Inquiry.new(inquiry_params)
     @inquiry.user = current_user
-    @inquiry.offer = Offer.find(params[:id])
+    @inquiry.offer = Offer.find(params[:offer_id])
     if @inquiry.save
       redirect_to inquiry_path(@inquiry)
+      flash.notice = "Your application as been sent!"
     else
       render :new
+      flash.alert = "Ops! Something went wrong."
     end
   end
 

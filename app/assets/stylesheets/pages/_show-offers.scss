@@ -1,13 +1,13 @@
-.wrapper-profile {
+.wrapper-offer {
   padding-top: 120px;
   display: flex;
   justify-content: center;
 }
-.profile-page-container {
+.offer-page-container {
   width: 600px;
 }
 
-.profile-page-first {
+.offer-page-first {
   display: flex;
   padding: auto;
   margin: 30px auto;
@@ -20,7 +20,7 @@
   }
 }
 
-.profile-page-actions {
+.offer-page-actions {
   display: flex;
   justify-content: space-around;
   margin: 30px auto;
@@ -29,29 +29,29 @@
   }
 }
 
-.profile-page-button {
+.offer-page-button {
   margin: 5px;
 }
 
-.profile-page-container {
+.offer-page-container {
   & ul {
     list-style-type: none;
   }
 }
-.profile-pic {
+.offer-pic {
 border-radius: 50%;
-height: 250px;
-width: 250px;
+height: 200px;
+width: 200px;
 
 }
 
-.profile-page-perks {
+.offer-page-perks {
   display: flex;
   justify-content: space-around;
   font-size: 40px;
 }
 
-.profile-page-about {
+.offer-page-about {
   & p {
     margin: 10px;
     padding: 35px;
