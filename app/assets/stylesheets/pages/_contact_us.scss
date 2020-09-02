@@ -1,8 +1,10 @@
 .contact-form {
   background: #fff;
   margin-top: 100px;
-
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
   width: 70%;
+  height: 35rem;
 }
 .contact-form .form-control {
   border-radius: 1rem;
@@ -38,4 +40,12 @@
   background-color: #0062cc;
   border: none;
   cursor: pointer;
+}
+.page-container {
+  display: flex;
+  align-content: center;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://res.cloudinary.com/corneliuskf/image/upload/v1598949631/agency_b3g9eg.jp2');
+  background-size: cover;
+  background-position: center;
 }
