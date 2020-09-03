@@ -5,8 +5,8 @@ class OffersController < ApplicationController
     if params[:search_by_title_and_location].nil? || params[:search_by_title_and_location].empty?
       @offers = Offer.all
     else
-    @offers = Offer.all
-  end
+      @offers = Offer.all
+    end
 end
 
   def show
