@@ -3,9 +3,13 @@
 }
 .footer {
   width: 100%;
-  background-color: #263238;
+  background-color: black;
   min-height: 250px;
   padding: 10px 0px 25px 0px;
+  & a:hover {
+    text-decoration: none;
+    color: #22dac3;
+  }
 }
 .pt2 {
   padding-top: 40px;
@@ -13,7 +17,7 @@
 }
 .footer p {
   font-size: 13px;
-  color: #ccc;
+  color: white;
   padding-bottom: 0px;
   margin-bottom: 8px;
 }
@@ -30,10 +34,10 @@
   padding: 0px 0px 5px 0px;
 }
 .footer_ul_amrc li a {
-  color: #ccc;
+  color: white;
 }
 .footer_ul_amrc li a:hover {
-  color: #fff;
+  // color: #fff;
   text-decoration: none;
 }
 .fleft {
@@ -59,7 +63,7 @@
 }
 
 .bottom_border {
-  border-bottom: 1px solid #323f45;
+  border-bottom: 1px solid white;
   padding-bottom: 20px;
 }
 .foote_bottom_ul_amrc {
@@ -75,8 +79,11 @@
   display: inline;
 }
 .foote_bottom_ul_amrc li a {
-  color: #999;
+  color: white;
   margin: 0 12px;
+  // &:hover {
+  //   text-decoration: none;
+  // }
 }
 
 .social_footer_ul {
@@ -92,8 +99,8 @@
   float: left;
 }
 .social_footer_ul li a {
-  color: #ccc;
-  border: 1px solid #ccc;
+  color: white;
+  border: 1px solid white;
   padding: 8px;
   border-radius: 50%;
 }
@@ -103,7 +110,7 @@
   text-align: center;
 }
 .h4-fo {
-  color: whitesmoke;
+  color: white;
   margin-top: 10px;
   margin-bottom: 32px;
 }
@@ -118,7 +125,7 @@
 }
 
 .acunt {
-  color: whitesmoke;
+  color: white;
 }
 
 .icons-social {
@@ -131,7 +138,7 @@
 }
 
 #social-icons {
-  color: whitesmoke;
+  color: white;
 }
 
 .cntct {
@@ -140,18 +147,18 @@
 }
 
 .lanza {
-  color: whitesmoke;
+  color: white;
   width: 500px;
   line-height: 7px;
   margin-top: 90px;
 }
 
 .lanzo {
-  color: whitesmoke;
+  color: white;
   line-height: 7px;
   margin-top: 90px;
 }
 
 .footer a {
-  color: whitesmoke;
+  color: white;
 }
