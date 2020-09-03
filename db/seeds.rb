@@ -8,6 +8,7 @@
 require 'faker'
 
 puts "Starting seeds.."
+Inquiry.destroy_all
 Offer.destroy_all
 User.destroy_all
 
