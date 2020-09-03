@@ -1,7 +1,7 @@
 <!-- registration edit -->
-<div class="device-wrapper edit">
+<div class="device-wrapper">
   <div class="device-container edit">
-  <div class="inside-device-container" id="user-container">
+  <div class="inside-device-container pr-5 border-right" id="user-container">
     <h2 id="user-title">Choose user type</h2>
 
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -28,7 +28,7 @@
     </div>
   </div>
 
-  <div class="inside-device-container login-details">
+  <div class="inside-device-container login-details pl-5">
 <!--     <h2>Edit <%= resource_name.to_s.humanize %></h2>
 -->
 <h2>Login details</h2>
