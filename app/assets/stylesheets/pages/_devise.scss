@@ -20,38 +20,41 @@
     padding: 30px;
   }
   &.edit {
-    background-color: rgba(0,0,0,0);
+    &.login-details {
+      border: none;
+    }
+    // background-color: rgba(0,0,0,0);
     width: 400px;
     padding: 50px;
     margin: 10px;
     border: 2px solid #22dac3;
-    color: white;
+    // color: white;
     margin-top: 12vh;
       & input {
-    background-color: rgba(0,0,0,0.1);
-    color: white;
+    // background-color: rgba(0,0,0,0.1);
+    // color: white;
     &.update-button {
       background-color: #22dac3;
     }
     &:focus {
-      background-color: rgba(0,0,0,0.1);
-      color: white;
+      // background-color: rgba(0,0,0,0.1);
+      // color: white;
     }
   }
     & select {
-    background-color: rgba(0,0,0,0.1);
-    color: white;
+    // background-color: rgba(0,0,0,0.1);
+    // color: white;
     &:focus {
-      background-color: rgba(0,0,0,0.1);
-      color: white;
+      // background-color: rgba(0,0,0,0.1);
+      // color: white;
     }
   }
   & textarea {
-    background-color: rgba(0,0,0,0.1);
-    color: white;
+    // background-color: rgba(0,0,0,0.1);
+    // color: white;
     &:focus {
-      background-color: rgba(0,0,0,0.1);
-      color: white;
+      // background-color: rgba(0,0,0,0.1);
+      // color: white;
     }
   }
   }
@@ -82,7 +85,6 @@
 }
 
   // bootstrap tabs customization
-
   .nav.welance {
     display: flex;
     text-align: center;
@@ -115,4 +117,8 @@
         color: #242a2e;
       }
     }
+  }
+
+  .ap-dataset-places {
+    color: black;
   }
