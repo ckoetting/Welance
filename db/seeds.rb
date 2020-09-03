@@ -13,14 +13,14 @@ User.destroy_all
 
 puts "Creating users"
 User.create(
-  email: "filo.filo@filo.filo",
-  password:"filofilo",
-  full_name: "Filo Donna",
+  email: "batman@bat.man",
+  password:"batmanbat",
+  full_name: "Batman",
   user_type: "Developer",
-  bio: "I love loving love",
-  location: "Naboo",
+  bio: "I am vengeance",
+  location: "Gotham City",
   phone_number: "3343421236",
-  hourly_rate: "50 €",
+  hourly_rate: "1000 drops of blood",
   headline: "headline",
   business_address: "Business Adress 1234",
   business_name: "Business Name",
