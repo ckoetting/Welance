@@ -11,10 +11,11 @@
       if (value === 'Developer') {
         document.querySelector(".device-container").style.borderColor = "#1fa1f2";
         document.querySelector("#user-title").innerText = "Developer details";
+        document.querySelector("#user-title").style.color = "#1fa1f2";
       } else {
         document.querySelector(".device-container").style.borderColor = "#E93A7D";
         document.querySelector("#user-title").innerText = "Business details";
-
+        document.querySelector("#user-title").style.color = "#E93A7D";
       }
     });
 

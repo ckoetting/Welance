@@ -24,13 +24,13 @@
       border: none;
     }
     // background-color: rgba(0,0,0,0);
-    width: 400px;
+    display: flex;
     padding: 50px;
     margin: 10px;
     border: 2px solid #22dac3;
     // color: white;
     margin-top: 12vh;
-      & input {
+    & input {
     // background-color: rgba(0,0,0,0.1);
     // color: white;
     &.update-button {
@@ -41,7 +41,7 @@
       // color: white;
     }
   }
-    & select {
+  & select {
     // background-color: rgba(0,0,0,0.1);
     // color: white;
     &:focus {
@@ -57,9 +57,17 @@
       // color: white;
     }
   }
-  }
-
 }
+}
+
+#user-title {
+margin-bottom: 40px;
+}
+
+.inside-device-container {
+  padding: 0 20px;
+}
+
 
 .sign-up-text-box {
   width: 300px;
