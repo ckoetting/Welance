@@ -2,8 +2,7 @@ class InquiriesController < ApplicationController
   before_action :set_inquiry, only: [:show, :edit, :update, :destroy]
 
   def index
-    @user = User.find(params[:user_id])
-    @inquiries = @user.inquiries
+    @inquiries = current_user.inquiries
   end
 
   def show
@@ -19,7 +18,7 @@ class InquiriesController < ApplicationController
     @inquiry.user = current_user
     @inquiry.offer = Offer.find(params[:offer_id])
     if @inquiry.save
-      redirect_to inquiry_path(@inquiry)
+      redirect_to my_inquiries_path
       flash.notice = "Your application as been sent!"
     else
       render :new
