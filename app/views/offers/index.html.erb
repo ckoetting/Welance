@@ -2,7 +2,7 @@
   <div class="offers-index-container">
     <div class="offers-index-search">
       <div class="offers-index-searchbarbut">
-      
+
     <%= form_tag offers_path, method: :get, id: "search" do %>
     <%= submit_tag "Search", class: "offer-button-search btn btn-outline-success", style: "border-radius: 23px;"%>
     <%= text_field_tag :search_by_title_and_location,
@@ -20,7 +20,7 @@
     <div class="offers-index-offers">
 
       <% @offers.each do |offer| %>
-      <div class="offers-index-offer card">
+      <div class="offers-index-offer card" id="offer-<%= offer.id %>">
         <div class="offers-index-offer-head">
           <div class="offers-index-avatar">
             <img src="https://images.unsplash.com/photo-1589329482108-e414c7c6b8c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" class="company-pic" >
@@ -31,15 +31,21 @@
         <% end %></h4>
           </div>
         </div>
+
         <hr width="100%" color="gray">
+
         <div class="offers-index-offer-description">
           <%= offer.description %>
         </div>
         <div class="offers-index-offer-actions">
-           <%= link_to new_offer_inquiry_path(offer) do %>
-           <button name="button" type="submit" class="btn-offer btn1 btn btn-success"><i class="fab fa-telegram-plane"></i> Apply</button>
-           <% end %>
-            <button name="button" type="submit" class="btn-offer btn btn-success"><i class="far fa-bookmark"></i> Save</button>
+          <%= link_to new_offer_inquiry_path(offer) do %>
+          <button name="button" type="submit" class="btn-offer btn1 btn btn-success"><i class="fab fa-telegram-plane"></i> Apply</button>
+          <% end %>
+
+          <%= button_to bookmark_path(offer), class: "btn-offer btn-success btn", method: :post, remote: true do %>
+            <i class="fa<%= offer.saved ? 's' : 'r' %> fa-bookmark"></i> Save
+          <% end %>
+
         </div>
       </div>
       <% end %>
