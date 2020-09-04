@@ -18,7 +18,7 @@ class InquiriesController < ApplicationController
     @inquiry.user = current_user
     @inquiry.offer = Offer.find(params[:offer_id])
     if @inquiry.save
-      redirect_to my_inquiries_path
+      redirect_to inquiry_sent_path
       flash.notice = "Your application as been sent!"
     else
       render :new

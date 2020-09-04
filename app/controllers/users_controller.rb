@@ -7,6 +7,10 @@ class UsersController < ApplicationController
     @businesses = User.where(user_type: "business")
   end
 
+  def success
+    @inquiry = current_user.inquiries.last
+  end
+
   def job_offers
     @job_offers = []
     current_user.offers.each do |offer|
