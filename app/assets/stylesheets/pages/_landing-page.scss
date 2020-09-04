@@ -20,7 +20,7 @@
   margin: 0;
   color: white;
   font-family: "Quicksand", sans-serif;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  // text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 60px;
 }
 
@@ -45,7 +45,7 @@
 .banner.landing p {
   font-size: 20px;
   color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  // text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 .our-developers-info {
   margin: 40px 90px 40px;
@@ -87,6 +87,11 @@
   font-family: 'Roboto Condensed', sans-serif;
 }
 
+.pages-home > #h1-2 {
+  text-align: center;
+  margin-top: 30px;
+  color: black;
+
 .h2-5 {
   margin-top: 34px;
 }
@@ -107,8 +112,9 @@
   text-align: center;
 }
 
-.h2-1 {
+.welance-pros > .h2-1 {
   margin-top: 40px;
+  color: #242B2E;
   // margin-left: -66px;
 }
 
