@@ -1,38 +1,82 @@
+<%if @offer.user == current_user%>
+  <div class="banner offers" style="background-image: linear-gradient(to right, rgb(55, 59, 68), rgb(66, 134, 244));">
+  <div class="banner-container offers">
+     <h1>Welcome,  <%=current_user.full_name%> &#128188;</h1>
+     <div id="banner-logo-seperator"></div>
+     <h3>These are the applications for <%= @offer.title%></h3>
+  </div>
+  </div>
+  <%end%>
 <div class="wrapper-offer">
   <div class="offer-page-container">
     <div class="card">
       <div class="offer-page-first">
         <div class="offer-page-avatar">
-          <img src="https://images.unsplash.com/photo-1589329482108-e414c7c6b8c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" class="offer-pic" >
+          <img
+            src="https://images.unsplash.com/photo-1589329482108-e414c7c6b8c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
+            class="offer-pic">
         </div>
 
         <div class="offer-page-info">
           <ul>
-          <li> <h1><%= @offer.title %></h1></li>
-          <li> <p><i><%= @offer.skills_required %></li>
-          <li> from </i><%= @offer.location %></li>
-          <li> <%= @offer.compensation %></li>
-          <li> <%= @offer.user.business_name %></li>
-          <li> <%= @offer.user.business_address %></p></li>
+            <li>
+              <h1><%= @offer.title %></h1>
+            </li>
+            <li>
+              <p><i><%= @offer.skills_required %>
+            </li>
+            <li> from </i><%= @offer.location %></li>
+            <li> <%= @offer.compensation %></li>
+            <li> <%= @offer.user.business_name %></li>
+            <li> <%= @offer.user.business_address %></p>
+            </li>
 
           </ul>
         </div>
       </div>
     </div>
-      <div class="offer-page-actions">
-        <hr width="120 px" color="blue">
-        <div class="offer-page-button">
-          <%= link_to user_path, class: "btn nav-item btn-primary" do %>
-              Save Offer
-            <% end %>
+
+    <%if @offer.user == current_user%>
+    <% @offer.inquiries.each do |inquiry|%>
+    <div class="inquiries-container business">
+      <div class="course">
+        <div class="course-preview">
+          <h6>Applicant</h6>
+          <h2><%= inquiry.user.full_name %></h2>
+          <a href="/users/<%=inquiry.user.id%>">View user profile <%= inquiry.user.full_name %> <i
+              class="fas fa-chevron-right"></i></a>
         </div>
-        <div class="offer-page-button">
-          <%= link_to new_offer_inquiry_path(@offer), class: "btn nav-item btn-success" do %>
-              Apply Job
-            <% end %>
+        <div class="course-info">
+          <div class="progress-container">
+            <span class="progress-text">
+              <%= inquiry.created_at %>
+            </span>
+          </div>
+          <h6><%=inquiry.offer.user.business_name%></h6>
+          <h2><%= inquiry.offer.title %></h2>
+          <span class="progress-text inquiry-status"><strong>application status: <%= inquiry.status %></strong></span>
+          <button class="btn inquiry">Application</button>
         </div>
-        <hr width="120 px" color="blue">
       </div>
+    </div>
+    <% end %>
+
+
+    <%else%>
+    <div class="offer-page-actions">
+      <hr width="120 px" color="blue">
+      <div class="offer-page-button">
+        <%= link_to user_path, class: "btn nav-item btn-primary" do %>
+        Save Offer
+        <% end %>
+      </div>
+      <div class="offer-page-button">
+        <%= link_to new_offer_inquiry_path(@offer), class: "btn nav-item btn-success" do %>
+        Apply Job
+        <% end %>
+      </div>
+      <hr width="120 px" color="blue">
+    </div>
     <div class="card" style="margin-bottom: 20px;">
       <div class="offer-page-perks">
         <div class="perk-1"><i class="fas fa-certificate"></i></div>
@@ -47,6 +91,6 @@
         </p>
       </div>
     </div>
+    <%end%>
     </div>
-  </div>
-</div>
+    </div>
