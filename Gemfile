@@ -23,6 +23,8 @@ gem 'redis', '~> 4.0'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'cloudinary', '~> 1.16.0'
 gem 'jquery-rails'
+#filtering
+gem 'acts-as-taggable-on', '~> 6.0'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

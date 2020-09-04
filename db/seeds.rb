@@ -6,6 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
+require 'open-uri'
+
+TITLES = ["Need help with java", "Ruby implementation", "Css job","need an html expert"]
+SKILLS = ["CSS", "HTML","Ruby", "Java Script", "Rails", "SQL"]
+LOCATIONS = ["Freiburg", "Roma", "Amsterdam", "Sandweiler", "Venezia","Springfield"]
+
 
 puts "Starting seeds.."
 Offer.destroy_all
@@ -33,16 +39,18 @@ puts "______________"
 
 puts "Creating offers.."
 
-5.times do
-  offer = Offer.new(title: "Finding Nemo",
-   description: "do I look like a guy who likes repeating himself?",
-   skills_required:"Swimming, Fishing",
-   compensation: 50.000,
+
+15.times do
+  offer = Offer.new(
+    title: TITLES.sample,
+   description: Faker::TvShows::FamilyGuy.quote,
+   skills_required: "#{SKILLS.sample}, #{SKILLS.sample}",
+   compensation: rand(50000..100000),
    fixed_price: true,
-   location: "pacific ocean",
+   location: LOCATIONS.sample,
    deadline_at: Date.today)
   offer.user = User.first
-  offer.save
+  offer.save!
 end
 
 puts "#{Offer.count} offers created"
