@@ -18,16 +18,20 @@ User.destroy_all
 
 puts "Creating users"
 User.create(
-  email: "cornelius@ckdevelopment.de",
+  email: "jobs@airbnb.com",
   password:"Test1234",
-  full_name: "Cornelius Koetting",
-  user_type: "Developer",
+  full_name: "Brian Chesky",
+  user_type: "Business",
   bio: "Experienced Entrepreneur with a demonstrated history of working in the information technology and services industry. Skilled in WordPress, Ruby on Rails, Web Design, Ruby, and Full-Stack Development. Strong business development professional with a Bootcamp focused in Full-Stack Web Developmemt from Le Wagon. ",
-  location: "Amsterdam, Netherlands",
+  location: "United States",
   phone_number: "0170705047",
   hourly_rate: "1500",
-  headline: "Back End Wizard",
-  website: "ckdevelopment.de" )
+  headline: "Airbnb CEO",
+  website: "airbnb.com" ,
+  business_address: "888 Brannan St, San Francisco, CA 94103, United States",
+  business_name: "Airbnb Inc.",
+  business_vat_id: "882948",
+  business_size: "6300")
 puts "#{User.count} users created"
 
 puts "______________"
