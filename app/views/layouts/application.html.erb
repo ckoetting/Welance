@@ -12,7 +12,7 @@
 
   <meta charset="utf-8" >
 </head>
-<body>
+<body class="<%= params[:controller] %>-<%= params[:action] %>">
   <%= render 'shared/navbar' %>
   <%= yield %>
   <%= render 'shared/footer'%>

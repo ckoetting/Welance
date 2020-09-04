@@ -9,5 +9,7 @@ devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks'
   get 'users/applications', to: 'users#job_applications', as: :business_applications
   resources :users, only: [ :show ] 
   resources :contact, only: [:new, :create]
+  resources :about, only: [:show]
   get 'contact_us' => 'pages#contact_us'
+  get 'about' => 'pages#about'
 end
