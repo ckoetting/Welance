@@ -23,6 +23,7 @@ gem 'redis', '~> 4.0'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'cloudinary', '~> 1.16.0'
 gem 'jquery-rails'
+gem 'faker'
 #filtering
 gem 'acts-as-taggable-on', '~> 6.0'
 
@@ -47,7 +48,6 @@ gem 'omniauth-github'
 
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'
-  gem 'faker'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
