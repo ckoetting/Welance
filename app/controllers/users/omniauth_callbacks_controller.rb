@@ -4,7 +4,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     @user = User.from_omniauth(request.env["omniauth.auth"])
     if @user.persisted?
       sign_in(@user)
-      redirect_to edit_user_registration_path, event: :authentication #this will throw if @user is not activated
+      redirect_to profile_sign_up_path event: :authentication #this will throw if @user is not activated
       set_flash_message(:notice, :success, kind: "Github") if is_navigational_format?
     else
       session["devise.github_data"] = request.env["omniauth.auth"]
