@@ -7,35 +7,6 @@
   </div>
   </div>
   <%end%>
-<div class="wrapper-offer">
-  <div class="offer-page-container">
-    <div class="card">
-      <div class="offer-page-first">
-        <div class="offer-page-avatar">
-          <img
-            src="https://images.unsplash.com/photo-1589329482108-e414c7c6b8c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
-            class="offer-pic">
-        </div>
-
-        <div class="offer-page-info">
-          <ul>
-            <li>
-              <h1><%= @offer.title %></h1>
-            </li>
-            <li>
-              <p><i><%= @offer.skills_required %>
-            </li>
-            <li> from </i><%= @offer.location %></li>
-            <li> <%= @offer.compensation %></li>
-            <li> <%= @offer.user.business_name %></li>
-            <li> <%= @offer.user.business_address %></p>
-            </li>
-
-          </ul>
-        </div>
-      </div>
-    </div>
-
     <%if @offer.user == current_user%>
     <% @offer.inquiries.each do |inquiry|%>
     <div class="inquiries-container business">
@@ -55,7 +26,7 @@
           <h6><%=inquiry.offer.user.business_name%></h6>
           <h2><%= inquiry.offer.title %></h2>
           <span class="progress-text inquiry-status"><strong>application status: <%= inquiry.status %></strong></span>
-          <button class="btn inquiry">Application</button>
+          <%= link_to inquiry_path(inquiry) do%><button class="btn inquiry">Application</button><%end%>
         </div>
       </div>
     </div>
@@ -63,34 +34,39 @@
 
 
     <%else%>
-    <div class="offer-page-actions">
-      <hr width="120 px" color="blue">
-      <div class="offer-page-button">
-        <%= link_to user_path, class: "btn nav-item btn-primary" do %>
-        Save Offer
-        <% end %>
+  <div class="wrapper offers-show">
+   <div class="card offers mx-auto">
+      <div class="row">
+        <div class="logo offers ml-3 mb-3"><img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTxDRpxI5gXgaVmnO-VgcVUNOkca91jIpS75Flbzkz5W_5g5_V5&usqp=CAU">
+        </div>
       </div>
-      <div class="offer-page-button">
-        <%= link_to new_offer_inquiry_path(@offer), class: "btn nav-item btn-success" do %>
-        Apply Job
-        <% end %>
+      <div class="card-title">
+        <p class="heading" style="color: black;"><%= link_to offer_path(@offer) do %>
+        <%= @offer.title %>
+        <% end %></p>
       </div>
-      <hr width="120 px" color="blue">
+      <p class="text-muted"><%=@offer.description%></p>
+      <div class="offer-details">
+       <button type="button" class="btn  btn-sm" style="background: #8B2635; "><%=@offer.employment_type%></button>
+        <button type="button" class="btn  btn-sm" style="background: #8B2635; ">
+        <%if @fixed_price%>Fixed Price<%else%>Per Hour<%end%></button>
+        <button type="button" class="btn  btn-sm" style="background: #8B2635;"><%=@offer.location%></button>
+      </div>
+      <div class="row btnsubmit mt-4">
+        <div style="padding-top: 1rem; padding-left: 0.4rem;"> <%= link_to new_offer_inquiry_path(@offer) do %>
+          <button name="button" type="submit" class="btn-offer btn1 btn btn-success"><i
+              class="fab fa-telegram-plane"></i>
+            Apply</button>
+          <% end %></div>
+        <div style="padding-top: 1rem; padding-left: 0.4rem;">
+          <%= button_to bookmark_path(@offer), class: "btn-offer btn-success btn", method: :post, remote: true do %>
+          <i class="fa<%= @offer.saved ? 's' : 'r' %> fa-bookmark"></i> Save
+          <% end %> </div>
+      </div>
     </div>
-    <div class="card" style="margin-bottom: 20px;">
-      <div class="offer-page-perks">
-        <div class="perk-1"><i class="fas fa-certificate"></i></div>
-        <div class="perk-2"><i class="fas fa-certificate"></i></div>
-        <div class="perk-3"><i class="fas fa-certificate"></i></div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="offer-page-about">
-        <p>
-          <%= @offer.description %>
-        </p>
-      </div>
-    </div>
+  </div>
     <%end%>
+
     </div>
     </div>
