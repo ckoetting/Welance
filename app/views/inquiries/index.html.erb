@@ -1,17 +1,28 @@
 <div class="index-wrapper">
-
-  <% @inquiries.each do |inquiry|%>
   <div class="list-group">
-    <div class="inquiry-grid">
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
+    <div class="page-header"><h3>Your Job Applications</h3></div>
+  <% @inquiries.each do |inquiry|%>
+    <div class="courses-container">
+  <div class="course">
+    <div class="course-preview">
+      <h6>Company</h6>
+      <h2><%= inquiry.offer.user.business_name %></h2>
+      <a href="#">View all offers from <%= inquiry.offer.user.business_name %> <i class="fas fa-chevron-right"></i></a>
+    </div>
+    <div class="course-info">
+      <div class="progress-container">
+        <span class="progress-text">
+          <%= inquiry.created_at %>
+        </span>
       </div>
+      <h6>Job Title</h6>
+      <h2><%= inquiry.offer.title %></h2>
+      <span class="progress-text inquiry-status">application status: <%= inquiry.status %></span>
+      <button class="btn inquiry">Details</button>
     </div>
   </div>
+</div>
   <% end %>
+  </div>
   </div>
 </div>

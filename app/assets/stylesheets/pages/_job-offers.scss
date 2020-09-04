@@ -1,0 +1,45 @@
+.job-offers-container {
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.job-offers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: stretch;
+  column-gap: 1.5em;
+  row-gap: 2.2em;
+}
+.offers-index-offer-description.inquiry {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner.offers {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  height: 38rem;
+}
+#banner-logo-seperator {
+  border: 1px solid #FFFFFF;
+  width: 70rem;
+}
+
+.banner-container.offers {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  h1 {
+    margin: 0;
+    padding: 3rem;
+    font-size: 45px;
+    color: white;
+  }
+  h3 {
+    color: white;
+    padding: 2rem;
+    font-size: 35px;
+  }
+}
