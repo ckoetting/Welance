@@ -1,54 +1,55 @@
-<div class="index-wrapper">
-  <div class="offers-index-container">
-    <div class="offers-index-search">
-      <div class="offers-index-searchbarbut">
+<div class="wrapper offers">
+  <strong><h1 style="text-align: center; color: white;">Open Positions</h1></strong>
+<div class="container offer">
+  <div class="offers-index-search">
+    <div class="offers-index-searchbarbut">
 
-    <%= form_tag offers_path, method: :get, id: "search" do %>
-    <%= submit_tag "Search", class: "offer-button-search btn btn-outline-success", style: "border-radius: 23px;" %>
-    <%= text_field_tag :search_by_title_and_location,
+      <%= form_tag offers_path, method: :get, id: "search" do %>
+      <%= submit_tag "Search", class: "offer-button-search btn btn-outline-success", style: "border-radius: 23px;" %>
+      <%= text_field_tag :search_by_title_and_location,
     params[:search_by_title_and_location],
     class: "form-control",
       placeholder: "Find an offer"
       %>
-    <% end %>
-      </div>
-      <div class="row">
-        <div class="offers-index-dropdowns">
-        </div>
-      </div>
-    </div>
-    <div class="offers-index-offers">
-
-      <% @offers.each do |offer| %>
-      <div class="offers-index-offer card" id="offer-<%= offer.id %>">
-        <div class="offers-index-offer-head">
-          <div class="offers-index-avatar">
-            <img src="https://images.unsplash.com/photo-1589329482108-e414c7c6b8c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" class="company-pic" >
-          </div>
-          <div class="offers-index-offer-name">
-            <h4><%= link_to offer_path(offer) do %>
-        <%= offer.title %>
-        <% end %></h4>
-          </div>
-        </div>
-
-        <hr width="100%" color="gray">
-
-        <div class="offers-index-offer-description">
-          <%= offer.description %>
-        </div>
-        <div class="offers-index-offer-actions">
-          <%= link_to new_offer_inquiry_path(offer) do %>
-          <button name="button" type="submit" class="btn-offer btn1 btn btn-success"><i class="fab fa-telegram-plane"></i> Apply</button>
-          <% end %>
-
-          <%= button_to bookmark_path(offer), class: "btn-offer btn-success btn", method: :post, remote: true do %>
-            <i class="fa<%= offer.saved ? 's' : 'r' %> fa-bookmark"></i> Save
-          <% end %>
-
-        </div>
-      </div>
       <% end %>
     </div>
   </div>
-</div>
+
+  <div class="offers index">
+    <% @offers.each do |offer| %>
+    <div class="card offers mx-auto">
+      <div class="row">
+        <div class="logo offers ml-3 mb-3"><img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTxDRpxI5gXgaVmnO-VgcVUNOkca91jIpS75Flbzkz5W_5g5_V5&usqp=CAU">
+        </div>
+      </div>
+      <div class="card-title">
+        <p class="heading" style="color: black;"><%= link_to offer_path(offer) do %>
+        <%= offer.title %>
+        <% end %></p>
+      </div>
+      <p class="text-muted"><%=offer.description%></p>
+      <div class="offer-details">
+       <button type="button" class="btn  btn-sm" style="background: #8B2635; "><%=offer.employment_type%></button>
+        <button type="button" class="btn  btn-sm" style="background: #8B2635; ">
+        <%if @fixed_price%>Fixed Price<%else%>Per Hour<%end%></button>
+        <button type="button" class="btn  btn-sm" style="background: #8B2635;"><%=offer.location%></button>
+      </div>
+      <div class="row btnsubmit mt-4">
+        <div style="padding-top: 1rem; padding-left: 0.4rem;"> <%= link_to new_offer_inquiry_path(offer) do %>
+          <button name="button" type="submit" class="btn-offer btn1 btn btn-success"><i
+              class="fab fa-telegram-plane"></i>
+            Apply</button>
+          <% end %></div>
+        <div style="padding-top: 1rem; padding-left: 0.4rem;">
+          <%= button_to bookmark_path(offer), class: "btn-offer btn-success btn", method: :post, remote: true do %>
+          <i class="fa<%= offer.saved ? 's' : 'r' %> fa-bookmark"></i> Save
+          <% end %> </div>
+      </div>
+    </div>
+
+
+
+    <% end %>
+  </div>
+  </div>

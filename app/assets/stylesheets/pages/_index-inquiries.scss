@@ -23,10 +23,11 @@
   border-radius: 20px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
   display: flex;
-  max-width: 100%;
   margin: 20px;
   overflow: hidden;
-  width: 700px;
+  max-width: 70rem;
+  min-width: 40rem;
+  height: 15rem;
 }
 
 .course h6 {
