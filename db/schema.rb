@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2020_09_03_124459) do
+=======
+ActiveRecord::Schema.define(version: 2020_09_03_123455) do
+>>>>>>> master
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,6 +75,7 @@ ActiveRecord::Schema.define(version: 2020_09_03_124459) do
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "saved", default: false
     t.index ["user_id"], name: "index_offers_on_user_id"
   end
 

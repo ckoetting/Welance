@@ -4,6 +4,7 @@ class User < ApplicationRecord
   has_many :inquiries
   has_many :offers
   has_one_attached :photo
+  has_one_attached :business_logo
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :validatable,
   :omniauthable, omniauth_providers: [:github]
