@@ -1,55 +1,55 @@
 <div class="wrapper-profile">
   <div class="profile-page-container">
-    <div class="card">
+    <div class="profile-card">
       <div class="profile-page-first">
         <div class="profile-page-avatar">
           <!-- <img src="https://images.unsplash.com/photo-1589329482108-e414c7c6b8c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" class="profile-pic" > -->
           <%if current_user.photo.attached? || !current_user.avatar_url.nil?%>
-            <%= image_tag current_user.avatar_url, class: "profile-pic" %>
+          <%= image_tag current_user.avatar_url, class: "profile-pic" %>
           <%end%>
         </div>
         <div class="profile-page-info">
           <ul>
-          <li> <h1><%= current_user.full_name %></h1></li>
-          <li> <p><i><%= current_user.email %></li>
-          <li> from </i><%= current_user.location %></li>
-          <li> <%= current_user.phone_number %></li>
-          <li> <i>hourly rate</i> <%= current_user.hourly_rate %>€/h</li>
-          <li> <%= current_user.business_name %></li>
-          <li> <%= current_user.business_address %></p></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-      <div class="profile-page-actions">
-        <hr width="120 px">
-        <div class="profile-page-button">
-          <%= link_to edit_user_registration_path, class: "btn nav-item btn-primary" do %>
+            <li><h2 class="m-0"><%= current_user.full_name %></h2></li>
+            <li><p><i><%= current_user.email %></li>
+              <li>from </i><%= current_user.location %></li>
+              <li><%= current_user.phone_number %></li>
+              <li><i>hourly rate</i> <%= current_user.hourly_rate %>€/h</li>
+              <li><i>Business </i><%= current_user.business_name %></li>
+              <li> <%= current_user.business_address %></p></li>
+            </ul>
+            <div class="icon-block">
+              <a href="#"><i class="fab fa-linkedin p-2"></i></a>
+              <a href="#"> <i class="fab fa-twitter p-2"></i></a>
+              <a href="#"> <i class="fab fa-google-plus p-2"></i></a>
+            </div>
+            <!-- buttons -->
+            <div class="profile-page-button pt-3 border-top">
+              <%= link_to edit_user_registration_path, class: "btn nav-item btn-primary" do %>
               Edit Profile
-            <% end %>
-        </div>
-        <div class="profile-page-button">
-          <%= link_to user_path, class: "btn nav-item btn-success" do %>
+              <% end %>
+              <%= link_to user_path, class: "btn nav-item btn-success" do %>
               Upload Resume
-            <% end %>
+              <% end %>
+            </div>
+          </div>
         </div>
-        <hr width="120 px">
       </div>
-    <div class="card" style="margin-bottom: 20px;">
-      <div class="profile-page-perks">
-        <div class="perk-1"><i class="fas fa-certificate"></i></div>
-        <div class="perk-2"><i class="fas fa-certificate"></i></div>
-        <div class="perk-3"><i class="fas fa-certificate"></i></div>
+ <!--      <div class="card" style="margin-bottom: 20px;">
+        <div class="profile-page-perks">
+          <div class="perk-1"><i class="fas fa-certificate"></i></div>
+          <div class="perk-2"><i class="fas fa-certificate"></i></div>
+          <div class="perk-3"><i class="fas fa-certificate"></i></div>
+        </div>
+      </div> -->
+      <div class="card my-4">
+        <div class="profile-page-about">
+          <h2>Bio</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse molestie odio nisl, sed rhoncus turpis dignissim at. Donec sit amet sollicitudin orci. In hac habitasse platea dictumst. Curabitur iaculis nisi eu mauris vestibulum, a commodo nibh rutrum. Nulla in mattis nunc. Praesent tincidunt risus id finibus viverra. Ut et tortor ut mauris ornare suscipit. Praesent ut lacinia orci, ut sollicitudin velit. Phasellus a purus sed mauris scelerisque porta. Nunc in tempor elit.<br><br> Proin a dapibus nibh.
+            Maecenas gravida justo sem, ut mattis nunc condimentum ut. Etiam vel libero ut lorem egestas scelerisque sed quis neque. Quisque sem neque, placerat in vestibulum eget, ultricies vitae velit. Vestibulum ut interdum dolor, eget interdum sapien. Morbi nec lorem ante.
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="card mb-5">
-      <div class="profile-page-about">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse molestie odio nisl, sed rhoncus turpis dignissim at. Donec sit amet sollicitudin orci. In hac habitasse platea dictumst. Curabitur iaculis nisi eu mauris vestibulum, a commodo nibh rutrum. Nulla in mattis nunc. Praesent tincidunt risus id finibus viverra. Ut et tortor ut mauris ornare suscipit. Praesent ut lacinia orci, ut sollicitudin velit. Phasellus a purus sed mauris scelerisque porta. Nunc in tempor elit.<br><br> Proin a dapibus nibh.
-          Maecenas gravida justo sem, ut mattis nunc condimentum ut. Etiam vel libero ut lorem egestas scelerisque sed quis neque. Quisque sem neque, placerat in vestibulum eget, ultricies vitae velit. Vestibulum ut interdum dolor, eget interdum sapien. Morbi nec lorem ante. Vivamus egestas, odio non porttitor sodales, justo elit varius purus, ac mattis dui tellus id arcu. Nunc eleifend mattis metus sed ultricies. Nunc hendrerit vel dolor ut varius. Pellentesque dictum, nulla non condimentum ultrices, sapien est blandit quam, at congue tellus massa a tortor. Vivamus pretium imperdiet sem eu vulputate. In hac habitasse platea dictumst.
-        </p>
-      </div>
-    </div>
     </div>
   </div>
-</div>
