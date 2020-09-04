@@ -14,4 +14,7 @@ devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks'
   resources :about, only: [:show]
   get 'contact_us' => 'pages#contact_us'
   get 'about' => 'pages#about'
+  resources :services, only: [:show]
+  get 'services' => 'pages#services'
+  get 'services' => 'pages#services'
 end
