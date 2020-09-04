@@ -11,5 +11,7 @@ devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks'
   get 'users/success', to: 'users#success', as: :inquiry_sent
   resources :users, only: [ :show ]
   resources :contact, only: [:new, :create]
+  resources :about, only: [:show]
   get 'contact_us' => 'pages#contact_us'
+  get 'about' => 'pages#about'
 end
