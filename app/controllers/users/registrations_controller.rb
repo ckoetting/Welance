@@ -10,4 +10,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
     end
   end
 
+  def profile_sign_up
+    @user = current_user
+    if @user
+      render :profile_sign_up
+    else
+      render file: 'public/404', status: 404, formats: [:html]
+    end
+  end
+
 end
