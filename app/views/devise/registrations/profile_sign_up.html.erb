@@ -8,7 +8,6 @@
     <%= f.error_notification %>
     <div class="form-inputs">
       <%= f.hidden_field :provider, :value => current_user.provider %>
-      <%= f.hidden_field :type, :value => current_user.user_type %>
       <%= f.input :user_type, label: false, :collection => %w[Developer Business] %>
     </div>
 
@@ -67,4 +66,4 @@
 </div>
 </div>
 </div>
-<%= javascript_pack_tag 'user_edit' %>
+<%= javascript_pack_tag 'profile_sign_up' %>
