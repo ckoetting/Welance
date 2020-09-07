@@ -17,4 +17,6 @@ resources :contact, only: [:new, :create]
 resources :about, only: [:show]
 get 'contact_us' => 'pages#contact_us'
 get 'about' => 'pages#about'
+resources :customers, only: [:show]
+get 'customers' => 'pages#customers'
 end
