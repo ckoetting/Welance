@@ -4,6 +4,7 @@
     <div class="offers-index-search">
       <div class="offers-index-searchbarbut">
 
+
         <%= form_tag offers_path, method: :get, id: "search" do %>
         <%= submit_tag "Search", class: "offer-button-search btn btn-outline-success", style: "border-radius: 23px;" %>
         <%= text_field_tag :search_by_title_and_location,
@@ -11,10 +12,27 @@
           class: "form-control",
         placeholder: "Find an offer"
         %>
+
       <% end %>
+  
+    <%= search_form_for @q do |f| %>
+<%= f.label :title %>
+<%= f.text_field :title_cont, class: 'form-control' %>
+<%= f.label :location %>
+<%= f.text_field :location_cont, class: 'form-control' %>
+<%= f.label :skills_required %>
+<%= f.text_field :skills_required_cont, class: 'form-control' %>
+<%= f.submit class: 'btn btn-primary' %>
+<%= link_to "Clear", request.path, class: "btn btn-default"%>
+<% end %>
     </div>
   </div>
+</div>
+</div>
+</div>
 
+
+  
   <div class="offers index">
     <% @offers.each do |offer| %>
     <div class="card offers mx-auto">
@@ -56,3 +74,4 @@
   </div>
   </div>
 </div>
+
