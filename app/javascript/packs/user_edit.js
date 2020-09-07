@@ -6,11 +6,11 @@
       if (user_type === 'Developer') {
         $('div#Business').hide()
         document.querySelector("#user-title").innerText = "Developer details";
-        document.querySelector("#user-title").style.color = "#1fa1f2";
+        document.querySelector("#user-title").style.color = "white";
       } else {
         $('div#Developer').hide()
         document.querySelector("#user-title").innerText = "Business details";
-        document.querySelector("#user-title").style.color = "#E93A7D";
+        document.querySelector("#user-title").style.color = "#white";
       }
 
       const current_password_field = document.querySelector(".current_password_field");
