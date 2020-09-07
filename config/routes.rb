@@ -3,7 +3,9 @@ devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks'
   root to: 'pages#home'
   post '/bookmark/:id' => 'offers#bookmark', as: :bookmark
   resources :offers do
-    resources :inquiries, shallow: true
+    resources :inquiries, shallow: true do
+      get 'create_chat', to: 'chatrooms#create_chatroom'
+    end
     resources :reviews
     end
   get '/users/my_inquiries', to: 'inquiries#index', as: :my_inquiries
