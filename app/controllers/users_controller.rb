@@ -11,6 +11,16 @@ class UsersController < ApplicationController
     @inquiry = current_user.inquiries.last
   end
 
+  def saved_offers
+    @offers = current_user.offers
+    @saved_offers = []
+    current_user.offers.each do |offer|
+      if offer.saved
+        @saved_offers << offer
+      end
+    end
+  end
+
   def job_offers
     @job_offers = []
     current_user.offers.each do |offer|
