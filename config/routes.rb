@@ -9,6 +9,7 @@ devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks'
   get '/users/my_inquiries', to: 'inquiries#index', as: :my_inquiries
   get 'users/applications', to: 'users#job_offers', as: :business_applications
   get 'users/success', to: 'users#success', as: :inquiry_sent
+  get 'users/savedoffers', to: 'users#saved_offers', as: :saved_offers
   resources :users, only: [ :show ]
   resources :contact, only: [:new, :create]
   resources :about, only: [:show]
