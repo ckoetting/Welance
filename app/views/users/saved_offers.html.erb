@@ -1,0 +1,42 @@
+<div class="wrapper offers">
+  <strong><h1 style="text-align: center; color: white;">Saved Positions</h1></strong>
+<div class="container offer">
+
+  <div class="offers index">
+    <% @saved_offers.each do |offer| %>
+    <div class="card offers mx-auto">
+      <div class="row">
+        <div class="logo offers ml-3 mb-3"><img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTxDRpxI5gXgaVmnO-VgcVUNOkca91jIpS75Flbzkz5W_5g5_V5&usqp=CAU">
+        </div>
+      </div>
+      <div class="card-title">
+        <p class="heading" style="color: black;"><%= link_to offer_path(offer) do %>
+        <%= offer.title %>
+        <% end %></p>
+      </div>
+      <p class="text-muted"><%=offer.description%></p>
+      <div class="offer-details">
+       <button type="button" class="btn  btn-sm" style="background: #8B2635; "><%=offer.employment_type%></button>
+        <button type="button" class="btn  btn-sm" style="background: #8B2635; ">
+        <%if @fixed_price%>Fixed Price<%else%>Per Hour<%end%></button>
+        <button type="button" class="btn  btn-sm" style="background: #8B2635;"><%=offer.location%></button>
+      </div>
+      <div class="row btnsubmit mt-4">
+        <div style="padding-top: 1rem; padding-left: 0.4rem;"> <%= link_to new_offer_inquiry_path(offer) do %>
+          <button name="button" type="submit" class="btn-offer btn1 btn btn-success"><i
+              class="fab fa-telegram-plane"></i>
+            Apply</button>
+          <% end %></div>
+        <div style="padding-top: 1rem; padding-left: 0.4rem;">
+          <%= button_to bookmark_path(offer), class: "btn-offer btn-success btn", method: :post, remote: true do %>
+          <i class="fa<%= offer.saved ? 's' : 'r' %> fa-bookmark"></i> Save
+          <% end %> </div>
+      </div>
+    </div>
+
+
+
+    <% end %>
+  </div>
+  </div>
