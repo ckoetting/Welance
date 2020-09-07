@@ -8,7 +8,6 @@
 .offers-index-search {
   margin: 120px auto 20px auto;
   border-radius: 40px;
-  background-color: #293241;
   padding-top: 5px;
 }
 .offers-index-searchbarbut {
@@ -33,13 +32,14 @@
 }
 
 #search {
-  width: 424px;
   display: flex;
   flex-flow: row-reverse;
-  align-items: center;margin: 3vh;
+  align-items: center;
+  margin: 3vh;
   border-radius: 5px;
-  margin-bottom: 22px;
-  margin-top: 4px;
+  margin-bottom: 12px;
+  margin-top: 13px;
+  margin-left: 36px;
 }
 
 #search_by_title_and_location {
