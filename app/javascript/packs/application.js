@@ -26,6 +26,7 @@ require("jquery")
 import "bootstrap";
 import { mobileMenuNav} from '../components/navbar';
 import { initAutocomplete } from '../plugins/init_autocomplete';
+import { initChatroomCable } from '../channels/chatroom_channel'
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -35,6 +36,7 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   mobileMenuNav();
   initAutocomplete();
+  initChatroomCable();
   var select = function(s) {
     return document.querySelector(s);
   }
