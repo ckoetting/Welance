@@ -56,25 +56,28 @@
     </div>
   </div>
 
-    
+
   <div class="card offers mx-auto">
       <div class="row">
         <div class="logo offers ml-3 mb-3"><img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTxDRpxI5gXgaVmnO-VgcVUNOkca91jIpS75Flbzkz5W_5g5_V5&usqp=CAU">
         </div>
-      </div>
-      <div class="card-title">
-        <p class="heading" style="color: black;"><%= link_to offer_path(@inquiry.offer) do %>
-        <%= @inquiry.offer.title %>
-        <% end %></p>
+        <div class="card-title-info">
+          <div class="card-title">
+            <h5 class="heading" style="color: black;"><%= link_to offer_path(@inquiry.offer) do %>
+            <%= @inquiry.offer.title %>
+            <% end %></h5>
+          </div>
+          <div class="offer-details">
+           <button type="button" class="btn  btn-sm" style="background: #8B2635; "><%=@inquiry.offer.employment_type%></button>
+            <button type="button" class="btn  btn-sm" style="background: #8B2635; ">
+            <%if @inquiry.offer.fixed_price%>Fixed Price<%else%>Per Hour<%end%></button>
+            <button type="button" class="btn  btn-sm" style="background: #8B2635;"><%=@inquiry.offer.location%></button>
+          </div>
+        </div>
       </div>
       <p class="text-muted"><%=@inquiry.offer.description%></p>
-      <div class="offer-details">
-       <button type="button" class="btn  btn-sm" style="background: #8B2635; "><%=@inquiry.offer.employment_type%></button>
-        <button type="button" class="btn  btn-sm" style="background: #8B2635; ">
-        <%if @inquiry.offer.fixed_price%>Fixed Price<%else%>Per Hour<%end%></button>
-        <button type="button" class="btn  btn-sm" style="background: #8B2635;"><%=@inquiry.offer.location%></button>
-      </div>
+
       <div class="row btnsubmit mt-4">
         <div style="padding-top: 1rem; padding-left: 0.4rem;"> <%= link_to new_offer_inquiry_path(@inquiry.offer) do %>
           <button name="button" type="submit" class="btn-offer btn1 btn btn-success"><i
