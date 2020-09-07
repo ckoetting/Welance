@@ -7,8 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 require 'open-uri'
-
-TITLES = ["Need help with java", "Ruby implementation", "Css job","need an html expert"]
 SKILLS = ["CSS", "HTML","Ruby", "Java Script", "Rails", "SQL"]
 LOCATIONS = ["Freiburg", "Roma", "Amsterdam", "Sandweiler", "Venezia","Springfield"]
 
@@ -20,20 +18,20 @@ User.destroy_all
 
 puts "Creating users"
 User.create(
-  email: "batman@bat.man",
-  password:"batmanbat",
-  full_name: "Batman",
-  user_type: "Developer",
-  bio: "I am vengeance",
-  location: "Gotham City",
-  phone_number: "3343421236",
-  hourly_rate: "1000 drops of blood",
-  headline: "headline",
-  business_address: "Business Adress 1234",
-  business_name: "Business Name",
-  business_vat_id: 5,
-  business_size: "50",
-  website: "filo.filo.com" )
+  email: "jobs@airbnb.com",
+  password:"Test1234",
+  full_name: "Brian Chesky",
+  user_type: "Business",
+  bio: "Experienced Entrepreneur with a demonstrated history of working in the information technology and services industry. Skilled in WordPress, Ruby on Rails, Web Design, Ruby, and Full-Stack Development. Strong business development professional with a Bootcamp focused in Full-Stack Web Developmemt from Le Wagon. ",
+  location: "United States",
+  phone_number: "0170705047",
+  hourly_rate: "1500",
+  headline: "Airbnb CEO",
+  website: "airbnb.com" ,
+  business_address: "888 Brannan St, San Francisco, CA 94103, United States",
+  business_name: "Airbnb Inc.",
+  business_vat_id: "882948",
+  business_size: "6300")
 puts "#{User.count} users created"
 
 puts "______________"
@@ -43,8 +41,9 @@ puts "Creating offers.."
 
 15.times do
   offer = Offer.new(
-    title: TITLES.sample,
-   description: Faker::TvShows::FamilyGuy.quote,
+    title: Faker::Job.title,
+   description: Faker::Lorem.paragraph,
+   employment_type: Faker::Job.employment_type,
    skills_required: "#{SKILLS.sample}, #{SKILLS.sample}",
    compensation: rand(50000..100000),
    fixed_price: true,

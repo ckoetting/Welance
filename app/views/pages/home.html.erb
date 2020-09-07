@@ -4,6 +4,7 @@
     <div class="banner-container-left">
       <h1>Welance <i class="fas fa-code"></i></h1>
       <p>The future of hiring freelancer developers</p>
+        <%= link_to "Offers", offers_path, id: "offer-button", class: "offer-button-search btn btn-outline-success btn-lg" %>
     </div>
     <div class="banner-container-right">
       <img id="mbp"
@@ -11,10 +12,11 @@
     </div>
   </div>
 </div>
-<div class="clients-container">
-<div class="our-clients-info">
-  <h3>Some of our clients</h3>
 </div>
+<div class="clients-container">
+  <div class="our-clients-info">
+    <h3>Some of our clients</h3>
+  </div>
   <div class="our-clients">
     <i class="fab fa-amazon fa-5x"></i>
     <i class="fab fa-airbnb fa-5x"></i>
@@ -26,114 +28,121 @@
   </div>
 </div>
 <div class="our-developers-info">
-  <h2>Meet some of our Developers</h2>
+  <h2 class="Lanzo-2">Meet some of our Developers</h2>
   <p>The Welance network includes experts across a very wide array of software development languages and technologies.
-      At Welance, we thoroughly screen our developers to ensure we only match you with talent of the highest caliber.
-      You'll work with software engineering experts to understand your goals, technical needs, and team dynamics.
-      The end result: expert vetted talent from our network, custom matched to fit your business needs.
-      All of our developers are certified and highly skilled in their field of expertise</p>
+    At Welance, we thoroughly screen our developers to ensure we only match you with talent of the highest caliber.
+    You'll work with software engineering experts to understand your goals, technical needs, and team dynamics.
+    The end result: expert vetted talent from our network, custom matched to fit your business needs.
+  All of our developers are certified and highly skilled in their field of expertise</p>
 </div>
-  <div class="our-developers">
-    <div class="card profile-card-3">
-      <div class="background-block">
-        <img
-          src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
-          alt="profile-sample1" class="background" />
-      </div>
-      <div class="profile-thumb-block">
-        <img src="https://res.cloudinary.com/corneliuskf/image/upload/v1598524569/jm74y2sf2h5tvc8t5ejeakwwbhen.jpg" alt="profile-image" class="profile" />
-      </div>
-      <div class="card-content">
-        <h2>Cornelius Koetting<small>Web Developer</small></h3>
-          <div class="icon-block"><a href="#"><i class="fab fa-linkedin"></i></a><a href="#"> <i
-                class="fab fa-twitter"></i></a><a href="#"> <i class="fab fa-google-plus"></i></a></div>
+<div class="our-developers">
+  <div class="card profile-card-3">
+    <div class="background-block">
+      <img
+      src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
+      alt="profile-sample1" class="background" />
+    </div>
+    <div class="profile-thumb-block">
+      <img src="https://res.cloudinary.com/corneliuskf/image/upload/v1598524569/jm74y2sf2h5tvc8t5ejeakwwbhen.jpg" alt="profile-image" class="profile" />
+    </div>
+    <div class="card-content">
+      <h2>Cornelius Koetting</h2>
+      <h6>Web Developer</h6>
+
+      <div class="icon-block"><a href="#"><i class="fab fa-linkedin"></i></a><a href="#"> <i
+        class="fab fa-twitter"></i></a><a href="#"> <i class="fab fa-google-plus"></i></a></div>
       </div>
     </div>
 
-  <div class="card profile-card-3">
+    <div class="card profile-card-3">
       <div class="background-block">
         <img
-          src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
-          alt="profile-sample1" class="background" />
+        src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
+        alt="profile-sample1" class="background" />
       </div>
       <div class="profile-thumb-block">
         <img src="https://avatars1.githubusercontent.com/u/61974192?v=4" alt="profile-image" class="profile" />
       </div>
       <div class="card-content">
-        <h2>Filo Lanza<small>Web Developer</small></h3>
-          <div class="icon-block"><a href="#"><i class="fab fa-linkedin"></i></a><a href="#"> <i
-                class="fab fa-twitter"></i></a><a href="#"> <i class="fab fa-google-plus"></i></a></div>
+        <h2>Filo Lanza</h2>
+        <h6>Web Developer</h6>
+
+        <div class="icon-block"><a href="#"><i class="fab fa-linkedin"></i></a><a href="#"> <i
+          class="fab fa-twitter"></i></a><a href="#"> <i class="fab fa-google-plus"></i></a></div>
+        </div>
       </div>
-    </div>
-    <div class="card profile-card-3">
-      <div class="background-block">
-        <img
+      <div class="card profile-card-3">
+        <div class="background-block">
+          <img
           src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
           alt="profile-sample1" class="background" />
-      </div>
-      <div class="profile-thumb-block">
-        <img src="https://avatars1.githubusercontent.com/u/63601446?v=4" alt="profile-image" class="profile" />
-      </div>
-      <div class="card-content">
-        <h2>Felix Hermann<small>Web Developer</small></h3>
-          <div class="icon-block"><a href="#"><i class="fab fa-linkedin"></i></a><a href="#"> <i
-                class="fab fa-twitter"></i></a><a href="#"> <i class="fab fa-google-plus"></i></a></div>
-      </div>
-    </div>
-</div>
-<div class="our-developers">
-    <div class="card profile-card-3">
-      <div class="background-block">
-        <img
-          src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
-          alt="profile-sample1" class="background" />
-      </div>
-      <div class="profile-thumb-block">
-        <img src="https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1594964430/qgypwowy7kl1nbunary6.jpg" alt="profile-image" class="profile" />
-      </div>
-      <div class="card-content">
-        <h2>Ho Chieh Tung<small>Web Developer</small></h3>
-          <div class="icon-block"><a href="#"><i class="fab fa-linkedin"></i></a><a href="#"> <i
-                class="fab fa-twitter"></i></a><a href="#"> <i class="fab fa-google-plus"></i></a></div>
-      </div>
-    </div>
+        </div>
+        <div class="profile-thumb-block">
+          <img src="https://avatars1.githubusercontent.com/u/63601446?v=4" alt="profile-image" class="profile" />
+        </div>
+        <div class="card-content">
+          <h2>Felix Hermann</h2>
+          <h6>Web Developer</h6>
 
+          <div class="icon-block"><a href="#"><i class="fab fa-linkedin"></i></a><a href="#"> <i
+            class="fab fa-twitter"></i></a><a href="#"> <i class="fab fa-google-plus"></i></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="our-developers">
         <div class="card profile-card-3">
-      <div class="background-block">
-        <img
-          src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
-          alt="profile-sample1" class="background" />
-      </div>
-      <div class="profile-thumb-block">
-        <img src="https://avatars2.githubusercontent.com/u/67754111?v=4" alt="profile-image" class="profile" />
-      </div>
-      <div class="card-content">
-        <h2>Mohamed Soliman<small>Web Developer</small></h3>
-          <div class="icon-block"><a href="#"><i class="fab fa-linkedin"></i></a><a href="#"> <i
+          <div class="background-block">
+            <img
+            src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
+            alt="profile-sample1" class="background" />
+          </div>
+          <div class="profile-thumb-block">
+            <img src="https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1594964430/qgypwowy7kl1nbunary6.jpg" alt="profile-image" class="profile" />
+          </div>
+          <div class="card-content">
+            <h2>Ho Chieh Tung</h2>
+            <h6>Web Developer</h6>
+            <div class="icon-block"><a href="#"><i class="fab fa-linkedin"></i></a><a href="#"> <i
+              class="fab fa-twitter"></i></a><a href="#"> <i class="fab fa-google-plus"></i></a></div>
+            </div>
+          </div>
+
+          <div class="card profile-card-3">
+            <div class="background-block">
+              <img
+              src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
+              alt="profile-sample1" class="background" />
+            </div>
+            <div class="profile-thumb-block">
+              <img src="https://avatars2.githubusercontent.com/u/67754111?v=4" alt="profile-image" class="profile" />
+            </div>
+            <div class="card-content">
+              <h2>Mohamed Soliman</h2>
+              <h6>Web Developer</h6>
+
+              <div class="icon-block"><a href="#"><i class="fab fa-linkedin"></i></a><a href="#"> <i
                 class="fab fa-twitter"></i></a><a href="#"> <i class="fab fa-google-plus"></i></a></div>
-      </div>
-    </div>
+              </div>
+            </div>
 
-        <div class="card profile-card-3">
-      <div class="background-block">
-        <img
-          src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
-          alt="profile-sample1" class="background" />
-      </div>
-      <div class="profile-thumb-block">
-        <img src="https://avatars2.githubusercontent.com/u/18394029?v=4" alt="profile-image" class="profile" />
-      </div>
-      <div class="card-content">
-        <h2>Feiko Boerstra<small>Web Developer</small></h3>
-          <div class="icon-block"><a href="#"><i class="fab fa-linkedin"></i></a><a href="#"> <i
-                class="fab fa-twitter"></i></a><a href="#"> <i class="fab fa-google-plus"></i></a></div>
-      </div>
-    </div>
+            <div class="card profile-card-3">
+              <div class="background-block">
+                <img
+                src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
+                alt="profile-sample1" class="background" />
+              </div>
+              <div class="profile-thumb-block">
+                <img src="https://avatars2.githubusercontent.com/u/18394029?v=4" alt="profile-image" class="profile" />
+              </div>
+              <div class="card-content">
+                <h2>Feiko Boerstra</h2>
+                <h6>Web Developer</h6>
+                <div class="icon-block"><a href="#"><i class="fab fa-linkedin"></i></a><a href="#"> <i
+                  class="fab fa-twitter"></i></a><a href="#"> <i class="fab fa-google-plus"></i></a></div>
+                </div>
+              </div>
 
-</div>
-
-
-
+            </div>
 
 
 
@@ -142,135 +151,141 @@
 
 
 
-<h1 id="h1-2">How does Welance work?</h1>
-<div class="container">
-  <div class="row">
 
-    <div class="col-lg-3">
-      <div class="card" style="width: 20rem;">
-        <img
-          src="https://res.cloudinary.com/dn6wh4u2h/image/upload/v1598947761/jonathan-francisca-uTi9PhSJPm8-unsplash_mehkwj.jpg"
-          class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Sign up and set up your profile</p>
-        </div>
-      </div>
-    </div>
 
-    <div class="col-lg-3">
-      <div class="card" style="width: 20rem;">
-        <img
-          src="https://res.cloudinary.com/dn6wh4u2h/image/upload/v1598957716/marten-newhall-uAFjFsMS3YY-unsplash_orkafz.jpg"
-          class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Search for Freelancer</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-3">
-      <div class="card" style="width: 20rem;">
-        <img
-          src="https://res.cloudinary.com/dn6wh4u2h/image/upload/v1598957635/hunters-race-MYbhN8KaaEc-unsplash_rimchk.jpg"
-          class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Get ready for the interview</p>
-        </div>
-      </div>
-    </div>
 
-    <div class="col-lg-3">
-      <div class="card" style="width: 20rem;">
-        <img
-          src="https://res.cloudinary.com/dn6wh4u2h/image/upload/v1598963901/skillscouter-XQaqV5qYcXg-unsplash_ss5ljp.jpg"
-          class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Get a contract and proof their certifications</p>
-        </div>
-      </div>
-    </div>
+            <h1 id="h1-2">How does Welance work?</h1>
+            <div class="container">
+              <div class="row">
 
-    <div class="col-lg-3">
-      <div class="card" style="width: 20rem;">
-        <img
-          src="https://res.cloudinary.com/dn6wh4u2h/image/upload/v1598964106/christopher-gower-m_HRfLhgABo-unsplash_tvlyfl.jpg"
-          class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Let them do the work</p>
-        </div>
-      </div>
-    </div>
+                <div class="col-lg-3">
+                  <div class="card" style="width: 20rem;">
+                    <img
+                    src="https://res.cloudinary.com/dn6wh4u2h/image/upload/v1598947761/jonathan-francisca-uTi9PhSJPm8-unsplash_mehkwj.jpg"
+                    class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Sign up and set up your profile</p>
+                    </div>
+                  </div>
+                </div>
 
-    <div class="col-lg-3">
-      <div class="card" style="width: 20rem;">
-        <img
-          src="https://res.cloudinary.com/dn6wh4u2h/image/upload/v1598966172/rupixen-com-Q59HmzK38eQ-unsplash_gdsbc3.jpg"
-          class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Pay them and get your product</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+                <div class="col-lg-3">
+                  <div class="card" style="width: 20rem;">
+                    <img
+                    src="https://res.cloudinary.com/dn6wh4u2h/image/upload/v1598957716/marten-newhall-uAFjFsMS3YY-unsplash_orkafz.jpg"
+                    class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Search for Freelancer</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="card" style="width: 20rem;">
+                    <img
+                    src="https://res.cloudinary.com/dn6wh4u2h/image/upload/v1598957635/hunters-race-MYbhN8KaaEc-unsplash_rimchk.jpg"
+                    class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Get ready for the interview</p>
+                    </div>
+                  </div>
+                </div>
 
-<h1 id="h1-2">Why should you choose Welance?</h1>
+                <div class="col-lg-3">
+                  <div class="card" style="width: 20rem;">
+                    <img
+                    src="https://res.cloudinary.com/dn6wh4u2h/image/upload/v1598963901/skillscouter-XQaqV5qYcXg-unsplash_ss5ljp.jpg"
+                    class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Get a contract and proof their certifications</p>
+                    </div>
+                  </div>
+                </div>
 
-<div class="container-icon">
-  <div class="welance-pros">
-    <i id="contract" class="fas fa-file-contract fa-5x"></i>
-    <h2 class="h2-1">Certified Developers</h2>
-  </div>
-  <div class="welance-pros">
-    <i class="fas fa-shield-alt fa-5x"></i>
-    <h2 class="h2-2">Secure hiring process</h2>
-  </div>
-  <div class="welance-pros">
-    <i class="fas fa-link fa-5x"></i>
-    <h2 class="h2-3">Connected</h2>
-  </div>
-</div>
+                <div class="col-lg-3">
+                  <div class="card" style="width: 20rem;">
+                    <img
+                    src="https://res.cloudinary.com/dn6wh4u2h/image/upload/v1598964106/christopher-gower-m_HRfLhgABo-unsplash_tvlyfl.jpg"
+                    class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Let them do the work</p>
+                    </div>
+                  </div>
+                </div>
 
-<h1 id="h1-3">What our clients say about us</h1>
-<div class="testimonail-container">
-  <div class="testimonial">
-    <div class="testimonial-body">
-      <p>Very easy and transparent hiring process! The developers did an awesome job! It is especially great for Startups because we can use Welance
-      to scale easily!</p>
-      <i class="fas fa-quote-right"></i>
-    </div>
-    <div class="testimonial-footer">
-      <img src="https://res.cloudinary.com/corneliuskf/image/upload/v1598617625/nq7zax6vjizps1211umkpfpj5k5k.jpg"
-        alt="user" />
-      <h3>Gonzalo Franco</h3>
-      <h4>Supercharge.nyc</h4>
-    </div>
-  </div>
+                <div class="col-lg-3">
+                  <div class="card" style="width: 20rem;">
+                    <img
+                    src="https://res.cloudinary.com/dn6wh4u2h/image/upload/v1598966172/rupixen-com-Q59HmzK38eQ-unsplash_gdsbc3.jpg"
+                    class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Pay them and get your product</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-  <div class="testimonial">
-    <div class="testimonial-body">
-      <p>We developed our entire online presence together with developers from Welance and are very proud
-      of the end result! Their work has helped my business immensely</p>
-      <i class="fas fa-quote-right"></i>
-    </div>
-    <div class="testimonial-footer">
-      <img src="https://res.cloudinary.com/corneliuskf/image/upload/v1598619090/pf2zbgmvhbjkbhlfrii1tx5hg240.jpg"
-        alt="user" />
-      <h3>Panagis Strintzis</h3>
-      <h4>Strintzis Lines</h4>
-    </div>
-  </div>
+            <h1 id="h1-2">Why should you choose Welance?</h1>
 
-  <div class="testimonial">
-    <div class="testimonial-body">
-      <p>The talented developers from Welance were a pleasure to work with. Each and everyone was highly skilled in
-      their field of expertise and delivered an amazing product</p>
-      <i class="fas fa-quote-right"></i>
-    </div>
-    <div class="testimonial-footer">
-      <img src="https://res.cloudinary.com/corneliuskf/image/upload/v1599043965/i0r4k7ustkw55axl8tjx_rcp1ga.jpg"
-        alt="user" />
-      <h3>JP Solano</h3>
-      <h4>Avianca</h4>
-    </div>
-  </div>
-</div>
+            <div class="container-icon">
+              <div class="welance-pros">
+                <i id="contract" class="fas fa-file-contract fa-5x"></i>
+                <h2 class="h2-5">Certified Developers</h2>
+              </div>
+              <div class="welance-pros">
+                <i class="fas fa-shield-alt fa-5x"></i>
+                <h2 class="h2-2">Secure hiring process</h2>
+              </div>
+              <div class="welance-pros">
+                <i class="fas fa-link fa-5x"></i>
+                <h2 class="h2-3">Connected</h2>
+              </div>
+            </div>
+
+            <h1 id="h1-3">What our clients say about us</h1>
+            <div class="testimonail-container">
+              <div class="testimonial">
+                <div class="testimonial-body">
+                  <p>Very easy and transparent hiring process! The developers did an awesome job! It is especially great for Startups because we can use Welance
+                  to scale easily!</p>
+                  <i class="fas fa-quote-right"></i>
+                </div>
+                <div class="testimonial-footer">
+                  <img src="https://res.cloudinary.com/corneliuskf/image/upload/v1598617625/nq7zax6vjizps1211umkpfpj5k5k.jpg"
+                  alt="user" />
+                  <h3>Gonzalo Franco</h3>
+                  <h4>Supercharge.nyc</h4>
+                </div>
+              </div>
+
+              <div class="testimonial">
+                <div class="testimonial-body">
+                  <p>We developed our entire online presence together with developers from Welance and are very proud
+                  of the end result! Their work has helped my business immensely</p>
+                  <i class="fas fa-quote-right"></i>
+                </div>
+                <div class="testimonial-footer">
+                  <img src="https://res.cloudinary.com/corneliuskf/image/upload/v1598619090/pf2zbgmvhbjkbhlfrii1tx5hg240.jpg"
+                  alt="user" />
+                  <h3>Panagis Strintzis</h3>
+                  <h4>Strintzis Lines</h4>
+                </div>
+              </div>
+
+              <div class="testimonial">
+                <div class="testimonial-body">
+                  <p>The talented developers from Welance were a pleasure to work with. Each and everyone was highly skilled in
+                  their field of expertise and delivered an amazing product</p>
+                  <i class="fas fa-quote-right"></i>
+                </div>
+                <div class="testimonial-footer">
+                  <img src="https://res.cloudinary.com/corneliuskf/image/upload/v1599043965/i0r4k7ustkw55axl8tjx_rcp1ga.jpg"
+                  alt="user" />
+                  <h3>JP Solano</h3>
+                  <h4>Avianca</h4>
+                </div>
+              </div>
+            </div>
+
+
+
