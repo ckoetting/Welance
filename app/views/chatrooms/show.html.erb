@@ -1,8 +1,6 @@
+<div class="chat">
 <div class="d-flex">
   <div class="list-group w-200px bg-white br-light">
-    <% @chatrooms.each do |chatroom| %>
-      <%= link_to "##{chatroom.name}", chatroom_path(chatroom), class: "list-group-item #{'active' if chatroom == @chatroom}" %>
-    <% end %>
   </div>
 
 
@@ -15,14 +13,11 @@
           <%= render "messages/message", message: message %>
         <% end %>
       </div>
-
-      <%= simple_form_for [ @chatroom, @message ] do |f| %>
-        <%= f.input :content, label: false, placeholder: "Message ##{@chatroom.name}" %>
-      <% end %>
     </div>
 
     <%= simple_form_for [ @chatroom, @message ], remote: true do |f| %>
       <%= f.input :content, label: false, placeholder: "Message ##{@chatroom.name}" %>
     <% end %>
   </div>
+</div>
 </div>
