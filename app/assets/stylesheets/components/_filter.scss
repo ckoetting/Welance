@@ -1,16 +1,81 @@
 .offer_search {
     width: 300px;
     margin-left: 18px;
-    margin-top: 3px;
+    margin-top: 14px;
 }
 
 #hoola {
     width: 337px;
-    height: 345px;
+    height: 357px;
     border-radius: 24px;
     background-color: #0096c7;
+    margin-top: 114px;
+    margin-left: 81px;
 }
 
 .card label {
     color: whitesmoke;
+}
+
+
+#testbutton {
+    width: 150px;
+    height:50px;
+    border-radius:180px;
+    position:relative;
+    left:calc(50% - 75px);
+    top:calc(50% - 25px);
+    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    cursor:pointer;
+    line-height:12px;
+    margin-top: -80px;
+}
+
+#testbutton:before {
+    content:'';
+    z-index:1;
+    position:absolute;
+    display:block;
+    width:80%;
+    height:70%;
+    top:15%;
+    left:10%;
+    transition: 0.3s opacity ease-in-out;
+    filter:blur(15px);
+    opacity:0;
+    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+}
+
+#testbutton:hover:before {
+    opacity:1;
+    transition: 0.3s opacity ease-in-out;
+    filter:blur(25px);
+    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);  
+}
+
+#testbutton:after {
+    content:'Search!';
+    text-align:center;
+    line-height:40px;
+    font-size:18px;
+    color:rgba(235,235,235,1);
+    font-weight:bold;
+    z-index:5;
+    position:absolute;
+    display:block;
+    border-radius:180px;
+    width:92%;
+    height:80%;
+    top:10%;
+    left:4%;  
+    background-color:rgb(19, 20, 22);
+}
+
+.modal-content {
+    background-color: rgba(0,0,0,0);
+    border: 0px solid rgba(0, 0, 0, 0);
+}
+
+.card .form-control {
+    margin-bottom: 7px;
 }

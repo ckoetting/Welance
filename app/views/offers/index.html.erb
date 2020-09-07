@@ -1,19 +1,18 @@
 <div class="wrapper offers">
   <strong><h1 style="text-align: center; color: white;">Open Positions</h1></strong>
-  <div class="container offer">
-    <div class="offers-index-search">
-      <div class="offers-index-searchbarbut">
+<div class="container offer">
+  <div class="offers-index-search">
+    <div class="offers-index-searchbarbut">
 
-
-        <%= form_tag offers_path, method: :get, id: "search" do %>
-        <%= submit_tag "Search", class: "offer-button-search btn btn-outline-success", style: "border-radius: 23px;" %>
-        <%= text_field_tag :search_by_title_and_location,
-          params[:search_by_title_and_location],
-          class: "form-control",
-        placeholder: "Find an offer"
-        %>
-
-      <% end %>
+      
+<div class='container'> <div id="testbutton" data-toggle="modal" data-target="#exampleModal"></div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">  
+                
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card" id="hoola">
   
     <%= search_form_for @q do |f| %>
 <%= f.label :title %>
@@ -22,14 +21,27 @@
 <%= f.text_field :location_cont, class: 'form-control' %>
 <%= f.label :skills_required %>
 <%= f.text_field :skills_required_cont, class: 'form-control' %>
+<div class="form-group">
+<%= f.check_box :fixed_price_true, include_hidden: false%>
+<%= f.label :fixed_price, 'Fixed Price?' %></div>
 <%= f.submit class: 'btn btn-primary' %>
 <%= link_to "Clear", request.path, class: "btn btn-default"%>
 <% end %>
+   
+                      </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
-</div>
-</div>
+
+
+
+
+  
+  
 
 
   
@@ -74,4 +86,7 @@
   </div>
   </div>
 </div>
+
+
+
 
