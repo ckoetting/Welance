@@ -24,8 +24,8 @@ require("jquery")
 
 // External imports
 import "bootstrap";
-import { mobileMenuNav} from '../components/navbar'
-import { initAutocomplete } from '../plugins/init_autocomplete'
+import { mobileMenuNav} from '../components/navbar';
+import { initAutocomplete } from '../plugins/init_autocomplete';
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
