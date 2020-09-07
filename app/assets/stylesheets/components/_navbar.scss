@@ -5,6 +5,8 @@ body {
 /* Navbar section */
 .container.navigation-bar {
   max-width: 1800px;
+  padding: 10px 0;
+  width: 90%;
 }
 .nav.global {
   width: 100%;
@@ -13,6 +15,8 @@ body {
   text-align: center;
   z-index: 99999;
   top: 0;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .nav.global div.logo {
@@ -57,7 +61,7 @@ body {
   text-decoration: none;
   color: white;
   line-height: 65px;
-  font-size: 27px;
+  font-size: 22px;
 }
 
 .nav.global div.main_list ul li a:hover {
@@ -67,14 +71,6 @@ body {
 .navTrigger {
   display: none;
 }
-
-.nav.global {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-}
-
 /* Media qurey section */
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -115,10 +111,10 @@ body {
     text-align: right;
   }
   .nav.global div.main_list ul li a {
-    text-align: center;
+    // text-align: center;
     width: 100%;
-    font-size: 3rem;
-    padding: 20px;
+    font-size: 2rem;
+    // padding: 20px;
   }
   .nav.global div.media_button {
     display: block;
@@ -335,4 +331,8 @@ body {
   .myP {
     padding: 2%;
   }
+}
+
+li.nav-item.dropdown {
+
 }
