@@ -1,6 +1,6 @@
 .chatroom {
   background: white;
-  height: calc(100vh - 66px);
+  height: calc(100vh - 90px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -37,7 +37,4 @@
   small {
     color: $gray-500;
   }
-}
-.chat {
-  padding-top: 10rem;
 }

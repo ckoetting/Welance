@@ -13,6 +13,9 @@ class Offer < ApplicationRecord
   include PgSearch::Model
   pg_search_scope :search_by_title_and_location,
     against: [ :title, :location ],
+    associated_against: {
+      user: [ :business_name ]
+    },
     using: {
       tsearch: { prefix: true } # <-- now `superman batm` will return something!
     }

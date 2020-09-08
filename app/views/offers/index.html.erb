@@ -29,6 +29,33 @@
                       <%= link_to "Clear", request.path, class: "btn btn-danger btn-block"%>
                       <% end %>
 
+<div class='container'> <div id="testbutton" data-toggle="modal" data-target="#exampleModal"></div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card" id="hoola">
+
+    <%= search_form_for @q do |f| %>
+<%= f.label :title %>
+<%= f.text_field :title_cont, class: 'form-control' %>
+<%= f.label :business_name %>
+<%= f.text_field :user_business_name_cont, class: 'form-control' %>
+<%= f.label :location %>
+<%= f.text_field :location_cont, class: 'form-control' %>
+<%= f.label :skills_required %>
+<%= f.text_field :skills_required_cont, class: 'form-control' %>
+<div class="form-group">
+<%= f.check_box :fixed_price_true, include_hidden: false%>
+<%= f.label :fixed_price, 'Fixed Price?' %></div>
+<%= f.submit class: 'btn btn-primary' %>
+<%= link_to "Clear", request.path, class: "btn btn-default"%>
+<% end %>
+
+                      </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -74,10 +101,25 @@
                 </div>
               </div>
 
-
-
+  <div class="offers index">
+    <% @offers.each do |offer| %>
+    <div class="card offers mx-auto">
+      <div class="row">
+        <div class="logo offers ml-3 mb-3"><img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTxDRpxI5gXgaVmnO-VgcVUNOkca91jIpS75Flbzkz5W_5g5_V5&usqp=CAU">
+        </div>
+        <div class="title-info">
+          <div class="card-title" style="margin-bottom: 5px">
+            <h5 class="heading" style="color: black;"><%= link_to offer_path(offer) do %>
+            <%= offer.title %>
+            <% end %></h5>
+          </div>
+          <div class="offer-details">
+           <button type="button" class="btn  btn-sm" style="background: #8B2635; "><%=offer.employment_type%></button>
+            <button type="button" class="btn  btn-sm" style="background: #8B2635; ">
+            <%if @fixed_price%>Fixed Price<%else%>Per Hour<%end%></button>
+            <button type="button" class="btn  btn-sm" style="background: #8B2635;"><%=offer.location%></button>
               <% end %>
-            </div>
           </div>
         </div>
 

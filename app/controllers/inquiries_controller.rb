@@ -6,6 +6,13 @@ class InquiriesController < ApplicationController
   end
 
   def show
+    @chatrooms = @inquiry.offer.chatrooms
+    @chatroom = nil
+    @chatrooms.each do |chatroom|
+      if chatroom.developer_id == current_user.id && chatroom.business_id = @inquiry.offer.user
+        @chatroom = chatroom
+      end
+    end
   end
 
   def new
