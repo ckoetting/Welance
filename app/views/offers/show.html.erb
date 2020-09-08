@@ -26,7 +26,7 @@
         <h6><%=inquiry.offer.user.business_name%></h6>
         <h2><%= inquiry.offer.title %></h2>
         <span class="progress-text inquiry-status"><strong>application status: <%= inquiry.status %></strong></span>
-        <%= link_to inquiry_path(inquiry) do%><button class="btn inquiry">Application</button><%end%>
+        <%= link_to offer_inquiry_path(@offer, inquiry) do%><button class="btn inquiry">Application</button><%end%>
       </div>
     </div>
   </div>
