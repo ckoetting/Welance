@@ -1,6 +1,6 @@
 <!-- registration edit -->
-<div class="device-wrapper">
-  <div class="device-container edit">
+<div class="device-wrapper edit">
+  <div class="device-container edit gradient-topleft">
   <div class="inside-device-container pr-5 border-right" id="user-container">
     <h2 id="user-title">Choose user type</h2>
 
@@ -12,19 +12,23 @@
     </div>
 
     <div class="form-inputs" id="Developer">
-      <%= f.input :full_name, autofocus: true %>
+      <%= f.label :full_name, class: 'text-white' %>
+      <%= f.input :full_name, label: false, autofocus: true %>
       <%= f.input :bio, as: :text, autofocus: true %>
       <%= f.input :location, label: 'Address', autofocus: true %>
       <%= f.input :dob, label: 'Date of birth', autofocus: true %>
       <%= f.input :phone_number, autofocus: true %>
+      <%= f.input :photo, as: :file %>
     </div>
     <div class="form-inputs" id="Business">
-      <%= f.input :business_name, autofocus: true %>
+      <%= f.label :business_name, class: 'text-white' %>
+      <%= f.input :business_name, label: false, autofocus: true %>
       <%= f.input :business_address, label: 'Address', autofocus: true %>
       <%= f.input :business_vat_id, label: 'Business VAT', autofocus: true %>
       <%= f.input :business_size, autofocus: true %>
       <%= f.input :phone_number, autofocus: true %>
       <%= f.input :website, autofocus: true %>
+      <%= f.input :photo, as: :file %>
     </div>
   </div>
 

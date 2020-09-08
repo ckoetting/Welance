@@ -1,116 +1,15 @@
-.core {
-  background-color: #fff;
-  border-radius: 20px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  overflow: hidden;
-  max-width: 100%;
-  width: 600px;
-  text-align: center;
-  margin: 0 auto;
-  float: none;
-  padding: 40px;
-  font-size: 20px;
-  color: #555;
-  line-height: 36px;
-}
 .about-wrapper {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  min-height: 65vh;
 }
 
 .about-container {
     background-color: #fff;
     border-radius: 20px;
-    width: 50vw;
-}
-
-.card-text {
-  font-family: "Roboto Condensed", sans-serif;
-}
-
-#h1-2 {
-  text-align: center;
-  margin-top: 30px;
-  color: white;
-}
-
-.card-img-top {
-  height: 212px;
-}
-
-.h2-1 {
-  margin-top: 40px;
-  color: white;
-}
-
-.h2-2 {
-  margin-top: 40px;
-}
-
-// .h2-3 {
-//   margin-top: 40px;
-// }
-
-.team {
-  background-color: #fff;
-  border-radius: 20px;
-  overflow: hidden;
-  max-width: 100%;
-  width: 400px;
-}
-
-.team-body {
-  padding: 30px 30px 60px;
-}
-
-.team-body p {
-  color: #555;
-  font-size: 20px;
-  line-height: 36px;
-  margin: 0;
-}
-
-.team-body .fa-quote-right {
-  color: #eee;
-  font-size: 40px;
-  float: right;
-}
-
-.team-footer {
-  background-color: #686de0;
-  height: 200px;
-  color: #fff;
-  padding: 40px;
-  text-align: center;
-}
-
-.team-footer img {
-  border-radius: 50%;
-  border: 5px solid #fff;
-  height: 120px;
-  width: 120px;
-  margin-top: -100px;
-}
-
-.team-footer h3 {
-  margin: 10px 0;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.team-footer h4 {
-  color: #b3b5ef;
-  margin: 0;
-  letter-spacing: 1px;
-}
-
-.team-container {
-  display: flex;
-  justify-content: space-evenly;
-  margin-bottom: 50px;
-  margin-top: 30px;
-  width: 80%;
+    max-width: 50vw;
+    padding: 30px;
 }
 
 .pages-about {

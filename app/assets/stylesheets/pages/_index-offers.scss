@@ -94,4 +94,9 @@
   border-radius: 20px;
   margin: 5px;
 }
+h2.offers-search-title {
+-webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+background-image: linear-gradient(165deg, white 76%, #242a2e 50%);
+}
 
