@@ -31,41 +31,47 @@
     </div>
   </div>
   <% end %>
-
-
-  <%else%>
-  <div class="wrapper offers-show">
-   <div class="card offers mx-auto">
-    <div class="row">
-      <div class="logo offers ml-3 mb-3"><img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTxDRpxI5gXgaVmnO-VgcVUNOkca91jIpS75Flbzkz5W_5g5_V5&usqp=CAU">
-      </div>
-    </div>
-    <div class="card-title">
-      <p class="heading" style="color: black;"><%= link_to offer_path(@offer) do %>
-        <%= @offer.title %>
-        <% end %></p>
-      </div>
-      <p class="text-muted"><%=@offer.description%></p>
-      <div class="offer-details">
-       <button type="button" class="btn  btn-sm" style="background: #8B2635; "><%=@offer.employment_type%></button>
-       <button type="button" class="btn  btn-sm" style="background: #8B2635; ">
-        <%if @fixed_price%>Fixed Price<%else%>Per Hour<%end%></button>
-        <button type="button" class="btn  btn-sm" style="background: #8B2635;"><%=@offer.location%></button>
-      </div>
-      <div class="row btnsubmit mt-4">
-        <div style="padding-top: 1rem; padding-left: 0.4rem;"> <%= link_to new_offer_inquiry_path(@offer) do %>
-          <button name="button" type="submit" class="btn-offer btn1 btn btn-success"><i
-            class="fab fa-telegram-plane"></i>
-          Apply</button>
-          <% end %></div>
-          <div style="padding-top: 1rem; padding-left: 0.4rem;">
-            <%= button_to bookmark_path(@offer), class: "btn-offer btn-success btn", method: :post, remote: true do %>
-            <i class="fa<%= @offer.saved ? 's' : 'r' %> fa-bookmark"></i> Save
-            <% end %> </div>
+    <%else%>
+  <div class="wrapper-offer app-offers-show">
+    <div class="app-offers-card">
+      <div class="app-offers-card-top">
+        <div class="business-logo-info">
+          <img class="logo-app-offers" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTxDRpxI5gXgaVmnO-VgcVUNOkca91jIpS75Flbzkz5W_5g5_V5&usqp=CAU">
+          <div class="business-info app-offers">
+            <ul class="business-info">
+              <li><%= @offer.user.business_name %></li>
+              <li><%= @offer.user.business_address %></li>
+              <li><%= @offer.user.business_size %></li>
+              <li><%= @offer.user.website %></li>
+              <li><%= @offer.user.linkedin_url %></li>
+            </ul>
           </div>
         </div>
+        <div class="app-offer-details">
+        <div class="card-title">
+          <h5 class="heading" style="color: black;"><%= link_to offer_path(@offer) do %>
+          <%= @offer.title %>
+          <% end %></h5>
+        </div>
+        <div class="app-offer-perks">
+          <button type="button" class="btn  btn-sm" style="background: #8B2635; "><%=@offer.employment_type%></button>
+          <button type="button" class="btn  btn-sm" style="background: #8B2635; ">
+          <%if @fixed_price%>Fixed Price<%else%>Per Hour<%end%></button>
+          <button type="button" class="btn  btn-sm" style="background: #8B2635;"><%=@offer.location%></button>
+        </div>
+        <p class="app-offers-text text-muted"><%=@offer.description%> Lorem ipsum dolor sit amet consectetur adipisicing, elit. Nihil hic nemo at magnam quidem dolore quae magni ullam ipsam unde veritatis ratione, ea cumque veniam, consequatur est, reiciendis doloribus repellendus. Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, laboriosam aliquid, modi maiores quisquam recusandae facilis veniam odio cupiditate beatae ad, quaerat quia dolore praesentium. Quisquam, sit. Ipsa, inventore, nulla.</p>
+        </div>
       </div>
+      <div class="app-offers-card-bottom">
+        <div style="padding-top: 1rem; padding-left: 0.4rem;"> <%= link_to new_offer_inquiry_path(@offer) do %>
+          <button name="button" type="submit" class="btn-offer btn1 btn btn-success"><i class="fab fa-telegram-plane"></i>Apply</button>
+          <% end %>
+        </div>
+        <div style="padding-top: 1rem; padding-left: 0.4rem;">
+          <%= button_to bookmark_path(@offer), class: "btn-offer btn-success btn", method: :post, remote: true do %>
+          <i class="fa<%= @offer.saved ? 's' : 'r' %> fa-bookmark"></i> Save
+          <% end %> </div>
     </div>
+      </div>
   </div>
 

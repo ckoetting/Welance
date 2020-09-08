@@ -1,10 +1,51 @@
+// developer
+
 .wrapper-offer {
-  padding-top: 120px;
   display: flex;
   justify-content: center;
+  background-image: linear-gradient(to right, rgb(195, 20, 50), rgb(36, 11, 54));
+  width: 100%;
+  height: 100%;
+  padding: 10rem 0;
 }
-.offer-page-container {
-  width: 600px;
+.app-offers-card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 50rem;
+  border-radius: 20px;
+}
+.app-offers-card-top {
+  display: flex;
+  justify-content: space-around;
+  grid: 1fr 2fr;
+  margin: 2rem 1rem;
+}
+.app-offers-card-bottom {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.logo-app-offers {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+.business-logo-info {
+  width: 10rem;
+}
+.app-offer-details {
+  width: 30rem;
+}
+.app-offers-text {
+  margin-top: 2rem;
+}
+.business-info {
+  font-size: 12px;
+  list-style-type: none;
+  width: 14rem;
+  margin-left: -1rem;
+  margin-top: 1rem;
 }
 
 .offer-page-first {
