@@ -6,12 +6,14 @@ class InquiriesController < ApplicationController
   end
 
   def show
+    if @inquiry.status == "pending"
+      @inquiry.status = "opened"
+      @inquiry.save
+    end
     @chatrooms = @inquiry.offer.chatrooms
     @chatroom = nil
     @chatrooms.each do |chatroom|
-      if chatroom.developer_id == current_user.id && chatroom.business_id = @inquiry.offer.user
-        @chatroom = chatroom
-      end
+      @chatroom = chatroom if chatroom.developer_id == current_user.id && chatroom.business_id == @inquiry.offer.user
     end
   end
 
@@ -53,6 +55,6 @@ class InquiriesController < ApplicationController
   end
 
   def inquiry_params
-    params.require(:inquiry).permit(:status, :message)
+    params.require(:inquiry).permit(:status, :message, :chat)
   end
 end

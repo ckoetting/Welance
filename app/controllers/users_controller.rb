@@ -15,9 +15,7 @@ class UsersController < ApplicationController
     @offers = Offer.all
     @saved_offers = []
     @offers.each do |offer|
-      if offer.saved
-        @saved_offers << offer
-      end
+      @saved_offers << offer if offer.saved
     end
   end
 
