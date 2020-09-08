@@ -51,7 +51,6 @@ class OffersController < ApplicationController
     end
     redirect_to offers_path(anchor: "offer-#{@offer.id}")
 
-
   end
 
   private
@@ -61,6 +60,6 @@ class OffersController < ApplicationController
   end
 
   def offer_params
-    params.require(:offer).permit(:title, :description, :skills_required, :compensation, :fixed_price, :deadline_at, :location, photos: [])
+    params.require(:offer).permit(:title, :description, :skills_required, :compensation, :fixed_price, :deadline_at, :location, :business_name, photos: [])
   end
 end

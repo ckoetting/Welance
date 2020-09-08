@@ -4,19 +4,21 @@
   <div class="offers-index-search">
     <div class="offers-index-searchbarbut">
 
-      
+
 <div class='container'> <div id="testbutton" data-toggle="modal" data-target="#exampleModal"></div>
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content">  
-                
+            <div class="modal-content">
+
 <div class="row">
   <div class="col-sm-6">
     <div class="card" id="hoola">
-  
+
     <%= search_form_for @q do |f| %>
 <%= f.label :title %>
 <%= f.text_field :title_cont, class: 'form-control' %>
+<%= f.label :business_name %>
+<%= f.text_field :user_business_name_cont, class: 'form-control' %>
 <%= f.label :location %>
 <%= f.text_field :location_cont, class: 'form-control' %>
 <%= f.label :skills_required %>
@@ -27,7 +29,7 @@
 <%= f.submit class: 'btn btn-primary' %>
 <%= link_to "Clear", request.path, class: "btn btn-default"%>
 <% end %>
-   
+
                       </div>
                       </div>
                     </div>
@@ -40,11 +42,11 @@
 
 
 
-  
-  
 
 
-  
+
+
+
   <div class="offers index">
     <% @offers.each do |offer| %>
     <div class="card offers mx-auto">
