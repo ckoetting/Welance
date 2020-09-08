@@ -24,6 +24,7 @@ gem 'redis', '~> 4.0'
 gem 'cloudinary', '~> 1.16.0'
 gem 'jquery-rails'
 gem 'faker'
+gem 'exception_handler', '~> 0.8.0.0'
 #filtering
 gem 'acts-as-taggable-on', '~> 6.0'
 
