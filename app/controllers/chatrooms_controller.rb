@@ -12,7 +12,7 @@ class ChatroomsController < ApplicationController
     @chatroom.name = "#{current_user.full_name} and #{@offer.user.business_name} - #{@offer.title}"
     @chatroom.developer_id = current_user.id
     @chatroom.business_id = @offer.user.id
-    @chatroom.offer = @offer
+    @inquiry.chatroom = @chatroom
     if @chatroom.save
       @inquiry.chat = true
       @inquiry.save

@@ -10,11 +10,6 @@ class InquiriesController < ApplicationController
       @inquiry.status = "opened"
       @inquiry.save
     end
-    @chatrooms = @inquiry.offer.chatrooms
-    @chatroom = nil
-    @chatrooms.each do |chatroom|
-      @chatroom = chatroom if chatroom.developer_id == current_user.id && chatroom.business_id == @inquiry.offer.user
-    end
   end
 
   def new
