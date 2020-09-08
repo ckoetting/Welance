@@ -6,8 +6,10 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   post '/bookmark/:id' => 'offers#bookmark', as: :bookmark
   resources :offers do
-    resources :inquiries, shallow: true do
-      get 'create_chat', to: 'chatrooms#create_chatroom'
+    resources :inquiries do
+      member do
+        get 'create_chat', to: 'chatrooms#create_chatroom'
+      end
     end
     resources :reviews
   end

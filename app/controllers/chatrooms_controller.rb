@@ -7,11 +7,16 @@ class ChatroomsController < ApplicationController
 
   def create_chatroom
     @chatroom = Chatroom.new
+    @inquiry = Inquiry.find(params[:id])
     @offer = Offer.find(params[:offer_id])
-    @chatroom.name = "Conversation between #{current_user.full_name} and #{@offer.user.business_name}"
-    @chatroom.developer = current_user
-    @chatroom.business = @offer.user
-    @chatroom.save
-    redirect_to inquiry_path(current_user.inquiries.last)
+    @chatroom.name = "#{current_user.full_name} and #{@offer.user.business_name} - #{@offer.title}"
+    @chatroom.developer_id = current_user.id
+    @chatroom.business_id = @offer.user.id
+    @chatroom.offer = @offer
+    if @chatroom.save
+      @inquiry.chat = true
+      @inquiry.save
+      redirect_to chatroom_path(@chatroom)
+    end
   end
 end
