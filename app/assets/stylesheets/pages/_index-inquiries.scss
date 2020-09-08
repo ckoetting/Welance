@@ -43,7 +43,7 @@
 }
 
 .course-preview {
-  background-color: #2A265F;
+  background: linear-gradient(90deg, rgba(63,94,251,1) 10%, rgba(252,70,107,1) 90%);
   color: #fff;
   padding: 30px;
   max-width: 250px;
@@ -103,15 +103,24 @@
 }
 
 .btn.inquiry {
-  background-color: #2A265F;
-  border: 0;
+  background-color: #94F0E5;
   border-radius: 50px;
-  box-shadow: 4px 6px 18px -7px rgba(0,0,0,0.75);
-  color: #fff;
+  color: #22dac3;
   font-size: 16px;
   padding: 12px 25px;
   position: absolute;
   bottom: 30px;
   right: 30px;
   letter-spacing: 1px;
+    &:hover {
+        background-color: #22dac3;
+        color: #fff;
+    }
+}
+
+#button-color {
+  color: #22dac3;
+  & :hover {
+    color: #fff;
+  }
 }
