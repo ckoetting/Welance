@@ -1,27 +1,29 @@
-<div class="banner offers" style="background-image: linear-gradient(to right, rgb(55, 59, 68), rgb(66, 134, 244));">
-  <div class="banner-container offers">
-     <h1> Converstion between <%=User.find(@chatroom.developer_id).full_name%> and <%=User.find(@chatroom.business_id).business_name%> </h1>
-     <div id="banner-logo-seperator"></div>
+<div class="wrapper-chatroom" style="background-image: linear-gradient(to right, rgb(55, 59, 68), rgb(66, 134, 244));">
+  <div class="header-chat">
+    <div class="chat-avatars">
+     <img class="chat-avatar-logo" src="https://avatars1.githubusercontent.com/u/61974192?v=4">
+     <img class="chat-avatar-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTxDRpxI5gXgaVmnO-VgcVUNOkca91jIpS75Flbzkz5W_5g5_V5&usqp=CAU">
+    </div>
+     <h1>Conversation between <br><%=User.find(@chatroom.developer_id).full_name%> and <%=User.find(@chatroom.business_id).business_name%></h1>
   </div>
-  </div>
-<div class="chat">
-<div class="d-flex">
-  <div class="list-group w-200px bg-white br-light">
-  </div>
+  <div class="chat card">
+    <div class="d-flex">
+      <div class="list-group w-200px bg-white br-light">
+      </div>
 
 
-  <div class="chatroom">
-    <div>
-      <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
-        <% @chatroom.messages.each do |message| %>
-          <%= render "messages/message", message: message %>
+      <div class="chatroom">
+        <div>
+          <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
+            <% @chatroom.messages.each do |message| %>
+            <%= render "messages/message", message: message %>
+            <% end %>
+          </div>
+        </div>
+        <%= simple_form_for [ @chatroom, @message ], remote: true do |f| %>
+        <%= f.input :content, label: false, placeholder: "Message #{User.find(@chatroom.developer_id).full_name}" %>
         <% end %>
       </div>
     </div>
-
-    <%= simple_form_for [ @chatroom, @message ], remote: true do |f| %>
-      <%= f.input :content, label: false, placeholder: "Message #{User.find(@chatroom.developer_id).full_name}" %>
-    <% end %>
   </div>
-</div>
 </div>
