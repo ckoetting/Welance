@@ -3,6 +3,11 @@
     <h1>Welcome, <%=current_user.full_name%> &#128188;</h1>
     <div id="banner-logo-seperator"></div>
     <h3>These are the applications for <%=@inquiry.offer.title%></h3>
+    <%if @inquiry.chat%>
+      <%= link_to chatroom_path(@chatroom) do%><button class="btn-offer btn-success btn">Go to Chat</button><%end%>
+    <%else%>
+      <a href="create_chat" class="btn-offer btn-success btn">Initiate Chat</a>
+    <%end%>
   </div>
 </div>
 <div class="container inquiry">
