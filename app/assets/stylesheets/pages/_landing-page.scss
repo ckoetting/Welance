@@ -143,15 +143,15 @@
 
 .testimonial {
   background-color: #fff;
-  border-radius: 20px;
+  border-radius: 10px;
   // box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   overflow: hidden;
   max-width: 100%;
-  width: 400px;
+  width: 350px;
 }
 
 .testimonial-body {
-  padding: 40px 40px 80px;
+  padding: 30px 30px 60px;
 }
 
 .testimonial-body p {
@@ -168,7 +168,7 @@
 }
 
 .testimonial-footer {
-  background-color: #686de0;
+  background-color: rgba(63,94,251,1);
   height: 200px;
   color: #fff;
   padding: 40px;
@@ -199,7 +199,7 @@
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 50px;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 30px auto;
 }
 
@@ -302,6 +302,14 @@
 
 #contract {
   margin-top: 6px;
+  color: rgba(63,94,251,1);
+}
+#shield {
+  color: rgba(#22DAC2,1);
+}
+
+#link {
+  color: rgba(252,70,107,1);
 }
 
 .welance-pros-center {

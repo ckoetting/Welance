@@ -13,3 +13,8 @@
 .contact-form .btn-primary {
   margin: 15px 0;
 }
+h3.contact_us-title {
+-webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+background-image: linear-gradient(165deg, white 53%, #242a2e 50%);
+}

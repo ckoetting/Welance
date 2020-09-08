@@ -1,9 +1,33 @@
 <div class="wrapper offers">
-  <strong><h1 style="text-align: center; color: white;">Open Positions</h1></strong>
-<div class="container offer">
-  <div class="offers-index-search">
-    <div class="offers-index-searchbarbut">
+  <strong><h1 class="text-white text-center">Open Positions</h1></strong>
+  <div class="container offer">
+    <div class="offers-index-search">
+      <div class="offers-index-searchbarbut">
 
+
+        <div class='container'> <div id="testbutton" data-toggle="modal" data-target="#exampleModal"></div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="card gradient-topleft" id="hoola">
+                    <%= search_form_for @q do |f| %>
+                                        <h2 class="offers-search-title">Filter search results</h2>
+
+                    <%= f.label :title, class: 'text-white' %>
+                    <%= f.text_field :title_cont, class: 'form-control' %>
+                    <%= f.label :location %>
+                    <%= f.text_field :location_cont, class: 'form-control' %>
+                    <%= f.label :skills_required %>
+                    <%= f.text_field :skills_required_cont, class: 'form-control' %>
+                    <div class="form-group">
+                      <%= f.check_box :fixed_price_true, include_hidden: false%>
+                      <%= f.label :fixed_price, 'Fixed Price?' %></div>
+                      <%= f.submit class: 'btn btn-success btn-block' %>
+                      <%= link_to "Clear", request.path, class: "btn btn-danger btn-block"%>
+                      <% end %>
 
 <div class='container'> <div id="testbutton" data-toggle="modal" data-target="#exampleModal"></div>
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -33,19 +57,49 @@
                       </div>
                       </div>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-</div>
+      </div>
 
 
-
-
-
-
-
-
+      <div class="offers index">
+        <% @offers.each do |offer| %>
+        <div class="card offers mx-auto">
+          <div class="row">
+            <div class="logo offers ml-3 mb-3"><img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTxDRpxI5gXgaVmnO-VgcVUNOkca91jIpS75Flbzkz5W_5g5_V5&usqp=CAU">
+            </div>
+            <div class="title-info">
+              <div class="card-title" style="margin-bottom: 5px">
+                <h5 class="heading" style="color: black;"><%= link_to offer_path(offer) do %>
+                  <%= offer.title %>
+                  <% end %></h5>
+                </div>
+                <div class="offer-details">
+                 <button type="button" class="btn  btn-sm" style="background: #8B2635; "><%=offer.employment_type%></button>
+                 <button type="button" class="btn  btn-sm" style="background: #8B2635; ">
+                  <%if @fixed_price%>Fixed Price<%else%>Per Hour<%end%></button>
+                  <button type="button" class="btn  btn-sm" style="background: #8B2635;"><%=offer.location%></button>
+                </div>
+              </div>
+            </div>
+            <p class="text-muted"><%=offer.description%></p>
+            <div class="row btnsubmit mt-4">
+              <div style="padding-top: 1rem; padding-left: 0.4rem;"> <%= link_to new_offer_inquiry_path(offer) do %>
+                <button name="button" type="submit" class="btn-offer btn1 btn btn-success"><i
+                  class="fab fa-telegram-plane"></i>
+                Apply</button>
+                <% end %></div>
+                <div style="padding-top: 1rem; padding-left: 0.4rem;">
+                  <%= button_to bookmark_path(offer), class: "btn-offer btn-success btn", method: :post, remote: true do %>
+                  <i class="fa<%= offer.saved ? 's' : 'r' %> fa-bookmark"></i> Save
+                  <% end %> </div>
+                </div>
+              </div>
 
   <div class="offers index">
     <% @offers.each do |offer| %>
@@ -65,29 +119,9 @@
             <button type="button" class="btn  btn-sm" style="background: #8B2635; ">
             <%if @fixed_price%>Fixed Price<%else%>Per Hour<%end%></button>
             <button type="button" class="btn  btn-sm" style="background: #8B2635;"><%=offer.location%></button>
+              <% end %>
           </div>
         </div>
-      </div>
-      <p class="text-muted"><%=offer.description%></p>
-      <div class="row btnsubmit mt-4">
-        <div style="padding-top: 1rem; padding-left: 0.4rem;"> <%= link_to new_offer_inquiry_path(offer) do %>
-          <button name="button" type="submit" class="btn-offer btn1 btn btn-success"><i
-              class="fab fa-telegram-plane"></i>
-            Apply</button>
-          <% end %></div>
-        <div style="padding-top: 1rem; padding-left: 0.4rem;">
-          <%= button_to bookmark_path(offer), class: "btn-offer btn-success btn", method: :post, remote: true do %>
-          <i class="fa<%= offer.saved ? 's' : 'r' %> fa-bookmark"></i> Save
-          <% end %> </div>
-      </div>
-    </div>
-
-
-
-    <% end %>
-  </div>
-  </div>
-</div>
 
 
 

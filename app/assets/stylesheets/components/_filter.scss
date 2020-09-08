@@ -1,22 +1,27 @@
 .offer_search {
-    width: 300px;
-    margin-left: 18px;
-    margin-top: 14px;
+  background-color: rgba(0,0,0,0);
+  margin: 40px;
+    // width: 300px;
+    // margin-left: 18px;
+    // margin-top: 14px;
+    & label {
+      margin-top: 10px;
+    }
 }
 
 #hoola {
-    width: 337px;
-    height: 357px;
-    border-radius: 24px;
-    background-color: #0096c7;
-    margin-top: 114px;
-    margin-left: 81px;
+    width: 400px;
+    // height: 400px;
+    border-radius: 20px;
+    // background-color: #1fa1f2;
+    // margin: 30px;
+    // margin-top: 114px;
+    // margin-left: 81px;
 }
 
 .card label {
-    color: whitesmoke;
+    // color: white;
 }
-
 
 #testbutton {
     width: 150px;
@@ -50,7 +55,7 @@
     opacity:1;
     transition: 0.3s opacity ease-in-out;
     filter:blur(25px);
-    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);  
+    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
 }
 
 #testbutton:after {
@@ -58,7 +63,7 @@
     text-align:center;
     line-height:40px;
     font-size:18px;
-    color:rgba(235,235,235,1);
+    color: white;
     font-weight:bold;
     z-index:5;
     position:absolute;
@@ -67,15 +72,22 @@
     width:92%;
     height:80%;
     top:10%;
-    left:4%;  
+    left:4%;
     background-color:rgb(19, 20, 22);
 }
 
 .modal-content {
+    // background-color: rgba(0,0,0,0);
+    // border: 0px solid rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
     background-color: rgba(0,0,0,0);
-    border: 0px solid rgba(0, 0, 0, 0);
+    padding: 30px;
+
 }
 
 .card .form-control {
-    margin-bottom: 7px;
+    // margin-bottom: 7px;
 }

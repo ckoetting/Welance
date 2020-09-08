@@ -29,4 +29,17 @@ class UsersController < ApplicationController
       end
     end
   end
+
+  private
+
+  def user_params
+    params.require(:user).permit(
+      :email, :full_name, :user_type, :bio, :location, :dob,
+      :phone_number, :hourly_rate, :headline, :business_address,
+      :business_name, :business_vat_id, :business_size, :website,
+      :provider, :uid, :avatar_url, :developer_role, :username,
+      :linkedin_url, :photo
+      )
+  end
+
 end
