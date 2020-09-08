@@ -67,41 +67,4 @@ User.create(
     end
     
     puts "#{Offer.count} offers created"
-    
-    puts "creating contacts.."
-    15.times do
-      contact = Contact.new(
-        name: Faker::Name.name,
-        email: Faker::Internet.email,
-        message: Faker::Lorem.paragraph,
-        created_at: Date.today,
-        updated_at: Date.today
-      )
-      contact.save!
-    end
-    puts "#{Contact.count} contacts created"
-    
-    
-    
-    
-    puts "creating chatrooms..."
-    15.times do 
-      chatroom = Chatroom.new(
-        name: Faker::Job.field
-      )
-      chatroom.save!
-      
-      
-      puts "creating messages..."
-      15.times do
-        message = Message.new(
-          chatroom: chatroom,
-          user: User.all.sample,
-          content: Faker::Lorem.paragraph,
-          created_at: rand(1..100).weeks.ago
-        )
-        message.save!
-        puts "#{Message.count} received"
-      end
-      
     end
