@@ -6,7 +6,7 @@
     <%if @inquiry.chat%>
       <%= link_to chatroom_path(@chatroom) do%><button class="btn-offer btn-success btn">Go to Chat</button><%end%>
     <%else%>
-      <a href="create_chat" class="btn-offer btn-success btn">Initiate Chat</a>
+     <%= link_to create_chat_offer_inquiry_path(@inquiry.offer, @inquiry), class: "btn-offer btn-success btn" do %>Initiate Chat<%end%>
     <%end%>
   </div>
 </div>

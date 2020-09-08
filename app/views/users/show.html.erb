@@ -1,3 +1,4 @@
+<%if current_user == @user%>
 <div class="wrapper-profile">
   <div class="profile-page-container">
     <div class="profile-card gradient-topleft">
@@ -11,15 +12,13 @@
         <div class="profile-page-info">
           <ul>
             <li><h2 class="m-0"><%= current_user.full_name %></h2></li>
-            <li><p><i><%= current_user.email %></li>
-              <li>from </i><%= current_user.location %></li>
-              <li><%= current_user.phone_number %></li>
-              <li><i>hourly rate</i> <%= current_user.hourly_rate %>€/h</li>
-              <li><i>Business </i><%= current_user.business_name %></li>
-              <li> <%= current_user.business_address %></p></li>
+            <li><p><%= current_user.email %></li>
+              <li>🌍 <%= current_user.location %></li>
+              <li>📱 <%= current_user.phone_number %></li>
+              <li><i>Hourly rate</i> <%= current_user.hourly_rate %>€/h</li>
             </ul>
             <div class="icon-block">
-              <a href="#"><i class="fab fa-linkedin p-2"></i></a>
+              <a href="<%=current_user.linkedin_url%>"><i class="fab fa-linkedin p-2"></i></a>
               <a href="#"> <i class="fab fa-twitter p-2"></i></a>
               <a href="#"> <i class="fab fa-google-plus p-2"></i></a>
             </div>
@@ -31,8 +30,11 @@
               <%= link_to user_path, class: "btn nav-item btn-success" do %>
               Upload Resume
               <% end %>
+              <%= link_to my_inquiries_path, class: "btn nav-item btn-dark" do %>
+              My Applications
+              <% end %>
               <%= link_to saved_offers_path, class: "btn nav-item btn-warning" do %>
-              Saved
+              Saved Offers
               <% end %>
             </div>
           </div>
@@ -41,9 +43,44 @@
       <div class="card my-4">
         <div class="profile-page-about">
           <h2>Bio</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse molestie odio nisl, sed rhoncus turpis dignissim at. Donec sit amet sollicitudin orci. In hac habitasse platea dictumst. Curabitur iaculis nisi eu mauris vestibulum, a commodo nibh rutrum. Nulla in mattis nunc. Praesent tincidunt risus id finibus viverra. Ut et tortor ut mauris ornare suscipit. Praesent ut lacinia orci, ut sollicitudin velit. Phasellus a purus sed mauris scelerisque porta. Nunc in tempor elit.</p>
+          <p><%=current_user.bio%></p>
         </div>
       </div>
     </div>
   </div>
+<%else%>
+<div class="wrapper-profile">
+  <div class="profile-page-container">
+    <div class="profile-card gradient-topleft">
+      <div class="profile-page-first">
+        <div class="profile-page-avatar">
+          <!-- <img src="https://images.unsplash.com/photo-1589329482108-e414c7c6b8c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" class="profile-pic" > -->
+          <%if @user.photo.attached? || !@user.avatar_url.nil?%>
+          <%= image_tag @user.avatar_url, class: "profile-pic" %>
+          <%end%>
+        </div>
+        <div class="profile-page-info">
+          <ul>
+            <li><h2 class="m-0"><%= @user.full_name %></h2></li>
+            <li><p><%= @user.email %></li>
+              <li>🌍 <%= @user.location %></li>
+              <li>📱 <%= @user.phone_number %></li>
+              <li><i>Hourly rate</i> <%= @user.hourly_rate %>€/h</li>
+            </ul>
+            <div class="icon-block">
+              <a href="<%=@user.linkedin_url%>"><i class="fab fa-linkedin p-2"></i></a>
+              <a href="<%=@user.website%>"> <i class="fab fa-twitter p-2"></i></a>
+              <a href="#"> <i class="fab fa-google-plus p-2"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card my-4">
+        <div class="profile-page-about">
+          <h2>Bio</h2>
+          <p><%=@user.bio%></p>
+        </div>
+      </div>
+    </div>
+  </div>
+<%end%>

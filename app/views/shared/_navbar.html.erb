@@ -5,6 +5,9 @@
 		</div>
 		<div id="mainListDiv" class="main_list">
 			<ul class="navlinks">
+				<%if user_signed_in?%>
+					<li><a href="/offers/">Offers</a></li>
+				<%end%>
 				<li><a href="/about">About</a></li>
 				<li><a href="#">Customers</a></li>
 				<li><a href="/services">Services</a></li>
@@ -21,7 +24,7 @@
               <img src="<%= current_user.avatar_url %>" width="40" height="40" class="rounded-circle">
             </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="/users/1/" style="color: darkgray; font-size: 20px;">Dashboard</a>
+          <a class="dropdown-item" href="/users/<%=current_user.id%>/" style="color: darkgray; font-size: 20px;">Dashboard</a>
           <a class="dropdown-item" href="/users/edit" style="color: darkgray; font-size: 20px;">Edit Profile</a>
           <a class="dropdown-item"rel="nofollow" data-method="delete" href="/users/sign_out" style="color:darkgray; font-size: 20px;">Sign out</a>
         </div>

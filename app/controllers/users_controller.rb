@@ -11,6 +11,10 @@ class UsersController < ApplicationController
     @inquiry = current_user.inquiries.last
   end
 
+  def show
+    @user = User.find(params[:id])
+  end
+
   def saved_offers
     @offers = Offer.all
     @saved_offers = []
