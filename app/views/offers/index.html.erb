@@ -40,7 +40,7 @@
         </div>
       </div>
       <div class="offers index">
-        <% @offers.each do |offer| %>
+        <% @offers.reverse.each do |offer| %>
         <div class="card offers mx-auto">
           <div class="row">
             <div class="logo offers ml-3 mb-3"><img
@@ -60,7 +60,7 @@
                 </div>
               </div>
             </div>
-            <p class="text-muted"><%=offer.description%> Lorem ipsum dolor sit amet consectetur adipisicing elit. At quod minima nesciunt facere quo iusto eveniet cupiditate doloremque animi, id odit commodi repudiandae ab nemo eum. Possimus, ducimus non necessitatibus! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam veritatis, accusamus exercitationem laudantium vel veniam, neque deserunt hic debitis reiciendis. Temporibus sunt sint iure rerum ab hic molestias voluptatum labore!</p>
+            <p class="text-muted"><%= truncate("#{offer.description}            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, quisquam, perspiciatis. Quas temporibus debitis vel eos minus, eaque aperiam officiis molestiae, nulla deserunt, quae modi repellat doloribus molestias ea cum laudantium, quis sed illum maxime tempore tempora animi suscipit consequatur consequuntur. Dignissimos velit consequuntur molestiae, quis praesentium doloremque, deleniti. Minus sit vel nihil beatae est reprehenderit facilis aliquid, enim, praesentium maiores possimus exercitationem ea amet voluptatibus saepe, sapiente dolorem libero! Cupiditate animi, assumenda beatae et? Quae ipsa fuga consequatur, corporis rem quos dolore autem ipsam. Ipsa fugit, obcaecati eaque, libero nemo illum necessitatibus et quis nisi nostrum inventore dicta, alias.", length: 200) %> </p>
             <div class="row offer-btn-sbmt btnsubmit mt-4">
               <div style="padding-top: 1rem; padding-left: 0.4rem;"> <%= link_to new_offer_inquiry_path(offer) do %>
                 <button name="button" type="submit" class="btn-offer btn1 btn btn-success"><i
@@ -68,7 +68,7 @@
                 Apply</button>
                 <% end %></div>
                 <div style="padding-top: 1rem; padding-left: 0.4rem;">
-                  <%= button_to bookmark_path(offer), class: "btn-offer btn-success btn", method: :post, remote: true do %>
+                  <%= button_to bookmark_path(offer), class: "btn-offer btn-success btn", id: "bookmark-#{offer.id}", method: :post, remote: true do %>
                   <i class="fa<%= offer.saved ? 's' : 'r' %> fa-bookmark"></i> Save
                   <% end %> </div>
                 </div>
