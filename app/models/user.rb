@@ -4,11 +4,12 @@ class User < ApplicationRecord
   has_many :inquiries
   has_many :messages, dependent: :destroy
   has_many :offers
+  has_many :interviews
   has_one_attached :photo
   has_one_attached :business_logo
   devise :database_authenticatable, :registerable,
-  :recoverable, :rememberable, :validatable,
-  :omniauthable, omniauth_providers: [:github]
+         :recoverable, :rememberable, :validatable,
+         :omniauthable, omniauth_providers: [:github]
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
