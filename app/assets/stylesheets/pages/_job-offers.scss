@@ -7,6 +7,7 @@
   background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
   height: 100%;
   padding-top: 10rem;
+  padding-bottom: 10rem;
 }
 .banner.offers {
   background-size: cover;
@@ -17,7 +18,7 @@
 .offer-details {
   display: flex;
   justify-content: flex-start;
-  
+
 }
 #banner-logo-seperator {
   border: 1px solid #FFFFFF;
@@ -56,7 +57,7 @@
   margin-top: 5%;
   margin-bottom: 5%;
   width: 31rem;
-  
+
 
 }
 .card.offers p.heading {
