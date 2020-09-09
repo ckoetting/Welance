@@ -19,4 +19,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
     end
   end
 
+  def after_sign_up_path_for(resource)
+    @user = current_user
+    @user.update(user_type: 'Business')
+    profile_sign_up_path event: :authentication #this will throw if @user is not activated
+  end
 end

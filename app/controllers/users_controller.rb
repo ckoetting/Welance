@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
+
+
   def developers
     @developers = User.where(user_type: "developer")
   end
@@ -12,7 +15,14 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+  end
+
+  def edit
+  end
+
+  def update
+    @user.update(user_params)
+    redirect_to user_path(@offer)
   end
 
   def saved_offers
@@ -33,6 +43,10 @@ class UsersController < ApplicationController
   end
 
   private
+
+  def set_user
+    @user = User.find(params[:id])
+  end
 
   def user_params
     params.require(:user).permit(
