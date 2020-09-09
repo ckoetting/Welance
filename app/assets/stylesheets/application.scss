@@ -17,3 +17,21 @@
 @import "pages/show-offers";
 @import "pages/new-inquiries";
 @import "pages/index-inquiries";
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin: 0 0 350px; /* bottom = footer height */
+    padding-bottom: 10px;
+}
+
+.application-bg {
+  background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+  background-size: cover;
+}
+
+.inquiries-index.application-bg, .pages-home.application-bg {
+  background: none;
+}
