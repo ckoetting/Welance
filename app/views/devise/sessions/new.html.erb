@@ -29,14 +29,14 @@
         input_html: { autocomplete: "current-password" } %>
         <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
       </div>
-
-      <div class="form-actions">
-        <%= f.button :submit, "Log in", class: "btn btn-primary btn-block" %>
+      <%= render "devise/shared/gh_signin" %>
+      <div class="form-actions mt-2">
+        <%= f.button :submit, "Business Log in", class: "btn btn-primary btn-block mb-2" %>
+        <%= render "devise/shared/forgot_pw" %>
       </div>
       <% end %>
       <div class="separator my-3">Don't have an account?</div>
-
-      <%= render "devise/shared/links" %>
+      <%= render "devise/shared/signup_btn" %>
     </div>
   </div>
 </div>

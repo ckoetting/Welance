@@ -2,12 +2,13 @@
 <div class="device-wrapper edit">
   <div class="device-container edit gradient-topleft">
   <div class="inside-device-container pr-5 border-right" id="user-container">
-    <h2 id="user-title">Choose user type</h2>
+    <h2 id="user-title"></h2>
 
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
     <%= f.error_notification %>
     <div class="form-inputs">
       <%= f.hidden_field :provider, :value => current_user.provider %>
+      <%= f.hidden_field :type, :value => current_user.user_type %>
       <%= f.input :user_type, label: false, :collection => %w[Developer Business] %>
     </div>
 
@@ -35,7 +36,7 @@
   <div class="inside-device-container login-details pl-5">
 <!--     <h2>Edit <%= resource_name.to_s.humanize %></h2>
 -->
-<h2>Login details</h2>
+<h2 id="right-signup-title">Login details</h2>
 <div class="form-inputs">
   <%= f.input :email, required: true, autofocus: true %>
 
@@ -60,13 +61,12 @@
 </div>
 
 <div class="form-actions">
-  <%= f.button :submit, "Confirm", class: "btn btn-success update-button btn-block my-4" %>
+  <%= f.button :submit, "Confirm", class: "btn btn-success btn-block my-2" %>
 </div>
 <% end %>
 
 <p><%= link_to "Cancel my account", registration_path(resource_name), class:"btn btn-danger btn-block",data: { confirm: "Are you sure?" }, method: :delete %></p>
 
-<%= link_to "Back", :back %>
 </div>
 </div>
 </div>
