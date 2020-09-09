@@ -4,4 +4,4 @@ Welance is a platform for businesses to hire certified freelance developers on a
 
 ## About
 
-It was built as a final project as part of the Le Wagon coding bootcamp. Welance was coded with Ruby on Rails, HTML, CSS and Javascript. The website is available at welance.xy
+It was built as a final project as part of the Le Wagon coding bootcamp. Welance was coded with Ruby on Rails, HTML, CSS and Javascript. The website is available at https://welance.xy
