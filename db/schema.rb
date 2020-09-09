@@ -94,6 +94,8 @@ ActiveRecord::Schema.define(version: 2020_09_08_150401) do
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "saved", default: false
     t.string "employment_type"
+    t.float "latitude"
+    t.float "longitude"
     t.index ["user_id"], name: "index_offers_on_user_id"
   end
 
