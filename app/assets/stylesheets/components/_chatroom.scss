@@ -6,6 +6,7 @@
   flex-direction: column;
   justify-content: space-around;
   flex-grow: 1;
+  border-radius: 5px;
 
   h1 {
     padding: 0 1rem;
@@ -13,10 +14,15 @@
     margin-bottom: 0;
   }
 }
+.card-chat {
+border-radius: 5px;
+box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+border: none;
+margin-bottom: 5rem;
+}
 .wrapper-chatroom {
   display: flex;
   justify-content: center;
-  background-image: linear-gradient(to right, rgb(195, 20, 50), rgb(36, 11, 54));
   width: 100%;
   height: 100%;
   padding-top: 6rem;
@@ -58,6 +64,8 @@
 #new_message {
   padding: 1rem;
   border-top: 1px solid $gray-200;
+  position: relative;
+  width: 29rem;
 
   .form-group {
     margin-bottom: 0;
@@ -73,3 +81,4 @@
     color: $gray-500;
   }
 }
+
