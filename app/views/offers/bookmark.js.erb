@@ -1,0 +1,8 @@
+
+if(document.querySelector("#bookmark-<%= @offer.id %> .fa-bookmark").classList.contains("far")) {
+  document.querySelector("#bookmark-<%= @offer.id %> .fa-bookmark").classList.remove("far")
+  document.querySelector("#bookmark-<%= @offer.id %> .fa-bookmark").classList.add("fas")
+} else {
+  document.querySelector("#bookmark-<%= @offer.id %> .fa-bookmark").classList.add("far")
+  document.querySelector("#bookmark-<%= @offer.id %> .fa-bookmark").classList.remove("fas")
+}

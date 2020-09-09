@@ -3,9 +3,9 @@ class OffersController < ApplicationController
 
   def index
     if params[:search_by_title_and_location].nil? || params[:search_by_title_and_location].empty?
-      @offers = Offer.all
+      @offers = Offer.all.order(title: :desc)
     else
-    @offers = Offer.search_by_title_and_location(params[:search_by_title_and_location])
+      @offers = Offer.search_by_title_and_location(params[:search_by_title_and_location]).order(title: :desc)
     end
     @q = Offer.ransack(params[:q])
     @offers = @q.result
@@ -49,7 +49,7 @@ class OffersController < ApplicationController
       @offer.saved = true
       @offer.save
     end
-    redirect_to offers_path(anchor: "offer-#{@offer.id}")
+    # redirect_to offers_path(anchor: "offer-#{@offer.id}")
 
   end
 
