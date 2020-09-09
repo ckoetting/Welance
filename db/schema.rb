@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_08_150401) do
+ActiveRecord::Schema.define(version: 2020_09_09_122802) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,6 +69,18 @@ ActiveRecord::Schema.define(version: 2020_09_08_150401) do
     t.index ["chatroom_id"], name: "index_inquiries_on_chatroom_id"
     t.index ["offer_id"], name: "index_inquiries_on_offer_id"
     t.index ["user_id"], name: "index_inquiries_on_user_id"
+  end
+
+  create_table "interviews", force: :cascade do |t|
+    t.date "date"
+    t.string "infos"
+    t.bigint "inquiry_id"
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.time "time"
+    t.index ["inquiry_id"], name: "index_interviews_on_inquiry_id"
+    t.index ["user_id"], name: "index_interviews_on_user_id"
   end
 
   create_table "messages", force: :cascade do |t|
@@ -170,6 +182,8 @@ ActiveRecord::Schema.define(version: 2020_09_08_150401) do
   add_foreign_key "inquiries", "chatrooms"
   add_foreign_key "inquiries", "offers"
   add_foreign_key "inquiries", "users"
+  add_foreign_key "interviews", "inquiries"
+  add_foreign_key "interviews", "users"
   add_foreign_key "messages", "chatrooms"
   add_foreign_key "messages", "users"
   add_foreign_key "offers", "users"
