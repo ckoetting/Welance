@@ -1,0 +1,15 @@
+<div class="device-wrapper">
+  <div class="inquiry-container">
+    <h3> Schedule an interview </h3>
+    <div class="form">
+    <%= simple_form_for([@offer, @inquiry, @interview])do |f| %>
+      <%= f.input :date, as: :date %>
+      <%= f.input :time, as: :time%>
+      <%= f.input :infos, as: :text%>
+      <div class="form-actions">
+        <%= f.button :submit, "Apply", class: "btn btn-success btn-block" %>
+      </div>
+    <% end %>
+    </div>
+  </div>
+</div>
