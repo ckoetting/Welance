@@ -1,4 +1,4 @@
-<div class="wrapper-chatroom" style="background-image: linear-gradient(to right, rgb(55, 59, 68), rgb(66, 134, 244));">
+<div class="wrapper-chatroom">
   <div class="header-chat">
     <div class="chat-avatars">
      <img class="chat-avatar-logo" src="https://avatars1.githubusercontent.com/u/61974192?v=4">
@@ -6,7 +6,7 @@
     </div>
      <h1>Conversation between <br><%=User.find(@chatroom.developer_id).full_name%> and <%=User.find(@chatroom.business_id).business_name%></h1>
   </div>
-  <div class="chat card">
+  <div class="chat card-chat">
     <div class="d-flex">
       <div class="list-group w-200px bg-white br-light">
       </div>

@@ -33,6 +33,15 @@ body {
   background-size: cover;
 }
 
-.inquiries-index.application-bg, .pages-home.application-bg {
+.pages-home.application-bg {
   background: #EBEAED;
+}
+.chatrooms-show.application-bg {
+  background-image: linear-gradient(to right, rgb(55, 59, 68), rgb(66, 134, 244));
+}
+.offers-show.application-bg {
+background-image: linear-gradient(to right, rgb(195, 20, 50), rgb(36, 11, 54));
+}
+.inquiries-show.application-bg {
+  background-image: linear-gradient(to right, rgb(55, 59, 68), rgb(66, 134, 244));
 }

@@ -1,6 +1,6 @@
 class OffersController < ApplicationController
   before_action :set_offer, only: [:show, :edit, :update, :destroy, :bookmark]
-  
+
   def index
     if params[:search_by_title_and_location].nil? || params[:search_by_title_and_location].empty?
       @offers = Offer.all.order(title: :desc)
@@ -10,15 +10,12 @@ class OffersController < ApplicationController
     @q = Offer.ransack(params[:q])
     @offers = @q.result
   end
-  
-  
-  
+   
   def show
     # the `geocoded` scope filters only flats with coordinates (latitude & longitude)
     @marker = [{lat: @offer.latitude,lng: @offer.longitude}]    
-    end
+  end
 
-  
   def new
     @offer = Offer.new
   end
@@ -49,16 +46,15 @@ class OffersController < ApplicationController
   def bookmark
     if @offer.saved
       @offer.saved = false
-      @offer.save
     else
       @offer.saved = true
-      @offer.save
     end
+    @offer.save
     redirect_to offers_path(anchor: "offer-#{@offer.id}")
     # redirect_to offers_path(anchor: "offer-#{@offer.id}")
   end
   
-  private
+private
   
   def set_offer
     @offer = Offer.find(params[:id])
