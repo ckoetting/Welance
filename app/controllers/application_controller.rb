@@ -13,12 +13,13 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: [
       :full_name, :user_type, :bio, :location, :dob,
       :phone_number, :hourly_rate, :headline, :business_address,
-      :business_name, :business_vat_id, :business_size, :website, :username
+      :business_name, :business_vat_id, :business_size, :website, :username,
+      :photo
     ])
     update_attrs = [:full_name, :user_type, :bio, :location, :dob,
       :phone_number, :hourly_rate, :headline, :business_address,
       :business_name, :business_vat_id, :business_size, :website,
-      :password, :password_confirmation, :current_password]
+      :password, :password_confirmation, :current_password, :photo]
       devise_parameter_sanitizer.permit :account_update, keys: update_attrs
     end
   end
