@@ -6,6 +6,7 @@ class InquiriesController < ApplicationController
   end
 
   def show
+    @offer = Offer.find(params[:offer_id])
     if @inquiry.status == "pending"
       @inquiry.status = "opened"
       @inquiry.save
@@ -18,10 +19,11 @@ class InquiriesController < ApplicationController
   end
 
   def create
+    @offer = Offer.find(params[:offer_id])
     @inquiry = Inquiry.new(inquiry_params)
     @inquiry.user = current_user
-    @inquiry.offer = Offer.find(params[:offer_id])
-    if @inquiry.save
+    @inquiry.offer = @offer
+    if @inquiry.save!
       redirect_to inquiry_sent_path
       flash.notice = "Your application as been sent!"
     else

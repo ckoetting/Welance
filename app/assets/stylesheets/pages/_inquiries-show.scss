@@ -1,3 +1,26 @@
+.wrapper-inquiry {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  padding-bottom: 5rem;
+  padding-top: 2rem;
+}
+.inq-offer-card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 50rem;
+  border-radius: 10px;
+  margin-left: 14.5rem;
+}
+.banner-inquiry-show {
+background-size: cover;
+background-position: center;
+padding: 6.5rem 0;
+height: 15rem;
+}
 .container.inquiry {
   display: flex;
   justify-content: space-between;
@@ -7,12 +30,11 @@
 .container.message {
   display: flex;
   justify-content: center;
-  
+
 }
 .user-card-full {
   overflow: hidden
 }
-
 .card {
   border-radius: 5px;
   -webkit-box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
