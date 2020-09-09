@@ -1,0 +1,30 @@
+<div class="index-wrapper">
+  <div class="list-group">
+    <div class="page-header"><h3>Your upcoming Job Interviews</h3></div>
+  <% @upcoming_interviews.each do |interview|%>
+  <div class="courses-container">
+  <div class="course">
+    <div class="course-preview">
+      <h6>Company</h6>
+      <h2><%= interview.inquiry.offer.user.business_name %></h2>
+      <a href="http://127.0.0.1:3000/offers?q%5Btitle_cont%5D=&q%5Buser_business_name_cont%5D=<%= interview.inquiry.offer.user.business_name %>&q%5Blocation_cont%5D=&q%5Bskills_required_cont%5D=&commit=Search">View all offers from <%= interview.inquiry.offer.user.business_name %> <i class="fas fa-chevron-right"></i></a>
+    </div>
+    <div class="course-info">
+      <div class="progress-container">
+        <span class="progress-text">
+          
+        </span>
+      </div>
+      <h6><%= interview.inquiry.offer.title %></h6>
+      <h2>Date: <%= interview.date.strftime("%d of %B, %Y")%></h2>
+      <h3>Time: <%= interview.time.strftime("%I:%M %p")%></h3>
+      <h5> <%= interview.infos%></h5>
+      <%= link_to offer_inquiry_path(interview.inquiry.offer, interview.inquiry), class: "btn inquiry" do %>Details<%end%>
+      <span class="progress-text interview-status">application status: <%= interview.inquiry.status %></span>
+    </div>
+  </div>
+</div>
+  <% end %>
+  </div>
+  </div>
+</div>

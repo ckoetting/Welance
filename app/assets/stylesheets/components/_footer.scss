@@ -1,11 +1,15 @@
+
+
 .col_white_amrc {
   color: #fff;
 }
 .footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
   width: 100%;
   background-color: black;
-  min-height: 250px;
-  padding: 10px 0px 25px 0px;
+  height: 350px;
   & a:hover {
     text-decoration: none;
     color: #22dac3;

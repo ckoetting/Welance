@@ -22,7 +22,7 @@
       <%= f.input :photo, as: :file %>
     </div>
     <div class="form-inputs" id="Business">
-      <%= f.input :business_name, autofocus: true %>
+      <%= f.input :business_name, autofocus: true, class: 'text-white' %>
       <%= f.input :business_address, label: 'Address', autofocus: true %>
       <%= f.input :business_vat_id, label: 'Business VAT', autofocus: true %>
       <%= f.input :business_size, autofocus: true %>
@@ -35,7 +35,7 @@
   <div class="inside-device-container login-details pl-5">
 <!--     <h2>Edit <%= resource_name.to_s.humanize %></h2>
 -->
-<h2>Login details</h2>
+<h2 class="user-edit-title">Login details</h2>
 <div class="form-inputs">
   <%= f.input :email, required: true, autofocus: true %>
 
@@ -60,7 +60,7 @@
 </div>
 
 <div class="form-actions">
-  <%= f.button :submit, "Confirm", class: "btn btn-success update-button btn-block my-4" %>
+  <%= f.button :submit, "Confirm", class: "btn btn-success btn-block my-2" %>
 </div>
 <% end %>
 

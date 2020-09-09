@@ -37,6 +37,36 @@ User.create(
   puts "______________"
 
   puts "Creating offers.."
+  
+  
+  15.times do
+    offer = Offer.new(
+      title: Faker::Job.title,
+      description: Faker::Lorem.paragraph,
+      employment_type: Faker::Job.employment_type,
+      skills_required: "#{SKILLS.sample}, #{SKILLS.sample}",
+      compensation: rand(50000..100000),
+      fixed_price: true,
+      location: LOCATIONS.sample,
+      deadline_at: Date.today)
+      offer.user = User.first
+      inquiry = Inquiry.create(offer: offer, user: User.all.sample, message: Faker::Lorem.paragraph)
+      
+      puts "creating reviews..."
+      15.times do
+        review = Review.new(
+          inquiry: inquiry,
+          rating: rand(0..5),
+          description: Faker::Lorem.paragraph,
+          created_at: rand(1..100).weeks.ago
+        )
+        review.save!
+      end
+      
+      offer.save!
+    end
+    
+    puts "#{Offer.count} offers created"
 
 
 15.times do
@@ -55,3 +85,4 @@ User.create(
     offer.save!
   puts "#{Offer.count} offers created"
 end
+

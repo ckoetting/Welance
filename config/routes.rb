@@ -10,9 +10,11 @@ Rails.application.routes.draw do
       member do
         get 'create_chat', to: 'chatrooms#create_chatroom'
       end
+      resources :interviews, only: [:new, :create]
     end
     resources :reviews
   end
+  get '/users/my_interviews', to: 'interviews#my_interviews', as: :my_interviews
   get '/users/my_inquiries', to: 'inquiries#index', as: :my_inquiries
   get 'users/applications', to: 'users#job_offers', as: :business_applications
   get 'users/success', to: 'users#success', as: :inquiry_sent

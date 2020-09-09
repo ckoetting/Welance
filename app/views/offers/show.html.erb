@@ -71,9 +71,17 @@
           <%= button_to bookmark_path(@offer), class: "btn-offer btn-success btn", method: :post, remote: true do %>
           <i class="fa<%= @offer.saved ? 's' : 'r' %> fa-bookmark"></i> Save
           <% end %> </div>
-    </div>
+              </div>
+    
+ 
+          
+          <div id="map"
+     style="width: 100%; height: 350px;"
+     data-markers="<%= @marker.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+     </div>
       </div>
-  </div>
+ </div>
   <% end %>
 
 

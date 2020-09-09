@@ -27,7 +27,8 @@ gem 'faker'
 gem 'exception_handler', '~> 0.8.0.0'
 #filtering
 gem 'acts-as-taggable-on', '~> 6.0'
-
+#mapbox
+gem 'geocoder'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 gem 'ransack'
