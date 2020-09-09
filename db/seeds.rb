@@ -67,4 +67,3 @@ User.create(
     end
     
     puts "#{Offer.count} offers created"
-    end
