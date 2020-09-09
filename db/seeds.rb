@@ -33,9 +33,9 @@ User.create(
   business_vat_id: "882948",
   business_size: "6300")
   puts "#{User.count} users created"
-  
+
   puts "______________"
-  
+
   puts "Creating offers.."
   
   
@@ -67,3 +67,22 @@ User.create(
     end
     
     puts "#{Offer.count} offers created"
+
+
+15.times do
+  offer = Offer.new(
+    title: Faker::Job.title,
+    description: Faker::Lorem.paragraph,
+    employment_type: Faker::Job.employment_type,
+    skills_required: "#{SKILLS.sample}, #{SKILLS.sample}",
+    compensation: rand(50000..100000),
+    fixed_price: true,
+    location: LOCATIONS.sample,
+    deadline_at: Date.today)
+    offer.user = User.first
+    inquiry = Inquiry.create(offer: offer, user: User.all.sample, message: Faker::Lorem.paragraph)
+
+    offer.save!
+  puts "#{Offer.count} offers created"
+end
+

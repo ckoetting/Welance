@@ -1,27 +1,25 @@
-      $('div#Developer').hide()
-      $('div#Business').hide()
+   const user_type = document.querySelector('#user_type').value
+   const provider = document.querySelector("#user_provider").value
+   const user_type_dropdown = document.querySelector("#user_user_type");
+   const user_title = document.querySelector("#user-title");
+  const right_signup_title = document.querySelector("#right-signup-title");
+   user_type_dropdown.style.display = 'none';
 
-    // Show and hide selected div
-    $('#user_user_type').change(function () {
-      let value = this.value;
 
-      $('div#Developer').hide()
-      $('div#Business').hide()
-      $('#' + this.value).show();
-      if (value === 'Developer') {
-        // document.querySelector(".device-container").style.borderColor = "#1fa1f2";
-        document.querySelector("#user-title").innerText = "Developer details";
-        document.querySelector("#user-title").style.color = "#1fa1f2";
-      } else {
-        // document.querySelector(".device-container").style.borderColor = "#E93A7D";
-        document.querySelector("#user-title").innerText = "Business details";
-        document.querySelector("#user-title").style.color = "#E93A7D";
-      }
-    });
+   if (user_type === 'Developer') {
+    $('div#Business').hide()
+    user_title.innerText = "Complete developer details";
+    user_title.style.color = "white";
+       right_signup_title.classList.add("profile_signup-developer");
+  } else {
+    $('div#Developer').hide()
+   user_title.innerText = "Complete business details";
+   user_title.style.color = "white";
+   right_signup_title.classList.add("profile_signup-business");
 
-    const provider = document.querySelector("#user_provider").value
+ }
 
-    const current_password_field = document.querySelector(".current_password_field");
-    if (provider === 'github') {
-      current_password_field.style.display = 'none';
-    }
+ const current_password_field = document.querySelector(".current_password_field");
+ if (provider === 'github') {
+  current_password_field.style.display = 'none';
+}
