@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   get 'users/applications', to: 'users#job_offers', as: :business_applications
   get 'users/success', to: 'users#success', as: :inquiry_sent
   get 'users/savedoffers', to: 'users#saved_offers', as: :saved_offers
-  resources :users, only: [ :show ]
+  resources :users
   resources :contact, only: [:new, :create]
   resources :about, only: [:show]
   get 'contact_us' => 'pages#contact_us'
