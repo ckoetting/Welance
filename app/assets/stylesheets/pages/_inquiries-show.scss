@@ -13,7 +13,6 @@
   background-color: white;
   width: 50rem;
   border-radius: 10px;
-  margin-left: 14.5rem;
 }
 .banner-inquiry-show {
 background-size: cover;
@@ -173,4 +172,9 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.inquiry-interview-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
 }
