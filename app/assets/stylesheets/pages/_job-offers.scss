@@ -18,7 +18,6 @@
 .offer-details {
   display: flex;
   justify-content: flex-start;
-
 }
 #banner-logo-seperator {
   border: 1px solid #FFFFFF;
@@ -51,24 +50,27 @@
 
 .card.offers {
   display: block;
-  padding: 3vh 2vh 7vh 5vh;
+  padding: 4vh 2vh 3vh 4vh;
   border: none;
   border-radius: 15px;
-  margin-top: 5%;
   margin-bottom: 5%;
-  width: 31rem;
-
-
+  width: 33rem;
+  height: 16rem;
 }
-.card.offers p.heading {
+.card.offers h6.heading {
   font-weight: bold;
-  font-size: 25px
+  font-size: 25px;
 }
 
 .card.offers p.text-muted {
-  font-size: 17px;
-  font-weight: bold;
-  color: #a1a7ae !important
+  font-size: 15px;
+  color: #a1a7ae !important;
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 4rem;
 }
 
 .header.offers {
@@ -85,8 +87,14 @@
 
 
 .btn-sm {
-  border-radius: 8px;
-  margin-right: 2rem;
+  border-radius: 10px;
+  margin-right: 0.5rem;
+}
+
+.offer-btn-sbmt {
+  position: absolute;
+  top: 9.5rem;
+  left: 2rem;
 }
 
 .fas.fa-users {
