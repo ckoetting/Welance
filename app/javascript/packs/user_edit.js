@@ -10,7 +10,7 @@
       } else {
         $('div#Developer').hide()
         document.querySelector("#user-title").innerText = "Business details";
-        document.querySelector("#user-title").style.color = "#white";
+        document.querySelector("#user-title").style.color = "white";
       }
 
       const current_password_field = document.querySelector(".current_password_field");
