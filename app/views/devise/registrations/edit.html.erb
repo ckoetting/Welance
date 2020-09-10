@@ -19,7 +19,7 @@
       <%= f.input :location, label: 'Address', autofocus: true %>
       <%= f.input :dob, label: 'Date of birth', autofocus: true %>
       <%= f.input :phone_number, autofocus: true %>
-      <%= f.input :photo, as: :file %>
+      <%= f.input :photo, label: 'Avatar', as: :file %>
     </div>
     <div class="form-inputs" id="Business">
       <%= f.input :business_name, autofocus: true, class: 'text-white' %>
@@ -28,7 +28,7 @@
       <%= f.input :business_size, autofocus: true %>
       <%= f.input :phone_number, autofocus: true %>
       <%= f.input :website, autofocus: true %>
-      <%= f.input :photo, as: :file %>
+      <%= f.input :photo, label: 'Logo', as: :file %>
     </div>
   </div>
 

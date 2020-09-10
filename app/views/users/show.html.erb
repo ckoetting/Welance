@@ -5,21 +5,23 @@
       <div class="profile-page-first">
         <div class="profile-page-avatar">
           <!-- <img src="https://images.unsplash.com/photo-1589329482108-e414c7c6b8c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" class="profile-pic" > -->
-             <% if current_user.photo.attached? %>
-               <%= cl_image_tag current_user.photo.key, class: "profile-pic" %>
-             <% elsif current_user.avatar_url? %>
-              <%= image_tag current_user.avatar_url, class: "profile-pic" %>
-              <% else %>
-              <%= image_tag "avatar_placeholder.png", class: "profile-pic" %>
-             <% end %>
+          <% if current_user.photo.attached? %>
+          <%= cl_image_tag current_user.photo.key, class: "profile-pic" %>
+          <% elsif current_user.avatar_url? %>
+          <%= image_tag current_user.avatar_url, class: "profile-pic" %>
+          <% else %>
+          <%= image_tag "avatar_placeholder.png", class: "profile-pic" %>
+          <% end %>
         </div>
         <div class="profile-page-info">
           <ul>
             <li><h2 class="m-0"><%= current_user.full_name %></h2></li>
             <li><p><%= current_user.email %></li>
-              <li>🌍 <%= current_user.location %></li>
+              <li>🌍 <%= current_user.business_address %></li>
               <li>📱 <%= current_user.phone_number %></li>
-              <li><i>Hourly rate</i> <%= current_user.hourly_rate %>€/h</li>
+              <% if current_user.hourly_rate? %>
+              <li><i>Hourly rate</i><%= current_user.hourly_rate %>€/h</li>
+              <% end %>
             </ul>
             <div class="icon-block">
               <a href="<%=current_user.linkedin_url%>"><i class="fab fa-linkedin p-2"></i></a>
@@ -55,39 +57,39 @@
       </div>
     </div>
   </div>
-<%else%>
-<div class="wrapper-profile">
-  <div class="profile-page-container">
-    <div class="profile-card gradient-topleft">
-      <div class="profile-page-first">
-        <div class="profile-page-avatar">
-          <!-- <img src="https://images.unsplash.com/photo-1589329482108-e414c7c6b8c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" class="profile-pic" > -->
-          <%if @user.photo.attached? || !@user.avatar_url.nil?%>
-          <%= image_tag @user.avatar_url, class: "profile-pic" %>
-          <%end%>
-        </div>
-        <div class="profile-page-info">
-          <ul>
-            <li><h2 class="m-0"><%= @user.full_name %></h2></li>
-            <li><p><%= @user.email %></li>
-              <li>🌍 <%= @user.location %></li>
-              <li>📱 <%= @user.phone_number %></li>
-              <li><i>Hourly rate</i> <%= @user.hourly_rate %>€/h</li>
-            </ul>
-            <div class="icon-block">
-              <a href="<%=@user.linkedin_url%>"><i class="fab fa-linkedin p-2"></i></a>
-              <a href="<%=@user.website%>"> <i class="fab fa-twitter p-2"></i></a>
-              <a href="#"> <i class="fab fa-google-plus p-2"></i></a>
+  <%else%>
+  <div class="wrapper-profile">
+    <div class="profile-page-container">
+      <div class="profile-card gradient-topleft">
+        <div class="profile-page-first">
+          <div class="profile-page-avatar">
+            <!-- <img src="https://images.unsplash.com/photo-1589329482108-e414c7c6b8c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" class="profile-pic" > -->
+            <%if @user.photo.attached? || !@user.avatar_url.nil?%>
+            <%= image_tag @user.avatar_url, class: "profile-pic" %>
+            <%end%>
+          </div>
+          <div class="profile-page-info">
+            <ul>
+              <li><h2 class="m-0"><%= @user.full_name %></h2></li>
+              <li><p><%= @user.email %></li>
+                <li>🌍 <%= @user.location %></li>
+                <li>📱 <%= @user.phone_number %></li>
+                <li><i>Hourly rate</i> <%= @user.hourly_rate %>€/h</li>
+              </ul>
+              <div class="icon-block">
+                <a href="<%=@user.linkedin_url%>"><i class="fab fa-linkedin p-2"></i></a>
+                <a href="<%=@user.website%>"> <i class="fab fa-twitter p-2"></i></a>
+                <a href="#"> <i class="fab fa-google-plus p-2"></i></a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="card my-4">
-        <div class="profile-page-about">
-          <h2>Bio</h2>
-          <p><%=@user.bio%></p>
+        <div class="card my-4">
+          <div class="profile-page-about">
+            <h2>Bio</h2>
+            <p><%=@user.bio%></p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-<%end%>
+    <%end%>
