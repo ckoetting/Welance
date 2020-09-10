@@ -126,5 +126,11 @@ h2.profile_signup-business {
 h2.user-edit-title {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  background-image: linear-gradient(165deg, white 32%, #242a2e 24%);
+}
+
+h2.user-edit-title.business {
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
   background-image: linear-gradient(165deg, white 42%, #242a2e 24%);
 }
