@@ -1,4 +1,6 @@
-
+.footer-container {
+  margin: 20px 0 30px 0;
+}
 
 .col_white_amrc {
   color: #fff;
@@ -9,7 +11,7 @@
   bottom: 0;
   width: 100%;
   background-color: black;
-  height: 350px;
+  // height: 350px;
   & a:hover {
     text-decoration: none;
     color: #22dac3;
