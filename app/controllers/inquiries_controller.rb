@@ -6,7 +6,6 @@ class InquiriesController < ApplicationController
   end
 
   def change_status
-    # raise
     if params[:accepted] == "true"
       @inquiry.status = "Accepted"
     else

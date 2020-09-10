@@ -20,7 +20,7 @@
               <li>🌍 <%= current_user.website %></li>
               <li>📱 <%= current_user.phone_number %></li>
               <% if current_user.hourly_rate? %>
-              <li><i>Hourly rate</i><%= current_user.hourly_rate %>€/h</li>
+              <li>💸 <%= current_user.hourly_rate %>€/h</li>
               <% end %>
             </ul>
             <div class="icon-block">
