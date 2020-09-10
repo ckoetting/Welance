@@ -36,7 +36,7 @@
     <div class="app-offers-card">
       <div class="app-offers-card-top">
         <div class="business-logo-info">
-          <img class="logo-app-offers" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTxDRpxI5gXgaVmnO-VgcVUNOkca91jIpS75Flbzkz5W_5g5_V5&usqp=CAU">
+           <%= cl_image_tag @offer.user.photo.key, height: 170, width: 170, crop: :scale %>
           <div class="business-info app-offers">
             <ul class="business-info">
               <li><%= @offer.user.business_name %></li>
