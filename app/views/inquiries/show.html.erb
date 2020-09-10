@@ -1,15 +1,16 @@
 <div class="wrapper-offer-inquiry">
+<div class="wrapper-offer-inquiry">
 <div class="banner-inquiry-show">
   <div class="banner-container offers">
     <h2 style="color:white;">Hello, <%=current_user.full_name%> &#128188;</h2>
     <h4 style="color:white;">This is your applications for <%=@inquiry.offer.title%></h4>
   </div>
-  <div class="wrapper-inquiry app-offers-show">
+</div>
+<div class="wrapper-inquiry app-offers-show">
     <div class="inq-offer-card">
       <div class="app-offers-card-top">
         <div class="business-logo-info">
-          <img class="logo-app-offers"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTxDRpxI5gXgaVmnO-VgcVUNOkca91jIpS75Flbzkz5W_5g5_V5&usqp=CAU">
+          <img class="logo-app-offers" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTxDRpxI5gXgaVmnO-VgcVUNOkca91jIpS75Flbzkz5W_5g5_V5&usqp=CAU">
           <div class="business-info app-offers">
             <ul class="business-info">
               <li><%= @offer.user.business_name %></li>
@@ -21,61 +22,27 @@
           </div>
         </div>
         <div class="app-offer-details">
-          <div class="card-title">
-            <h5 class="heading" style="color: black;"><%= link_to offer_path(@offer) do %>
-              <%= @offer.title %>
-              <% end %></h5>
-          </div>
-          <div class="app-offer-perks">
-            <button type="button" class="btn  btn-sm" style="background: #8B2635; "><%=@offer.employment_type%></button>
-            <button type="button" class="btn  btn-sm" style="background: #8B2635; ">
-              <%if @fixed_price%>Fixed Price<%else%>Per Hour<%end%></button>
-            <button type="button" class="btn  btn-sm" style="background: #8B2635;"><%=@offer.location%></button>
-          </div>
-          <p class="app-offers-text text-muted"><%=@offer.description%> Lorem ipsum dolor sit amet consectetur
-            adipisicing, elit. Nihil hic nemo at magnam quidem dolore quae magni ullam ipsam unde veritatis ratione, ea
-            cumque veniam, consequatur est, reiciendis doloribus repellendus. Lorem, ipsum, dolor sit amet consectetur
-            adipisicing elit. Tenetur, laboriosam aliquid, modi maiores quisquam recusandae facilis veniam odio
-            cupiditate beatae ad, quaerat quia dolore praesentium. Quisquam, sit. Ipsa, inventore, nulla.</p>
+        <div class="card-title">
+          <h5 class="heading" style="color: black;"><%= link_to offer_path(@offer) do %>
+          <%= @offer.title %>
+          <% end %></h5>
+        </div>
+        <div class="app-offer-perks">
+          <button type="button" class="btn  btn-sm" style="background: #8B2635; "><%=@offer.employment_type%></button>
+          <button type="button" class="btn  btn-sm" style="background: #8B2635; ">
+          <%if @fixed_price%>Fixed Price<%else%>Per Hour<%end%></button>
+          <button type="button" class="btn  btn-sm" style="background: #8B2635;"><%=@offer.location%></button>
+        </div>
+        <p class="app-offers-text text-muted"><%=@offer.description%> Lorem ipsum dolor sit amet consectetur adipisicing, elit. Nihil hic nemo at magnam quidem dolore quae magni ullam ipsam unde veritatis ratione, ea cumque veniam, consequatur est, reiciendis doloribus repellendus. Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, laboriosam aliquid, modi maiores quisquam recusandae facilis veniam odio cupiditate beatae ad, quaerat quia dolore praesentium. Quisquam, sit. Ipsa, inventore, nulla.</p>
         </div>
       </div>
       <div class="app-offers-card-bottom">
-        <%= link_to new_offer_inquiry_interview_path(@inquiry.offer, @inquiry), class: "btn-offer btn-dark btn" do%>
-        Schedule Interview<%end%>
         <%if @inquiry.chatroom%>
-        <%= link_to chatroom_path(@inquiry.chatroom), class: "btn-offer btn-success btn" do %>Go to Chat<%end%>
-        <%else%>
-        <%= link_to create_chat_offer_inquiry_path(@inquiry.offer, @inquiry), class: "btn-offer btn-success btn" do %>Initiate
-        Chat<%end%>
-        <%end%>
-      </div>
-    </div>
-  </div>
-  <% unless @inquiry.interview.nil?%>
-  <h3 style="color: white; text-align: center;">Your Interviews for this Job</h3>
-  <div class="inquiry-interview-container">
-    <div class="course">
-      <div class="course-preview">
-        <h6>Company</h6>
-        <h2><%= @inquiry.offer.user.business_name %></h2>
-        <a
-          href="http://127.0.0.1:3000/offers?q%5Btitle_cont%5D=&q%5Buser_business_name_cont%5D=<%= @inquiry.offer.user.business_name %>&q%5Blocation_cont%5D=&q%5Bskills_required_cont%5D=&commit=Search">View
-          all offers from <%= @inquiry.offer.user.business_name %> <i class="fas fa-chevron-right"></i></a>
-      </div>
-      <div class="course-info">
-        <div class="progress-container">
-          <span class="progress-text">
-
-          </span>
-        </div>
-        <h6><%= @inquiry.offer.title %></h6>
-        <h2>Date: <%= @inquiry.interview.date.strftime("%d of %B, %Y")%></h2>
-        <h3>Time: <%= @inquiry.interview.time.strftime("%I:%M %p")%></h3>
-        <h5> <%= @inquiry.interview.infos%></h5>
-        <span class="progress-text interview-status">application status: <%= @inquiry.status %></span>
-      </div>
-    </div>
-    </div>
+      <%= link_to chatroom_path(@inquiry.chatroom), class: "btn-offer btn-success btn" do %>Go to Chat<%end%>
+    <%else%>
+     <%= link_to create_chat_offer_inquiry_path(@inquiry.offer, @inquiry), class: "btn-offer btn-success btn" do %>Initiate Chat<%end%>
     <%end%>
-</div>
- 
+    </div>
+      </div>
+  </div>
+  </div>
