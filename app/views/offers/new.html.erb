@@ -1,3 +1,42 @@
+<div class="device-wrapper">
+ 
+  <div class="device-container">
+    <div>
+      <ul class="nav welance justify-content-center">
+        <li class="nav-item w-50">
+          <a class="nav-link active" href="<%= new_user_registration_path %>">Submit an offer</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="form">
+      <%= simple_form_for @offer do |f| %>
+      <%= f.error_notification %>
+
+      <div class="form-inputs">
+        <%= f.input :title %>
+        <%= f.input :description %>
+        <%= f.input :skills_required%>
+        <%= f.input :fixed_price %>
+        <%= f.input :compensation%>
+        <%= f.input :location %>
+        <%= f.input :deadline_at %>
+        <%= f.input :employment_type %>
+      </div>
+      
+       
+        <%= f.submit "Submit offer", class: "btn btn-primary btn-block" %>
+    
+      <% end %>
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
 
 
 
