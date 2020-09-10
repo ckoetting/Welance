@@ -4,9 +4,9 @@
 <%if @offer.user == current_user%>
 <div class="banner offers" style="background-image: linear-gradient(to right, rgb(55, 59, 68), rgb(66, 134, 244));">
   <div class="banner-container offers">
-   <h1>Welcome,  <%=current_user.full_name%> &#128188;</h1>
-   <div id="banner-logo-seperator"></div>
-   <h3>These are the applications for <%= @offer.title%></h3>
+   <h2>Welcome,  <%=current_user.full_name%> &#128188;</h2>
+   <!-- <div id="banner-logo-seperator"></div> -->
+   <h4>These are the applications for <%= @offer.title%></h4>
  </div>
 </div>
 <%end%>
