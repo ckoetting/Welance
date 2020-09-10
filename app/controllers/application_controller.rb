@@ -24,6 +24,12 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  # app/controllers/application_controller.rb
+
+def default_url_options
+  { host: ENV["http://welance.xyz/"] || "localhost:3000" }
+end
+
 
 # class ApplicationController < ActionController::Base
 #     # Prevent CSRF attacks by raising an exception.
