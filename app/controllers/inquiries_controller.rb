@@ -1,8 +1,20 @@
 class InquiriesController < ApplicationController
-  before_action :set_inquiry, only: [:show, :edit, :update, :destroy]
+  before_action :set_inquiry, only: [:show, :edit, :update, :destroy, :change_status]
 
   def index
     @inquiries = current_user.inquiries
+  end
+
+  def change_status
+    # raise
+    if params[:accepted] == "true"
+      @inquiry.status = "Accepted"
+    else
+      @inquiry.status = "Declined"
+    end
+    @inquiry.save
+    redirect_to offer_inquiry_path(@inquiry.offer, @inquiry)
+    flash.notice = "Application status changed successfully!"
   end
 
   def show

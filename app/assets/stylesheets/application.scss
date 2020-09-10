@@ -18,6 +18,7 @@
 @import "pages/show-offers";
 @import "pages/new-inquiries";
 @import "pages/index-inquiries";
+@import "pages/job-offers";
 
 html {
     position: relative;
@@ -44,4 +45,7 @@ background-image: linear-gradient(to right, rgb(195, 20, 50), rgb(36, 11, 54));
 }
 .inquiries-show.application-bg {
   background-image: linear-gradient(to right, rgb(55, 59, 68), rgb(66, 134, 244));
+}
+.pages-job-offers.application-bg {
+  background: #EBEAED;
 }

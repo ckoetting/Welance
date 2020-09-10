@@ -34,8 +34,14 @@
               Edit Profile
               <% end %>
               <% if current_user.user_type == "Business"%>
-              <%= link_to new_offer_path, class: "btn nav-item btn-info" do %>
-              Create Offers
+              <%= link_to new_offer_path, class: "btn nav-item btn-warning" do %>
+              Add Offer
+              <%end%>
+              <%= link_to business_applications_path, class: "btn nav-item btn-dark" do %>
+              Job Applications
+              <% end %>
+              <%= link_to my_interviews_path, class: "btn nav-item btn-danger" do %>
+              Interviews
               <% end %>
               <% else %>
               <%= link_to user_path, class: "btn nav-item btn-success" do %>

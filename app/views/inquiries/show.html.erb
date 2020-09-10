@@ -10,7 +10,7 @@
     <div class="inq-offer-card">
       <div class="app-offers-card-top">
         <div class="business-logo-info">
-          <img class="logo-app-offers" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTxDRpxI5gXgaVmnO-VgcVUNOkca91jIpS75Flbzkz5W_5g5_V5&usqp=CAU">
+          <%= cl_image_tag @offer.user.photo.key, class: "logo-app-offers" %>
           <div class="business-info app-offers">
             <ul class="business-info">
               <li><%= @offer.user.business_name %></li>
@@ -33,7 +33,7 @@
           <%if @fixed_price%>Fixed Price<%else%>Per Hour<%end%></button>
           <button type="button" class="btn  btn-sm" style="background: #8B2635;"><%=@offer.location%></button>
         </div>
-        <p class="app-offers-text text-muted"><%=@offer.description%> Lorem ipsum dolor sit amet consectetur adipisicing, elit. Nihil hic nemo at magnam quidem dolore quae magni ullam ipsam unde veritatis ratione, ea cumque veniam, consequatur est, reiciendis doloribus repellendus. Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, laboriosam aliquid, modi maiores quisquam recusandae facilis veniam odio cupiditate beatae ad, quaerat quia dolore praesentium. Quisquam, sit. Ipsa, inventore, nulla.</p>
+        <p class="app-offers-text text-muted"><%=@offer.description%></p>
         </div>
       </div>
       <div class="app-offers-card-bottom">
@@ -41,6 +41,13 @@
       <%= link_to chatroom_path(@inquiry.chatroom), class: "btn-offer btn-success btn" do %>Go to Chat<%end%>
     <%else%>
      <%= link_to create_chat_offer_inquiry_path(@inquiry.offer, @inquiry), class: "btn-offer btn-success btn" do %>Initiate Chat<%end%>
+    <%end%>
+    <%if @inquiry.status == "Accepted"%>
+      <%= link_to new_offer_inquiry_interview_path(@inquiry.offer, @inquiry), class: "btn-offer btn-dark btn" do %>Schedule Interview<%end%>
+    <%end%>
+    <%if current_user.user_type == "Business"%>
+      <%=link_to change_status_path(@inquiry, accepted: true), class: "btn-offer btn-success btn" do%>Accept Application<%end%>
+      <%=link_to change_status_path(@inquiry, accepted: false), class: "btn-offer btn-danger btn" do%>Decline Application<%end%>
     <%end%>
     </div>
       </div>
