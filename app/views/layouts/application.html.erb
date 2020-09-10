@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Welance - Connecting companies & freelance developers like never before</title>
   <%= favicon_link_tag asset_path('favicon.png') %>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
@@ -22,13 +21,6 @@
   <meta property="og:description" content="<%= meta_description %>" />
   <meta property="og:site_name" content="<%= meta_title %>" />
 
-  <!-- Twitter Card data -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="<%= DEFAULT_META["twitter_account"] %>">
-  <meta name="twitter:title" content="<%= meta_title %>">
-  <meta name="twitter:description" content="<%= meta_description %>">
-  <meta name="twitter:creator" content="<%= DEFAULT_META["twitter_account"] %>">
-  <meta name="twitter:image:src" content="<%= meta_image %>">
 </head>
 <body class="<%= params[:controller] %>-<%= params[:action] %> application-bg">
   <%= render 'shared/flashes' %>

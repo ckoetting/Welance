@@ -4,11 +4,11 @@
 @import "config/bootstrap_variables";
 
 // External libraries
-@import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import 'mapbox-gl/dist/mapbox-gl';
 @import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder';
+@import "bootstrap/scss/bootstrap";
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
@@ -18,6 +18,7 @@
 @import "pages/show-offers";
 @import "pages/new-inquiries";
 @import "pages/index-inquiries";
+@import "pages/job-offers";
 
 html {
     position: relative;
@@ -44,4 +45,7 @@ background-image: linear-gradient(to right, rgb(195, 20, 50), rgb(36, 11, 54));
 }
 .inquiries-show.application-bg {
   background-image: linear-gradient(to right, rgb(55, 59, 68), rgb(66, 134, 244));
+}
+.pages-job-offers.application-bg {
+  background: #EBEAED;
 }

@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   get 'users/applications', to: 'users#job_offers', as: :business_applications
   get 'users/success', to: 'users#success', as: :inquiry_sent
   get 'users/savedoffers', to: 'users#saved_offers', as: :saved_offers
+  get 'users/applications/:id/change_status', to: 'inquiries#change_status', as: :change_status
   resources :users
   resources :contact, only: [:new, :create]
   # resources :about, only: [:show]
