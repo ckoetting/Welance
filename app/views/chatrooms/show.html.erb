@@ -1,10 +1,10 @@
 <div class="wrapper-chatroom">
   <div class="header-chat">
     <div class="chat-avatars">
-     <img class="chat-avatar-logo" src="https://avatars1.githubusercontent.com/u/61974192?v=4">
-     <img class="chat-avatar-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTxDRpxI5gXgaVmnO-VgcVUNOkca91jIpS75Flbzkz5W_5g5_V5&usqp=CAU">
+    <img src="<%=@chatroom.inquiry.user.avatar_url%>" class="chat-avatar-logo">
+     <%= cl_image_tag @chatroom.inquiry.offer.user.photo.key, class: "chat-avatar-logo"%>
     </div>
-     <h1>Conversation between <br><%=User.find(@chatroom.developer_id).full_name%> and <%=User.find(@chatroom.business_id).business_name%></h1>
+     <h1>Conversation between <br><%=@chatroom.inquiry.user.full_name%> and <%=@chatroom.inquiry.offer.user.full_name%> (<%=@chatroom.inquiry.offer.user.business_name%>)</h1>
   </div>
   <div class="chat card-chat">
     <div class="d-flex">
@@ -21,7 +21,7 @@
           </div>
         </div>
         <%= simple_form_for [ @chatroom, @message ], remote: true do |f| %>
-        <%= f.input :content, label: false, placeholder: "Message #{User.find(@chatroom.developer_id).full_name}" %>
+        <%= f.input :content, label: false, placeholder: "Message #{@chatroom.inquiry.offer.user.business_name}" %>
         <% end %>
       </div>
     </div>
