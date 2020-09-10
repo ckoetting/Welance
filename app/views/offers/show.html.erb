@@ -72,15 +72,71 @@
           <i class="fa<%= @offer.saved ? 's' : 'r' %> fa-bookmark"></i> Save
           <% end %> </div>
               </div>
-    
- 
-          
+
+
+
           <div id="map"
      style="width: 100%; height: 350px;"
      data-markers="<%= @marker.to_json %>"
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
      </div>
       </div>
+
+    <div class="app-reviews-card">
+      <h4 style="text-align: center; margin: 2rem 0 1rem 0;">Reviews</h4>
+      <div class="review-container">
+        <div class="app-reviews-card-top">
+          <div class="avatar-review-info">
+            <img class="avatar-app-reviews" src="https://i.pinimg.com/originals/70/71/37/70713776d26d0a7102ccd8c5d9213944.jpg">
+            <div class="business-info app-offers">
+              <ul class="business-info">
+                <li> FullStack Developer </li>
+                <li> Cohag, USA </li>
+                <li> 1k/ h </li>
+                <li> peter.griffin@famguy.com </li>
+                <li><%= @offer.user.linkedin_url %></li>
+              </ul>
+            </div>
+          </div>
+          <div class="app-offer-details">
+          <div class="card-title">
+            <h5 class="heading" style="color: black;"><%= link_to offer_path(@offer) do %>
+            Peter Griffin
+            <% end %></h5>
+          </div>
+          <div class="app-offer-perks">
+            <h5><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h5>
+          </div>
+          <p class="app-reviews-text text-muted"><%=@offer.description%> Lorem ipsum dolor sit amet consectetur adipisicing, elit. Nihil hic nemo at magnam quidem dolore quae magni ullam ipsam unde veritatis ratione, ea cumque veniam, consequatur est, reiciendis doloribus repellendus.</p>
+          </div>
+        </div>
+        <div class="app-reviews-card-top">
+          <div class="avatar-review-info">
+            <img class="avatar-app-reviews" src="https://i.pinimg.com/originals/6e/51/32/6e5132a90812ad1abf3711135a5cf406.png">
+            <div class="business-info app-offers">
+              <ul class="business-info">
+                <li> FullStack Developer </li>
+                <li> Possibly Everywhere, Galaxy </li>
+                <li> 1k/ h </li>
+                <li> rick.slayer@rnm.com </li>
+                <li><%= @offer.user.linkedin_url %></li>
+              </ul>
+            </div>
+          </div>
+          <div class="app-offer-details">
+          <div class="card-title">
+            <h5 class="heading" style="color: black;"><%= link_to offer_path(@offer) do %>
+            Rick Sanchez
+            <% end %></h5>
+          </div>
+          <div class="app-offer-perks">
+            <h5><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></i></h5>
+          </div>
+          <p class="app-reviews-text text-muted"><%=@offer.description%> Lorem ipsum dolor sit amet consectetur adipisicing, elit. Nihil hic nemo at magnam quidem dolore quae magni ullam ipsam unde veritatis ratione, ea cumque veniam, consequatur est, reiciendis doloribus repellendus.</p>
+          </div>
+        </div>
+      </div>
+    </div>
  </div>
   <% end %>
 
