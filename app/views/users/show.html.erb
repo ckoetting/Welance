@@ -17,7 +17,7 @@
           <ul>
             <li><h2 class="m-0"><%= current_user.full_name %></h2></li>
             <li><p><%= current_user.email %></li>
-              <li>🌍 <%= current_user.business_address %></li>
+              <li>🌍 <%= current_user.website %></li>
               <li>📱 <%= current_user.phone_number %></li>
               <% if current_user.hourly_rate? %>
               <li><i>Hourly rate</i><%= current_user.hourly_rate %>€/h</li>
