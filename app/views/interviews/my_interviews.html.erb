@@ -1,6 +1,6 @@
 <div class="index-wrapper">
   <div class="list-group">
-    <div class="page-header"><h3>Your upcoming Job Interviews</h3></div>
+    <div class="page-header" style="text-shadow: 0px 0px 10px black;"><h2>Your upcoming job interviews</h2></div>
   <% @upcoming_interviews.each do |interview|%>
   <div class="courses-container">
   <div class="course">
@@ -12,7 +12,7 @@
     <div class="course-info">
       <div class="progress-container">
         <span class="progress-text">
-          
+
         </span>
       </div>
       <h6><%= interview.inquiry.offer.title %></h6>
