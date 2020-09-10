@@ -1,7 +1,7 @@
 # config/meta.yml
 
 meta_product_name: "Welance"
-meta_title: "Welance - Connecting Developers and Businesses"
+meta_title: "Welance - Connecting Businesses and Developers"
 meta_description: "Platform where developers and companies can find each other"
 meta_image: "welance.jpg" # should exist in `app/assets/images/`
 twitter_account: "@welance_twitter_account"   # required for Twitter Cards
