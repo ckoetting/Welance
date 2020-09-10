@@ -21,11 +21,11 @@ Rails.application.routes.draw do
   get 'users/savedoffers', to: 'users#saved_offers', as: :saved_offers
   resources :users
   resources :contact, only: [:new, :create]
-  resources :about, only: [:show]
+  # resources :about, only: [:show]
   get 'contact_us' => 'pages#contact_us'
   resources :services, only: [:show]
   get 'services' => 'pages#services'
-  get 'about' => 'pages#about'
+  get 'about' => 'pages#about', as: :about
   resources :customers, only: [:show]
   get 'customers' => 'pages#customers'
   resources :chatrooms, only: :show do
