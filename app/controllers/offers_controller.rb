@@ -20,9 +20,10 @@ class OffersController < ApplicationController
 
   
   def new
-    @offer = Offer.new
+    @offer = Offer.new(params[:offer])
+    @offer.save
   end
-  
+
   def create
     @offer = Offer.new(offer_params)
     @offer.user = current_user
@@ -65,6 +66,6 @@ class OffersController < ApplicationController
   end
   
   def offer_params
-    params.require(:offer).permit(:title, :description, :skills_required, :compensation, :fixed_price, :deadline_at, :location, :business_name, photos: [])
+    params.require(:offer).permit(:title, :description, :skills_required, :compensation, :fixed_price, :deadline_at,:employment_type, :location, :business_name, photos: [])
   end
 end

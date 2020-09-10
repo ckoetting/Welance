@@ -27,6 +27,11 @@
               <%= link_to edit_user_registration_path, class: "btn nav-item btn-primary" do %>
               Edit Profile
               <% end %>
+              <% if current_user.user_type == "Business"%>
+              <%= link_to new_offer_path, class: "btn nav-item btn-info" do %>
+              Create Offers
+              <% end %>
+              <% else %>
               <%= link_to user_path, class: "btn nav-item btn-success" do %>
               Upload Resume
               <% end %>
@@ -35,6 +40,7 @@
               <% end %>
               <%= link_to saved_offers_path, class: "btn nav-item btn-warning" do %>
               Saved Offers
+              <% end %>
               <% end %>
             </div>
           </div>
