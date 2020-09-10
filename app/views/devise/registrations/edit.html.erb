@@ -17,7 +17,7 @@
       <%= f.input :full_name, label: false, autofocus: true %>
       <%= f.input :bio, as: :text, autofocus: true %>
       <%= f.input :location, label: 'Address', autofocus: true %>
-      <%= f.input :dob, label: 'Date of birth', autofocus: true %>
+      <%= f.input :dob, label: 'Date of birth', start_year: Date.today.year - 110, end_year: Date.today.year, autofocus: true %>
       <%= f.input :phone_number, autofocus: true %>
       <%= f.input :photo, label: 'Avatar', as: :file %>
     </div>
