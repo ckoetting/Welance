@@ -1,3 +1,6 @@
+<% content_for :meta_title, "Welance | #{@offer.title}" %>
+<% content_for :meta_description, "#{@offer.description}" %>
+
 <%if @offer.user == current_user%>
 <div class="banner offers" style="background-image: linear-gradient(to right, rgb(55, 59, 68), rgb(66, 134, 244));">
   <div class="banner-container offers">
