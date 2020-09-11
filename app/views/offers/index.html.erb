@@ -53,21 +53,21 @@
                   <% end %></h6>
                 </div>
                 <div class="offer-details">
-                 <button type="button" class="btn  btn-sm" style="background: #8B2635; cursor: unset;"><%=offer.employment_type%></button>
-                 <button type="button" class="btn  btn-sm" style="background: #8B2635; cursor: unset;">
+                 <button type="button" class="badge badge-pill badge-secondary ml-1"><%=offer.employment_type%></button>
+                 <button type="button" class="badge badge-pill badge-secondary ml-1">
                   <%if @fixed_price%>Fixed Price<%else%>Per Hour<%end%></button>
-                  <button type="button" class="btn  btn-sm" style="background: #8B2635;cursor: unset;"><%=offer.location%></button>
+                  <button type="button" class="badge badge-pill badge-secondary ml-1"><%=offer.location%></button>
                 </div>
               </div>
             </div>
             <p class="text-muted"><%= offer.description %></p>
             <div class="row offer-btn-sbmt btnsubmit mt-4">
-              <div style="padding-top: 1rem; padding-left: 0.4rem;"> <%= link_to new_offer_inquiry_path(offer) do %>
+              <div style="padding-top: 1rem;"> <%= link_to new_offer_inquiry_path(offer) do %>
                 <button name="button" type="submit" class="btn-offer btn1 btn btn-success"><i
                   class="fab fa-telegram-plane"></i>
                 Apply</button>
                 <% end %></div>
-                <div style="padding-top: 1rem; padding-left: 0.4rem;">
+                <div style="padding-top: 1rem;">
                   <%= button_to bookmark_path(offer), class: "btn-offer btn-success btn", id: "bookmark-#{offer.id}", method: :post, remote: true do %>
                   <i class="fa<%= offer.saved ? 's' : 'r' %> fa-bookmark"></i> Save
                   <% end %> </div>
