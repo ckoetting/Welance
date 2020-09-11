@@ -28,10 +28,10 @@
           <% end %></h5>
         </div>
         <div class="app-offer-perks">
-          <button type="button" class="btn  btn-sm" style="background: #8B2635; "><%=@offer.employment_type%></button>
-          <button type="button" class="btn  btn-sm" style="background: #8B2635; ">
+          <button type="button" class="badge badge-pill badge-secondary ml-1"><%=@offer.employment_type%></button>
+          <button type="button" class="badge badge-pill badge-secondary ml-1">
           <%if @fixed_price%>Fixed Price<%else%>Per Hour<%end%></button>
-          <button type="button" class="btn  btn-sm" style="background: #8B2635;"><%=@offer.location%></button>
+          <button type="button" class="badge badge-pill badge-secondary ml-1"><%=@offer.location%></button>
         </div>
         <p class="app-offers-text text-muted"><%=@inquiry.message%></p>
         </div>
