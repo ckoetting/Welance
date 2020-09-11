@@ -10,7 +10,7 @@
     <div class="inq-offer-card">
       <div class="app-offers-card-top">
         <div class="business-logo-info">
-          <%= cl_image_tag @offer.user.photo.key, class: "logo-app-offers" %>
+           <img src="<%=@inquiry.user.avatar_url%>" class="logo-app-offers">
           <div class="business-info app-offers">
             <ul class="business-info">
               <li><%= @offer.user.business_name %></li>
@@ -33,7 +33,7 @@
           <%if @fixed_price%>Fixed Price<%else%>Per Hour<%end%></button>
           <button type="button" class="btn  btn-sm" style="background: #8B2635;"><%=@offer.location%></button>
         </div>
-        <p class="app-offers-text text-muted"><%=@offer.description%></p>
+        <p class="app-offers-text text-muted"><%=@inquiry.message%></p>
         </div>
       </div>
       <div class="app-offers-card-bottom">
@@ -45,10 +45,11 @@
     <%if @inquiry.status == "Accepted"%>
       <%= link_to new_offer_inquiry_interview_path(@inquiry.offer, @inquiry), class: "btn-offer btn-dark btn" do %>Schedule Interview<%end%>
     <%end%>
-    <%if current_user.user_type == "Business"%>
+    <%if current_user.user_type == "Business" && @inquiry.status != "Accepted"%>
       <%=link_to change_status_path(@inquiry, accepted: true), class: "btn-offer btn-success btn" do%>Accept Application<%end%>
       <%=link_to change_status_path(@inquiry, accepted: false), class: "btn-offer btn-danger btn" do%>Decline Application<%end%>
     <%end%>
+    <%= link_to user_path(@inquiry.user), class: "btn-offer btn-primary btn" do%>User Profile <%end%>
     </div>
       </div>
   </div>
