@@ -17,7 +17,7 @@
       </div>
       <h6>Job Title</h6>
       <h2><%= inquiry.offer.title %></h2>
-      <span class="progress-text inquiry-status">application status: <%= inquiry.status %></span>
+      <h6 style="font-weight: bold;"><span class="inquiry-status">Application status: <%= inquiry.status %></span></h6>
       <%= link_to offer_inquiry_path(inquiry.offer, inquiry), class: "btn inquiry" do %>Details<%end%>
     </div>
   </div>
