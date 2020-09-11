@@ -1,7 +1,7 @@
 class InterviewsController < ApplicationController
   def my_interviews
-    @interviews = Interview.where(user: current_user)
-    @upcoming_interviews = @interviews.select { |i| i.date >= Date.today }
+    @interviews = Interview.all
+    @upcoming_interviews = @interviews.select { |i| i.date >= Date.today && i.user == current_user }
   end
 
   def new
