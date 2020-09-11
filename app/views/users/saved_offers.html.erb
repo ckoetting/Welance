@@ -24,7 +24,7 @@
             </div>
           </div>
         </div>
-        <p class="text-muted"><%= truncate("#{offer.description}            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, quisquam, perspiciatis. Quas temporibus debitis vel eos minus, eaque aperiam officiis molestiae, nulla deserunt, quae modi repellat doloribus molestias ea cum laudantium, quis sed illum maxime tempore tempora animi suscipit consequatur consequuntur. Dignissimos velit consequuntur molestiae, quis praesentium doloremque, deleniti. Minus sit vel nihil beatae est reprehenderit facilis aliquid, enim, praesentium maiores possimus exercitationem ea amet voluptatibus saepe, sapiente dolorem libero! Cupiditate animi, assumenda beatae et? Quae ipsa fuga consequatur, corporis rem quos dolore autem ipsam. Ipsa fugit, obcaecati eaque, libero nemo illum necessitatibus et quis nisi nostrum inventore dicta, alias.", length: 200) %> </p>
+        <p class="text-muted"><%= truncate(offer.description, length:150) %></p>
         <div class="row offer-btn-sbmt btnsubmit mt-4">
           <div style="padding-top: 1rem; padding-left: 0.4rem;"> <%= link_to new_offer_inquiry_path(offer) do %>
             <button name="button" type="submit" class="btn-offer btn1 btn btn-success"><i class="fab fa-telegram-plane"></i>
