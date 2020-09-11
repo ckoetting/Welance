@@ -4,7 +4,6 @@
     <div class="profile-card gradient-topleft">
       <div class="profile-page-first">
         <div class="profile-page-avatar">
-          <!-- <img src="https://images.unsplash.com/photo-1589329482108-e414c7c6b8c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" class="profile-pic" > -->
           <% if current_user.photo.attached? %>
           <%= cl_image_tag current_user.photo.key, class: "profile-pic" %>
           <% elsif current_user.avatar_url? %>
@@ -17,10 +16,14 @@
           <ul>
             <li><h2 class="m-0"><%= current_user.full_name %></h2></li>
             <li><p><%= current_user.email %></li>
-              <li>🌍 <%= current_user.website %></li>
-              <li>📱 <%= current_user.phone_number %></li>
+              <% if current_user.website? %>
+              <li><p>🌍 <%= current_user.website %></p></li>
+              <% end %>
+              <% if current_user.phone_number? %>
+              <li><p>📱 <%= current_user.phone_number %></p></li>
+              <% end %>
               <% if current_user.hourly_rate? %>
-              <li>💸 <%= current_user.hourly_rate %>€/h</li>
+              <li><p>💸 <%= current_user.hourly_rate %>€/h</p></li>
               <% end %>
             </ul>
             <div class="icon-block">
