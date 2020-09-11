@@ -53,14 +53,14 @@
                   <% end %></h6>
                 </div>
                 <div class="offer-details">
-                 <button type="button" class="badge badge-pill badge-secondary ml-1"><%=offer.employment_type%></button>
-                 <button type="button" class="badge badge-pill badge-secondary ml-1">
-                  <%if @fixed_price%>Fixed Price<%else%>Per Hour<%end%></button>
-                  <button type="button" class="badge badge-pill badge-secondary ml-1"><%=offer.location%></button>
+                 <span class="badge badge-pill badge-dark ml-1 p-2"><%=offer.employment_type%></span>
+                <span class="badge badge-pill badge-dark ml-1 p-2">
+                  <%if @fixed_price%>Fixed Price<%else%>Per Hour<%end%></span>
+                  <span class="badge badge-pill badge-dark ml-1  p-2"><%=offer.location%></span>
                 </div>
               </div>
             </div>
-            <p class="text-muted"><%= offer.description %></p>
+            <p class="text-muted"><%= truncate(offer.description, length:150) %></p>
             <div class="row offer-btn-sbmt btnsubmit mt-4">
               <div style="padding-top: 1rem;"> <%= link_to new_offer_inquiry_path(offer) do %>
                 <button name="button" type="submit" class="btn-offer btn1 btn btn-success"><i
